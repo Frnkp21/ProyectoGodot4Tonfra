@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://bed8impuogdfw"]
+[gd_scene load_steps=34 format=3 uid="uid://bed8impuogdfw"]
 
 [ext_resource type="Texture2D" uid="uid://cee0p48iy4te7" path="res://istock-1071006450_small.jpg" id="1"]
+[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_kxrb3"]
 [ext_resource type="Texture2D" uid="uid://c6mgodwy2ndnw" path="res://Assets/Map/casa/decoracioncasa/armario.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://b2g08cmcp45yf" path="res://Assets/Map/casa/puerta.png" id="5"]
@@ -13,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="12"]
 [ext_resource type="Texture2D" uid="uid://c0x404gjd7w6r" path="res://Assets/Map/casa/sueloconalfombra5.png" id="13"]
 [ext_resource type="PackedScene" uid="uid://q6eqbxde54rp" path="res://Scenes/mother.tscn" id="14_0xfms"]
+[ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="15_c7bce"]
 [ext_resource type="Texture2D" uid="uid://cqxxlii083yvh" path="res://Assets/Map/casa/sueloconalfombra6.png" id="17"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rublu"]
@@ -752,7 +754,9 @@ sources/13 = SubResource("TileSetAtlasSource_3uwj0")
 sources/14 = SubResource("TileSetAtlasSource_tvgo7")
 sources/15 = SubResource("TileSetAtlasSource_k1qia")
 
-[node name="Livingroom" type="Node2D"]
+[node name="Livingroom" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_kxrb3")
+player = NodePath("player")
 
 [node name="BlackBack" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
@@ -786,10 +790,20 @@ layer_0/tile_data = PackedInt32Array(196616, 12, 0, 262152, 18, 0)
 position = Vector2(234, 64)
 
 [node name="player" parent="." instance=ExtResource("4")]
-position = Vector2(366, 137)
+position = Vector2(348, 157)
 
 [node name="ChairTopDown" type="TileMap" parent="."]
 position = Vector2(0, 23)
 tile_set = ExtResource("11")
 format = 2
 layer_0/tile_data = PackedInt32Array(131079, 6, 0, 196615, 7, 0, 262151, 8, 0, 327687, 9, 0)
+
+[node name="MoveScene" parent="." instance=ExtResource("15_c7bce")]
+position = Vector2(368, 55)
+target_scene = "Hallway"
+target_position = Vector2(304, 148)
+
+[node name="MoveScene2" parent="." instance=ExtResource("15_c7bce")]
+position = Vector2(367, 220)
+target_scene = "Street"
+target_position = Vector2(611, 194)

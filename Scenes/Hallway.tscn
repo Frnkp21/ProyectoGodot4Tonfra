@@ -447,9 +447,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_f77tk")
 
-[node name="HallWay" type="Node2D"]
+[node name="HallWay" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_6xppr")
-player = null
+player = NodePath("player")
 
 [node name="Black" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
@@ -467,7 +467,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(196618, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("9")]
-position = Vector2(376, 118)
+position = Vector2(305, 89)
 
 [node name="MoveScene" parent="." instance=ExtResource("10")]
 position = Vector2(432, 156)
@@ -480,6 +480,11 @@ target_scene = "Livingroom"
 target_position = Vector2(368, 57)
 
 [node name="MoveScene3" parent="." instance=ExtResource("10")]
+position = Vector2(432, 84)
+target_scene = "Bathroom"
+target_position = Vector2(288, 148)
+
+[node name="MoveScene5" parent="." instance=ExtResource("10")]
 position = Vector2(432, 84)
 target_scene = "Bathroom"
 target_position = Vector2(288, 148)
