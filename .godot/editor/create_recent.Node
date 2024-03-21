@@ -1,0 +1,13 @@
+CollisionShape2D
+AnimatedSprite2D
+CharacterBody2D
+Area2D
+Button
+VBoxContainer
+Label
+Node2D
+Sprite2D
+CanvasLayer
+ProgressBar
+Timer
+RayCast2D
