@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cq8rnooqvps1d"]
+[gd_scene load_steps=43 format=3 uid="uid://cq8rnooqvps1d"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_3prne"]
@@ -105,6 +105,20 @@ texture_region_size = Vector2i(32, 32)
 0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, 16, -16, 3.1201, -15.9914, 3.093, 16)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ldb1"]
+texture = ExtResource("10")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxy8i"]
+texture = ExtResource("12")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q5ky"]
 texture = ExtResource("5")
@@ -278,6 +292,32 @@ texture_region_size = Vector2i(32, 32)
 0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_52yi8"]
+texture = ExtResource("11")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(1, 3)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1g3w"]
+texture = ExtResource("13")
+texture_region_size = Vector2i(32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jrvtr"]
+texture = ExtResource("7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b0gep"]
+texture = ExtResource("9")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSet" id="3"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
@@ -287,6 +327,12 @@ sources/2 = SubResource("TileSetAtlasSource_4q5ky")
 sources/3 = SubResource("TileSetAtlasSource_6vex0")
 sources/4 = SubResource("TileSetAtlasSource_ldnqc")
 sources/5 = SubResource("TileSetAtlasSource_eqxxp")
+sources/6 = SubResource("TileSetAtlasSource_52yi8")
+sources/7 = SubResource("TileSetAtlasSource_k1g3w")
+sources/8 = SubResource("TileSetAtlasSource_jrvtr")
+sources/9 = SubResource("TileSetAtlasSource_b0gep")
+sources/10 = SubResource("TileSetAtlasSource_0ldb1")
+sources/11 = SubResource("TileSetAtlasSource_wxy8i")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1pau"]
 texture = ExtResource("7")
@@ -812,9 +858,13 @@ texture = ExtResource("1")
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("3")
 format = 2
+layer_0/name = "Background"
 layer_0/tile_data = PackedInt32Array(4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 65540, 4, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 4, 0, 131076, 4, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131082, 1, 0, 131083, 4, 0, 196612, 4, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 4, 0, 262148, 4, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 3, 0, 262153, 2, 0, 262154, 0, 0, 262155, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 393220, 4, 0, 393227, 4, 0)
+layer_1/name = "Deco"
+layer_1/tile_data = PackedInt32Array(262154, 10, 0, 131077, 6, 0, 196618, 11, 0, 131078, 9, 0, 131081, 8, 0)
 
 [node name="Deco" type="TileMap" parent="."]
+visible = false
 position = Vector2(0, -8)
 tile_set = SubResource("7")
 format = 2

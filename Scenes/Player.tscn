@@ -345,11 +345,11 @@ shape = SubResource("CircleShape2D_cp0a5")
 wait_time = 0.5
 
 [node name="healthbar" type="ProgressBar" parent="."]
-modulate = Color(0, 0.964706, 0.129412, 1)
-offset_left = -7.0
+modulate = Color(0, 1, 0.129412, 1)
+offset_left = -8.0
 offset_top = 12.0
-offset_right = 133.0
-offset_bottom = 39.0
+offset_right = 142.0
+offset_bottom = 42.0
 scale = Vector2(0.1, 0.1)
 show_percentage = false
 
