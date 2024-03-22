@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cru4hx16fhnbv"]
+
+[ext_resource type="Script" path="res://Xavier.gd" id="1_40frc"]
+[ext_resource type="Texture2D" uid="uid://b8h31dwfsspta" path="res://Assets/Npc/granjero_defrente.png" id="2_r5lxb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt37v"]
+atlas = ExtResource("2_r5lxb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wdhf"]
+atlas = ExtResource("2_r5lxb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m508"]
+atlas = ExtResource("2_r5lxb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1rrc"]
+animations = [{
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_qt37v")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_1wdhf")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_2m508")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnqee"]
+size = Vector2(17, 22)
+
+[node name="Xavier" type="CharacterBody2D"]
+script = ExtResource("1_40frc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r1rrc")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_xnqee")

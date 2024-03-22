@@ -1,12 +1,14 @@
 ~ start
 
-Mother: [[Hi|Hello|Buenas]].. how are you?
-- hola buenas tardes estoy perfe
-	Mother: te piras pa la calle o que
-	- pues si 
-		Mother: pues venga a tomar por culo niño rata
-	- a ti que te importa
-		Mother: tus muertos ven aqui.
+Mother: [[Hola|Buenas]].. hijo como estas?
+- Bien ma 
+	Mother: A donde vas?
+	- A la ciudad
+		Mother: Vale ten cuidado con el bosque
+		- Porque dices eso?
+			Mother: estos dias el bosque esta muy peligroso
+	- Adios => END
+	
 - adios puta dejame en paz => END
 
 => END

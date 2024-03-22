@@ -1,17 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://q6eqbxde54rp"]
+[gd_scene load_steps=8 format=3 uid="uid://q6eqbxde54rp"]
 
 [ext_resource type="Script" path="res://Scripts/Mother.gd" id="1_85ky3"]
-[ext_resource type="Texture2D" uid="uid://bpk0x6mrgr7u5" path="res://Assets/Npc/defrente madre.png" id="2_06u3f"]
+[ext_resource type="Texture2D" uid="uid://blf7jxh0vym24" path="res://Assets/Npc/madre_defrente-sheet.png" id="2_npci4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iwop0"]
-atlas = ExtResource("2_06u3f")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwc4q"]
+atlas = ExtResource("2_npci4")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07dga"]
+atlas = ExtResource("2_npci4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i3uk"]
+atlas = ExtResource("2_npci4")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uc1yg"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iwop0")
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_mwc4q")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_07dga")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_2i3uk")
 }],
 "loop": true,
 "name": &"Idle",
@@ -25,8 +39,10 @@ size = Vector2(17, 22)
 script = ExtResource("1_85ky3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.997631, 1)
 sprite_frames = SubResource("SpriteFrames_uc1yg")
 animation = &"Idle"
+frame_progress = 0.839067
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)

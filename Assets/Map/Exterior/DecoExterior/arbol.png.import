@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwx5itcsovp5x"
-path="res://.godot/imported/arbolllll.png-7c77fda4ac306fdb63bb32ae48206593.ctex"
+uid="uid://dm5gdc3sx8633"
+path="res://.godot/imported/arbol.png-59eea7ac54572c6166d646fef35eb34b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Map/Exterior/DecoExterior/arbolllll.png"
-dest_files=["res://.godot/imported/arbolllll.png-7c77fda4ac306fdb63bb32ae48206593.ctex"]
+source_file="res://Assets/Map/Exterior/DecoExterior/arbol.png"
+dest_files=["res://.godot/imported/arbol.png-59eea7ac54572c6166d646fef35eb34b.ctex"]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7cxlr"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_wwenu"]
 
 [resource]
-script = ExtResource("1_7cxlr")
+script = ExtResource("1_wwenu")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -22,7 +22,21 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
 "next_id": "end",
-"next_id_after": "12",
+"next_id_after": "14",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Adios",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Adios",
+"type": "response"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "end",
+"next_id_after": "14",
 "notes": "",
 "tags": PackedStringArray(),
 "text": "adios puta dejame en paz",
@@ -30,8 +44,8 @@ lines = {
 "translation_key": "adios puta dejame en paz",
 "type": "response"
 },
-"12": {
-"id": "12",
+"14": {
+"id": "14",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
@@ -43,9 +57,9 @@ lines = {
 "next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "[[Hi|Hello|Buenas]].. how are you?",
+"text": "[[Hola|Buenas]].. hijo como estas?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "[[Hi|Hello|Buenas]].. how are you?",
+"translation_key": "[[Hola|Buenas]].. hijo como estas?",
 "type": "dialogue"
 },
 "4": {
@@ -53,13 +67,13 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
-"next_id_after": "12",
+"next_id_after": "14",
 "notes": "",
-"responses": PackedStringArray("4", "10"),
+"responses": PackedStringArray("4", "12"),
 "tags": PackedStringArray(),
-"text": "hola buenas tardes estoy perfe",
+"text": "Bien ma",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "hola buenas tardes estoy perfe",
+"translation_key": "Bien ma",
 "type": "response"
 },
 "5": {
@@ -70,9 +84,9 @@ lines = {
 "notes": "",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "te piras pa la calle o que",
+"text": "A donde vas?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "te piras pa la calle o que",
+"translation_key": "A donde vas?",
 "type": "dialogue"
 },
 "6": {
@@ -80,27 +94,27 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
 "next_id": "7",
-"next_id_after": "12",
+"next_id_after": "14",
 "notes": "",
 "parent_id": "4",
-"responses": PackedStringArray("6", "8"),
+"responses": PackedStringArray("6", "10"),
 "tags": PackedStringArray(),
-"text": "pues si",
+"text": "A la ciudad",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "pues si",
+"translation_key": "A la ciudad",
 "type": "response"
 },
 "7": {
 "character": "Mother",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
-"next_id": "12",
+"next_id": "8",
 "notes": "",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "pues venga a tomar por culo niño rata",
+"text": "Vale ten cuidado con el bosque",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "pues venga a tomar por culo niño rata",
+"translation_key": "Vale ten cuidado con el bosque",
 "type": "dialogue"
 },
 "8": {
@@ -108,38 +122,41 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "8",
 "next_id": "9",
-"next_id_after": "12",
+"next_id_after": "14",
 "notes": "",
-"parent_id": "4",
+"parent_id": "6",
+"responses": PackedStringArray("8"),
 "tags": PackedStringArray(),
-"text": "a ti que te importa",
+"text": "Porque dices eso?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "a ti que te importa",
+"translation_key": "Porque dices eso?",
 "type": "response"
 },
 "9": {
 "character": "Mother",
 "character_replacements": Array[Dictionary]([]),
 "id": "9",
-"next_id": "12",
+"next_id": "14",
 "notes": "",
 "parent_id": "8",
 "tags": PackedStringArray(),
-"text": "tus muertos ven aqui.",
+"text": "estos dias el bosque esta muy peligroso",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "tus muertos ven aqui.",
+"translation_key": "estos dias el bosque esta muy peligroso",
 "type": "dialogue"
 }
 }
 raw_text = "~ start
 
-Mother: [[Hi|Hello|Buenas]].. how are you?
-- hola buenas tardes estoy perfe
-	Mother: te piras pa la calle o que
-	- pues si 
-		Mother: pues venga a tomar por culo niño rata
-	- a ti que te importa
-		Mother: tus muertos ven aqui.
+Mother: [[Hola|Buenas]].. hijo como estas?
+- Bien ma 
+	Mother: A donde vas?
+	- A la ciudad
+		Mother: Vale ten cuidado con el bosque
+		- Porque dices eso?
+			Mother: estos dias el bosque esta muy peligroso
+	- Adios => END
+	
 - adios puta dejame en paz => END
 
 => END"
