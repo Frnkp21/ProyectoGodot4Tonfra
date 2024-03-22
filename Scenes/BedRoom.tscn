@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_n2dju"]
-[ext_resource type="TileSet" path="res://tilemaps/bedroomtile.tres" id="2"]
+[ext_resource type="TileSet" uid="uid://b54boqsi6bs7m" path="res://tilemaps/bedroomtile.tres" id="2"]
 [ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="4"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_oel5p"]
@@ -40,3 +40,4 @@ position = Vector2(-67, -5)
 position = Vector2(80, -44)
 target_scene = "Hallway"
 target_position = Vector2(432, 148)
+target_zoom = Vector2(4.5, 4.5)

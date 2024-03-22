@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1xecddcwtyti"]
 
-[ext_resource type="TileSet" path="res://tilemaps/bedroomtile.tres" id="1"]
+[ext_resource type="TileSet" uid="uid://b54boqsi6bs7m" path="res://tilemaps/bedroomtile.tres" id="1"]
 [ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_4niqu"]
 [ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="2"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="3"]
@@ -34,3 +34,4 @@ position = Vector2(243, 82)
 position = Vector2(287, 124)
 target_scene = "Hallway"
 target_position = Vector2(305, 89)
+target_zoom = Vector2(4.5, 4.5)

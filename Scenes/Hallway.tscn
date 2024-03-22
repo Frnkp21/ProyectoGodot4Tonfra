@@ -467,17 +467,19 @@ format = 2
 layer_0/tile_data = PackedInt32Array(196618, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("9")]
-position = Vector2(305, 89)
+position = Vector2(369, 118)
 
 [node name="MoveScene" parent="." instance=ExtResource("10")]
 position = Vector2(432, 156)
 target_scene = "BedRoom"
 target_position = Vector2(81, -41)
+target_zoom = Vector2(4.5, 4.5)
 
 [node name="MoveScene2" parent="." instance=ExtResource("10")]
 position = Vector2(304, 156)
 target_scene = "Livingroom"
 target_position = Vector2(368, 57)
+target_zoom = Vector2(4.5, 4.5)
 
 [node name="MoveScene3" parent="." instance=ExtResource("10")]
 position = Vector2(432, 84)
@@ -488,8 +490,10 @@ target_position = Vector2(288, 148)
 position = Vector2(432, 84)
 target_scene = "Bathroom"
 target_position = Vector2(288, 148)
+target_zoom = Vector2(4.5, 4.5)
 
 [node name="MoveScene4" parent="." instance=ExtResource("10")]
 position = Vector2(304, 84)
 target_scene = "Parentsroom"
 target_position = Vector2(288, 117)
+target_zoom = Vector2(4.5, 4.5)

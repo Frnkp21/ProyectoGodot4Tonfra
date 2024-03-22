@@ -330,7 +330,7 @@ scale = Vector2(0.717949, -1.57143)
 shape = SubResource("1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(4.5, 4.5)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 

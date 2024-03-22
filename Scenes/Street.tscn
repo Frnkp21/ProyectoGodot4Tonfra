@@ -1010,3 +1010,4 @@ position = Vector2(586, 240)
 position = Vector2(610, 197)
 target_scene = "Livingroom"
 target_position = Vector2(368, 212)
+target_zoom = Vector2(4.5, 4.5)
