@@ -5,3 +5,6 @@ func _ready():
 
 func mother():
 	pass
+
+func interactuable():
+	pass

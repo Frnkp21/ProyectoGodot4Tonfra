@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://djtkdpdniw3cv"]
+
+[ext_resource type="Script" path="res://Scenes/cartel_to_bosque.gd" id="1_2bumc"]
+[ext_resource type="Texture2D" uid="uid://buqacajjwp68i" path="res://Assets/Map/Exterior/DecoExterior/cartel1.png" id="1_bxmg8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_om7t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bxmg8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhn1d"]
+size = Vector2(29, 17)
+
+[node name="CartelToBosque" type="CharacterBody2D"]
+script = ExtResource("1_2bumc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_om7t7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -7.5)
+shape = SubResource("RectangleShape2D_uhn1d")

@@ -29,8 +29,6 @@ layer_1/tile_data = PackedInt32Array(-65536, 18, 0, -196608, 19, 0, -2, 16, 0, 1
 [node name="Deco" type="TileMap" parent="."]
 position = Vector2(-1, -20)
 tile_set = ExtResource("3")
-rendering_quadrant_size = 32
-collision_visibility_mode = 1
 format = 2
 layer_0/tile_data = PackedInt32Array(-65539, 0, 0, -65538, 1, 0, -65537, 9, 0, -131072, 10, 0, -3, 2, 0, -2, 3, 0, -1, 8, 0, -65536, 7, 0, 131069, 4, 0, 131070, 5, 0)
 

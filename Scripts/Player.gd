@@ -4,6 +4,7 @@ const speed = 100
 var current_dir ="none"
 
 var mother_in_range = false
+var cartelBosque_in_range = false
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var health = 100
@@ -11,8 +12,12 @@ var player_alive = true
 
 var attack_ip = false 
 
+var interrogante = false
+
 func _ready():
 	$AnimatedSprite.play("Idle")
+	$Interact/interrogante.visible = interrogante
+
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -23,6 +28,10 @@ func _physics_process(delta):
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
 			DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"))
+			return
+	if cartelBosque_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://cartelToBosque.dialogue"))
 			return
 	
 	if health <= 0:
@@ -166,8 +175,24 @@ func _on_regin_timer_timeout():
 func _on_detection_area_chat_body_entered(body):
 	if body.has_method("mother"):
 		mother_in_range = true
-
+	if body.has_method("cartelBosque"):
+		cartelBosque_in_range = true
 
 func _on_detection_area_chat_body_exited(body):
 	if body.has_method("mother"):
 		mother_in_range = false
+	if body.has_method("cartelBosque"):
+		cartelBosque_in_range = true
+
+func _on_interact_body_entered(body):
+	if body.has_method("interactuable"):
+		interrogante = true
+		print("se ve")
+		$Interact/interrogante.visible = interrogante
+
+func _on_interact_body_exited(body):
+	if body.has_method("interactuable"):
+		interrogante = false
+		print("no se ve")
+		$Interact/interrogante.visible = interrogante
+

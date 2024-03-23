@@ -4,6 +4,9 @@ extends Area2D
 @export var target_position: Vector2
 @export var target_zoom: Vector2
 
+func interactuable():
+	pass
+
 func _input(event):
 	# Verificar si el evento es de tipo KEY y si la tecla es la que deseas
 	if event is InputEventKey and event.pressed and event.keycode == KEY_E:
