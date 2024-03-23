@@ -5,5 +5,6 @@ func _ready():
 
 func Xavier():
 	pass
+
 func interactuable():
 	pass
