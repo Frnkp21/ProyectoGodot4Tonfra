@@ -14,3 +14,5 @@ res://Scenes/enemy.tscn
 res://Scenes/Hallway.tscn
 res://Scenes/xavier.tscn
 res://Scripts/Player.gd
+res://Scripts/Enemy.gd
+res://Scenes/Forest.tscn

@@ -1,0 +1,78 @@
+[gd_scene load_steps=15 format=3 uid="uid://cmfdss347dvja"]
+
+[ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
+[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_ga3tf"]
+[ext_resource type="Texture2D" uid="uid://cpjgxpbgs017e" path="res://Assets/Map/Exterior/cesped.png" id="2_24apy"]
+[ext_resource type="Texture2D" uid="uid://cnf0mrdji13d8" path="res://Assets/Map/Exterior/tierra.png" id="3_ahgp7"]
+[ext_resource type="Texture2D" uid="uid://dhhtg7nwspf57" path="res://Assets/Map/Exterior/tierra2.png" id="4_f3h3s"]
+[ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_kclhs"]
+[ext_resource type="Texture2D" uid="uid://c5dh0sotupijk" path="res://Assets/Map/Exterior/DecoExterior/monticulo_de_tierra.png" id="6_emgia"]
+[ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="7_67dqw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_supsr"]
+texture = ExtResource("2_24apy")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipl6k"]
+texture = ExtResource("3_ahgp7")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umg5i"]
+texture = ExtResource("4_f3h3s")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_23f8w"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_supsr")
+sources/1 = SubResource("TileSetAtlasSource_ipl6k")
+sources/2 = SubResource("TileSetAtlasSource_umg5i")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qkr8j"]
+texture = ExtResource("6_emgia")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lcunw"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_qkr8j")
+
+[node name="Forest" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_ga3tf")
+player = NodePath("player")
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(357, 207)
+scale = Vector2(3, 3)
+texture = ExtResource("1_ara27")
+
+[node name="Background" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_23f8w")
+format = 2
+layer_0/name = "Background"
+layer_0/tile_data = PackedInt32Array(393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 327690, 2, 0, 327689, 2, 0, 327688, 2, 0, 327687, 2, 0, 393223, 0, 0, 393222, 0, 0, 327685, 2, 0, 327686, 2, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327691, 2, 0, 327692, 2, 0, 393228, 0, 0, 393221, 0, 0, 393227, 0, 0, 393220, 0, 0, 327684, 2, 0, 262149, 0, 0, 196614, 0, 0, 393229, 0, 0, 327693, 2, 0, 327694, 2, 0, 393230, 0, 0, 262158, 0, 0, 262157, 0, 0, 262156, 0, 0, 262155, 0, 0, 196617, 0, 0, 196616, 0, 0, 196615, 0, 0, 196613, 0, 0, 196612, 0, 0, 262148, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 458766, 0, 0, 458765, 0, 0, 458764, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 458757, 0, 0, 458756, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("5_kclhs")]
+position = Vector2(381, 185)
+
+[node name="Montañita" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lcunw")
+format = 2
+layer_0/tile_data = PackedInt32Array(196621, 65536, 2, 196620, 65536, 2, 196619, 65536, 2, 196618, 65536, 2, 196617, 65536, 2, 196616, 65536, 2, 196615, 65536, 2, 196614, 65536, 2, 196622, 65536, 2, 196613, 65536, 2, 196612, 65536, 2, 458756, 65536, 0, 458757, 65536, 0, 458758, 65536, 0, 458759, 65536, 0, 458760, 65536, 0, 458761, 65536, 0, 458762, 65536, 0, 458763, 65536, 0, 458764, 65536, 0, 458765, 65536, 0, 458766, 65536, 0)
+
+[node name="MoveScene" parent="." instance=ExtResource("7_67dqw")]
+position = Vector2(476, 176)
+rotation = -1.5708
+target_scene = "Street"
+target_position = Vector2(47, 356)
+target_zoom = Vector2(3, 3)
