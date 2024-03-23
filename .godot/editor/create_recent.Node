@@ -1,3 +1,4 @@
+TileMap
 CollisionShape2D
 CharacterBody2D
 CollisionPolygon2D
@@ -11,4 +12,3 @@ Button
 VBoxContainer
 Label
 CanvasLayer
-ProgressBar

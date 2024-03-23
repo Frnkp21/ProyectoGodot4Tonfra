@@ -1,5 +1,5 @@
 res://tilemaps/default_env.tres
-res://Scenes/xavier.tscn
+res://Scenes/cartel_to_bosque.tscn
 res://tilemaps/bedroomtile.tres
 res://Scenes/menu.tscn
 res://Scenes/Livingroom.tscn
@@ -12,5 +12,12 @@ res://Scenes/Bathroom.tscn
 res://Scenes/BedRoom.tscn
 res://Scenes/enemy.tscn
 res://Scenes/Hallway.tscn
+<<<<<<< HEAD
 res://Scenes/cartel_to_bosque.tscn
 res://Scripts/Xavier.gd
+=======
+res://Scenes/xavier.tscn
+res://Scripts/Player.gd
+res://Scripts/Enemy.gd
+res://Scenes/Forest.tscn
+>>>>>>> 75993e2e7b89531c596c0daa1de500fa7828f36d
