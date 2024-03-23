@@ -11,6 +11,7 @@ var health = 100
 var player_alive = true
 
 var attack_ip = false 
+var is_attacking = false
 
 var interrogante = false
 
@@ -41,33 +42,33 @@ func _physics_process(delta):
 		self.queue_free()
 
 func player_movement(delta):
-	
-	if Input.is_action_pressed("move_right"):
-		current_dir = "right"
-		play_anim(1)
-		velocity.x = speed
-		velocity.y = 0
-	elif Input.is_action_pressed("move_left"):
-		current_dir = "left"
-		play_anim(1)
-		velocity.x = -speed
-		velocity.y = 0
-	elif Input.is_action_pressed("move_down"):
-		current_dir = "down"
-		play_anim(1)
-		velocity.y = speed
-		velocity.x = 0
-	elif Input.is_action_pressed("move_up"):
-		current_dir = "up"
-		play_anim(1)
-		velocity.y = -speed
-		velocity.x = 0
-	else:
-		play_anim(0)
-		velocity.x = 0
-		velocity.y = 0
-		
-	move_and_slide()
+	if !is_attacking:
+		if Input.is_action_pressed("move_right"):
+			current_dir = "right"
+			play_anim(1)
+			velocity.x = speed
+			velocity.y = 0
+		elif Input.is_action_pressed("move_left"):
+			current_dir = "left"
+			play_anim(1)
+			velocity.x = -speed
+			velocity.y = 0
+		elif Input.is_action_pressed("move_down"):
+			current_dir = "down"
+			play_anim(1)
+			velocity.y = speed
+			velocity.x = 0
+		elif Input.is_action_pressed("move_up"):
+			current_dir = "up"
+			play_anim(1)
+			velocity.y = -speed
+			velocity.x = 0
+		else:
+			play_anim(0)
+			velocity.x = 0
+			velocity.y = 0
+			
+		move_and_slide()
 
 
 func play_anim(movement):
@@ -129,7 +130,8 @@ func _on_attack_cooldown_timeout():
 	
 func attack():
 	var dir = current_dir
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and !is_attacking:
+		is_attacking = true
 		global.player_current_attack = true
 		attack_ip = true
 		if dir == "right":
@@ -150,6 +152,7 @@ func attack():
 func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()
 	global.player_current_attack = false
+	is_attacking = false
 	attack_ip = false
 
 
