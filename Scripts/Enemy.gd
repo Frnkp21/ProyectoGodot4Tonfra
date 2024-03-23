@@ -20,7 +20,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("Idle")
 	else:
 		$AnimatedSprite2D.play("Walk")
-		move_and_collide(Vector2(0,0))
+	move_and_collide(Vector2(0,0))
 
 
 func _on_detecting_area_body_entered(body):

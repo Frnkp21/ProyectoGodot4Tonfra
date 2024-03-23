@@ -4,3 +4,14 @@ var player_current_attack = false
 
 var found_mother_item = false
 var given_mother_item = false
+
+
+#var current_scene = String
+var transition_scene = false
+
+var player_exit_forest_posx = 0
+var player_exit_forest_posy = 0
+var player_start_posx = 0
+var player_start_posy = 0
+
+

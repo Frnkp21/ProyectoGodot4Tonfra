@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmfdss347dvja"]
+[gd_scene load_steps=16 format=3 uid="uid://cmfdss347dvja"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
-[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_ga3tf"]
 [ext_resource type="Texture2D" uid="uid://cpjgxpbgs017e" path="res://Assets/Map/Exterior/cesped.png" id="2_24apy"]
 [ext_resource type="Texture2D" uid="uid://cnf0mrdji13d8" path="res://Assets/Map/Exterior/tierra.png" id="3_ahgp7"]
 [ext_resource type="Texture2D" uid="uid://dhhtg7nwspf57" path="res://Assets/Map/Exterior/tierra2.png" id="4_f3h3s"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_kclhs"]
-[ext_resource type="Texture2D" uid="uid://c5dh0sotupijk" path="res://Assets/Map/Exterior/DecoExterior/monticulo_de_tierra.png" id="6_emgia"]
+[ext_resource type="Texture2D" uid="uid://b47p7d7lispoe" path="res://Assets/Map/Cueva/suelo_entero_cueva.png" id="5_oqb3y"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="7_67dqw"]
+[ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="7_tn5fg"]
+[ext_resource type="Script" path="res://Scenes/Forest_exitpoint.gd" id="8_cu5mc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_supsr"]
 texture = ExtResource("2_24apy")
@@ -24,14 +25,8 @@ texture = ExtResource("4_f3h3s")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_23f8w"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_supsr")
-sources/1 = SubResource("TileSetAtlasSource_ipl6k")
-sources/2 = SubResource("TileSetAtlasSource_umg5i")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qkr8j"]
-texture = ExtResource("6_emgia")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktlm5"]
+texture = ExtResource("5_oqb3y")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -43,13 +38,17 @@ texture_region_size = Vector2i(32, 32)
 1:2/0 = 0
 2:2/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_lcunw"]
+[sub_resource type="TileSet" id="TileSet_23f8w"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_qkr8j")
+sources/0 = SubResource("TileSetAtlasSource_supsr")
+sources/1 = SubResource("TileSetAtlasSource_ipl6k")
+sources/2 = SubResource("TileSetAtlasSource_umg5i")
+sources/3 = SubResource("TileSetAtlasSource_ktlm5")
 
-[node name="Forest" type="Node2D" node_paths=PackedStringArray("player")]
-script = ExtResource("1_ga3tf")
-player = NodePath("player")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5std7"]
+size = Vector2(24, 97)
+
+[node name="Forest" type="Node2D"]
 
 [node name="Black" type="Sprite2D" parent="."]
 position = Vector2(357, 207)
@@ -60,19 +59,30 @@ texture = ExtResource("1_ara27")
 tile_set = SubResource("TileSet_23f8w")
 format = 2
 layer_0/name = "Background"
-layer_0/tile_data = PackedInt32Array(393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 327690, 2, 0, 327689, 2, 0, 327688, 2, 0, 327687, 2, 0, 393223, 0, 0, 393222, 0, 0, 327685, 2, 0, 327686, 2, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327691, 2, 0, 327692, 2, 0, 393228, 0, 0, 393221, 0, 0, 393227, 0, 0, 393220, 0, 0, 327684, 2, 0, 262149, 0, 0, 196614, 0, 0, 393229, 0, 0, 327693, 2, 0, 327694, 2, 0, 393230, 0, 0, 262158, 0, 0, 262157, 0, 0, 262156, 0, 0, 262155, 0, 0, 196617, 0, 0, 196616, 0, 0, 196615, 0, 0, 196613, 0, 0, 196612, 0, 0, 262148, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 458766, 0, 0, 458765, 0, 0, 458764, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 458757, 0, 0, 458756, 0, 0)
+layer_0/tile_data = PackedInt32Array(393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 327690, 2, 0, 327689, 2, 0, 327688, 2, 0, 327687, 2, 0, 393223, 2, 0, 393222, 2, 0, 327685, 2, 0, 327686, 2, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327691, 2, 0, 327692, 2, 0, 393228, 2, 0, 393221, 2, 0, 393227, 2, 0, 393220, 2, 0, 327684, 2, 0, 262149, 0, 0, 196614, 0, 0, 393229, 2, 0, 327693, 2, 0, 327694, 2, 0, 393230, 2, 0, 262158, 0, 0, 262157, 0, 0, 262156, 0, 0, 262155, 0, 0, 196617, 0, 0, 196616, 0, 0, 196615, 0, 0, 196613, 0, 0, 196612, 0, 0, 262148, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 458766, 0, 0, 458765, 0, 0, 458764, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 458757, 0, 0, 458756, 0, 0, 589838, 0, 0, 589837, 0, 0, 589836, 0, 0, 589835, 0, 0, 589834, 0, 0, 589833, 0, 0, 589832, 0, 0, 589831, 0, 0, 589830, 0, 0, 589829, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("5_kclhs")]
-position = Vector2(381, 185)
+position = Vector2(440, 188)
 
 [node name="Montañita" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_lcunw")
+tile_set = ExtResource("7_tn5fg")
 format = 2
-layer_0/tile_data = PackedInt32Array(196621, 65536, 2, 196620, 65536, 2, 196619, 65536, 2, 196618, 65536, 2, 196617, 65536, 2, 196616, 65536, 2, 196615, 65536, 2, 196614, 65536, 2, 196622, 65536, 2, 196613, 65536, 2, 196612, 65536, 2, 458756, 65536, 0, 458757, 65536, 0, 458758, 65536, 0, 458759, 65536, 0, 458760, 65536, 0, 458761, 65536, 0, 458762, 65536, 0, 458763, 65536, 0, 458764, 65536, 0, 458765, 65536, 0, 458766, 65536, 0)
+layer_0/tile_data = PackedInt32Array(196621, 29, 0, 196620, 29, 0, 196619, 29, 0, 196618, 29, 0, 196617, 29, 0, 196616, 29, 0, 196615, 29, 0, 196614, 29, 0, 196622, 29, 0, 196613, 29, 0, 196612, 29, 0, 131086, 29, 0, 131085, 29, 0, 131084, 29, 0, 131083, 29, 0, 131082, 29, 0, 131081, 29, 0, 131080, 29, 0, 131079, 29, 0, 131078, 29, 0, 131077, 29, 0, 131076, 29, 0, 589838, 29, 0, 589837, 29, 0, 589836, 29, 0, 524301, 29, 0, 524302, 29, 0, 589828, 29, 0, 524292, 29, 0, 524293, 29, 0, 524294, 29, 0, 524295, 29, 0, 524296, 29, 0, 524297, 29, 0, 524298, 29, 0, 524299, 29, 0, 524300, 29, 0, 589831, 29, 0, 589833, 29, 0, 589834, 29, 0, 589835, 29, 0, 589832, 29, 0, 589830, 29, 0, 589829, 29, 0)
 
 [node name="MoveScene" parent="." instance=ExtResource("7_67dqw")]
+visible = false
 position = Vector2(476, 176)
 rotation = -1.5708
 target_scene = "Street"
 target_position = Vector2(47, 356)
 target_zoom = Vector2(3, 3)
+
+[node name="Forest_exitpoint" type="Area2D" parent="."]
+script = ExtResource("8_cu5mc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest_exitpoint"]
+position = Vector2(471, 202)
+shape = SubResource("RectangleShape2D_5std7")
+
+[connection signal="body_entered" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_entered"]
+[connection signal="body_exited" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_exited"]

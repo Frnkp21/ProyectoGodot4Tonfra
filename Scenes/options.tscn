@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://dw2ij6sg40md1"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_ope6j"]
+[ext_resource type="Texture2D" uid="uid://34q7hvjbf5kw" path="res://Assets/Additional/teclaW.png" id="2_b1r5x"]
+[ext_resource type="Texture2D" uid="uid://dp8twdg72tpny" path="res://Assets/Additional/teclaD.png" id="3_o66gb"]
+[ext_resource type="Texture2D" uid="uid://ctnhnykh1st8o" path="res://Assets/Additional/teclaS.png" id="4_xfqcr"]
+[ext_resource type="Texture2D" uid="uid://56a71frplsnd" path="res://Assets/Additional/teclaA.png" id="5_chrrt"]
+[ext_resource type="Texture2D" uid="uid://kibcnfaat6u6" path="res://Assets/Additional/teclaJ.png" id="6_4qvh3"]
+[ext_resource type="Texture2D" uid="uid://568g7qi5pqqn" path="res://Assets/Additional/teclaE.png" id="7_oefnw"]
+[ext_resource type="Texture2D" uid="uid://53ojmp56wvno" path="res://Assets/Additional/tecladoEspacio.png" id="8_aop8u"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchor_right = 1.203
+anchor_bottom = 1.255
+offset_right = 230.08
+offset_bottom = 548.2
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ope6j")
+
+[node name="Basic Movement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 73.0
+offset_right = 683.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 47
+text = "Movimiento Basico"
+
+[node name="Interact" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 198.0
+offset_right = 434.0
+offset_bottom = 243.0
+theme_override_font_sizes/font_size = 47
+text = "Interactuar"
+
+[node name="Attack" type="Label" parent="."]
+offset_left = 198.0
+offset_top = 305.0
+offset_right = 454.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 47
+text = "Atacar"
+
+[node name="W" type="Sprite2D" parent="."]
+position = Vector2(122, 68)
+scale = Vector2(2, 2)
+texture = ExtResource("2_b1r5x")
+
+[node name="D" type="Sprite2D" parent="."]
+position = Vector2(205, 142)
+scale = Vector2(2, 2)
+texture = ExtResource("3_o66gb")
+
+[node name="S" type="Sprite2D" parent="."]
+position = Vector2(123, 142)
+scale = Vector2(2, 2)
+texture = ExtResource("4_xfqcr")
+
+[node name="A" type="Sprite2D" parent="."]
+position = Vector2(47, 140)
+scale = Vector2(2, 2)
+texture = ExtResource("5_chrrt")
+
+[node name="TeclaJ" type="Sprite2D" parent="."]
+position = Vector2(113, 330)
+scale = Vector2(2, 2)
+texture = ExtResource("6_4qvh3")
+
+[node name="TeclaE" type="Sprite2D" parent="."]
+position = Vector2(122, 230)
+scale = Vector2(2, 2)
+texture = ExtResource("7_oefnw")
+
+[node name="TecladoEspacio" type="Sprite2D" parent="."]
+position = Vector2(110, 443)
+scale = Vector2(2, 2)
+texture = ExtResource("8_aop8u")
+
+[node name="Attack2" type="Label" parent="."]
+offset_left = 202.0
+offset_top = 402.0
+offset_right = 531.0
+offset_bottom = 467.0
+theme_override_font_sizes/font_size = 47
+text = "Quitar Dialogo
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -503.0
+offset_top = -317.0
+offset_right = -218.0
+offset_bottom = -142.0
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+
+[node name="volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volver"
+
+[connection signal="pressed" from="VBoxContainer/volver" to="." method="_on_volver_pressed"]

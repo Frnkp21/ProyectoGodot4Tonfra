@@ -38,6 +38,7 @@ func _physics_process(delta):
 	if health <= 0:
 		player_alive=false #agregar un menu de respawn o algo
 		health = 0
+		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 		print("player has been killed")
 		self.queue_free()
 
@@ -198,4 +199,5 @@ func _on_interact_body_exited(body):
 		interrogante = false
 		print("no se ve")
 		$Interact/interrogante.visible = interrogante
+
 
