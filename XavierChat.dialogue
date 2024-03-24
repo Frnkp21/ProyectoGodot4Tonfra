@@ -1,0 +1,11 @@
+~ start
+
+Xavier: [[KLK|Buenas|Hola]], vecino como te va?
+- Pues muy bien
+	Xavier: me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas
+	- Eso me ha dicho mi madre, pero tranquilo yo se defenderme.
+		Xavier: vale, pero ves con cuidado chaval
+	- Adios => END
+- Adios
+
+=> END

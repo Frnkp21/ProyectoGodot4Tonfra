@@ -1,0 +1,178 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xbhl3"]
+
+[resource]
+script = ExtResource("1_xbhl3")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Guarda Bosques")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "end",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "No, ahora mismo no me renta",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, ahora mismo no me renta",
+"type": "response"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "end",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "15",
+"next_id_after": "15",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Adios",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Adios",
+"type": "response"
+},
+"15": {
+"id": "15",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Guarda Bosques",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Buenas|Hola|Hey]], Aventurero.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Buenas|Hola|Hey]], Aventurero.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "15",
+"notes": "",
+"responses": PackedStringArray("4", "13"),
+"tags": PackedStringArray(),
+"text": "Buenas",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Buenas",
+"type": "response"
+},
+"5": {
+"character": "Guarda Bosques",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Podrias ayudarme con una cosita?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Podrias ayudarme con una cosita?",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "4",
+"responses": PackedStringArray("6", "12"),
+"tags": PackedStringArray(),
+"text": "Si",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Si",
+"type": "response"
+},
+"7": {
+"character": "Guarda Bosques",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "15",
+"notes": "",
+"parent_id": "6",
+"responses": PackedStringArray("8", "10"),
+"tags": PackedStringArray(),
+"text": "Si, cuenta conmigo",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Si, cuenta conmigo",
+"type": "response"
+},
+"9": {
+"character": "Guarda Bosques",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "15",
+"notes": "",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Gracias!!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Gracias!!!",
+"type": "dialogue"
+}
+}
+raw_text = "~ start
+
+Guarda Bosques: [[Buenas|Hola|Hey]], Aventurero.
+- Buenas
+	Guarda Bosques: Podrias ayudarme con una cosita?
+	- Si
+		Guarda Bosques: han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?
+		- Si, cuenta conmigo
+			Guarda Bosques: Gracias!!!
+		- No, ahora mismo no me renta => END
+		
+	- No => END
+- Adios
+
+=> END"
+metadata/dialogue_manager_version = "2.36.0"

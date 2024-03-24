@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_k688k"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_44wyn"]
 
 [resource]
-script = ExtResource("1_k688k")
+script = ExtResource("1_44wyn")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
 }
-character_names = PackedStringArray("Mother")
+character_names = PackedStringArray("Madre")
 first_title = "3"
 lines = {
 "1": {
@@ -39,9 +39,9 @@ lines = {
 "next_id_after": "14",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "adios puta dejame en paz",
+"text": "adios",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "adios puta dejame en paz",
+"translation_key": "adios",
 "type": "response"
 },
 "14": {
@@ -51,7 +51,7 @@ lines = {
 "type": "goto"
 },
 "3": {
-"character": "Mother",
+"character": "Madre",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
@@ -77,7 +77,7 @@ lines = {
 "type": "response"
 },
 "5": {
-"character": "Mother",
+"character": "Madre",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
@@ -105,7 +105,7 @@ lines = {
 "type": "response"
 },
 "7": {
-"character": "Mother",
+"character": "Madre",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
@@ -133,7 +133,7 @@ lines = {
 "type": "response"
 },
 "9": {
-"character": "Mother",
+"character": "Madre",
 "character_replacements": Array[Dictionary]([]),
 "id": "9",
 "next_id": "14",
@@ -148,16 +148,16 @@ lines = {
 }
 raw_text = "~ start
 
-Mother: [[Hola|Buenas]].. hijo como estas?
+Madre: [[Hola|Buenas]].. hijo como estas?
 - Bien ma 
-	Mother: A donde vas?
+	Madre: A donde vas?
 	- A la ciudad
-		Mother: Vale ten cuidado con el bosque
+		Madre: Vale ten cuidado con el bosque
 		- Porque dices eso?
-			Mother: estos dias el bosque esta muy peligroso
+			Madre: estos dias el bosque esta muy peligroso
 	- Adios => END
 	
-- adios puta dejame en paz => END
+- adios => END
 
 => END"
 metadata/dialogue_manager_version = "2.36.0"

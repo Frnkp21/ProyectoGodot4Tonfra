@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cnyj1y25gs3d"
+path="res://.godot/imported/XavierChat.dialogue-ef8ce883b4e04123074b2fb3f90d892b.tres"
+
+[deps]
+
+source_file="res://XavierChat.dialogue"
+dest_files=["res://.godot/imported/XavierChat.dialogue-ef8ce883b4e04123074b2fb3f90d892b.tres"]
+
+[params]
+
+defaults=true

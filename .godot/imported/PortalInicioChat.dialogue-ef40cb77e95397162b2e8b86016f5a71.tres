@@ -1,0 +1,110 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qhk3x"]
+
+[resource]
+script = ExtResource("1_qhk3x")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Portal", "Desconocido")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Portal",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "........",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "........",
+"type": "dialogue"
+},
+"5": {
+"character": "Desconocido",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo",
+"type": "dialogue"
+},
+"6": {
+"character": "Desconocido",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales",
+"type": "dialogue"
+},
+"7": {
+"character": "Desconocido",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos",
+"type": "dialogue"
+},
+"8": {
+"character": "Desconocido",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Me quedo sin tiempo.... Vienen a por mi...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Me quedo sin tiempo.... Vienen a por mi...",
+"type": "dialogue"
+},
+"9": {
+"character": "Desconocido",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "11",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "...............",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...............",
+"type": "dialogue"
+}
+}
+raw_text = "~ start
+
+Portal: ........
+
+Desconocido: Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo
+Desconocido: Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales
+Desconocido: Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos
+Desconocido: Me quedo sin tiempo.... Vienen a por mi... 
+Desconocido: ............... 
+
+=> END"
+metadata/dialogue_manager_version = "2.36.0"

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=70 format=3 uid="uid://bj0sju3foal3c"]
+[gd_resource type="TileSet" load_steps=74 format=3 uid="uid://bj0sju3foal3c"]
 
 [ext_resource type="Texture2D" uid="uid://hlxpeq7vcp80" path="res://Assets/Map/Exterior/hierba1.png" id="1_o5jrc"]
 [ext_resource type="Texture2D" uid="uid://x5guiv4wnish" path="res://Assets/Map/Exterior/DecoExterior/arbusto2.png" id="2_p2eiy"]
@@ -32,7 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://boiefuaxo5d2p" path="res://Assets/Map/Exterior/DecoExterior/florRaraRosa.png" id="26_umxsx"]
 [ext_resource type="Texture2D" uid="uid://ckfocvrw1myki" path="res://Assets/Map/Exterior/caminoDePiedrasConHierbas.png" id="27_cjj88"]
 [ext_resource type="Texture2D" uid="uid://ciksxjmmlgyb5" path="res://Assets/Map/Exterior/suelo_cesped_bordes_calle.png" id="27_mjdbm"]
+[ext_resource type="Texture2D" uid="uid://pglhsilg0qns" path="res://Assets/Additional/tp.png" id="28_f8rjb"]
 [ext_resource type="Texture2D" uid="uid://cpjgxpbgs017e" path="res://Assets/Map/Exterior/cesped.png" id="28_ivq6g"]
+[ext_resource type="Texture2D" uid="uid://4dhag16mlxbu" path="res://Assets/Additional/tp_petit.png" id="29_mtn2l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lc4cc"]
 texture = ExtResource("1_o5jrc")
@@ -889,6 +891,30 @@ texture_region_size = Vector2i(32, 32)
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qvh0u"]
+texture = ExtResource("28_f8rjb")
+texture_region_size = Vector2i(32, 32)
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mc0se"]
+texture = ExtResource("29_mtn2l")
+texture_region_size = Vector2i(32, 32)
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4e0yi"]
 texture = ExtResource("23_s2h6g")
 texture_region_size = Vector2i(32, 32)
@@ -1173,3 +1199,5 @@ sources/31 = SubResource("TileSetAtlasSource_pqn1p")
 sources/32 = SubResource("TileSetAtlasSource_iv10n")
 sources/33 = SubResource("TileSetAtlasSource_ndhs0")
 sources/34 = SubResource("TileSetAtlasSource_kf870")
+sources/35 = SubResource("TileSetAtlasSource_qvh0u")
+sources/36 = SubResource("TileSetAtlasSource_mc0se")
