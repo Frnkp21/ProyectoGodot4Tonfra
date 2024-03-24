@@ -807,5 +807,5 @@ target_zoom = Vector2(4.5, 4.5)
 [node name="MoveScene2" parent="." instance=ExtResource("15_c7bce")]
 position = Vector2(367, 220)
 target_scene = "Street"
-target_position = Vector2(194, 357)
+target_position = Vector2(290, 520)
 target_zoom = Vector2(3, 3)
