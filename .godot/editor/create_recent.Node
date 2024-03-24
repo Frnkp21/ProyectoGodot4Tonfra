@@ -1,3 +1,4 @@
+TileMap
 Button
 Label
 VideoStreamPlayer
@@ -7,7 +8,6 @@ CollisionShape2D
 Area2D
 CollisionPolygon2D
 StaticBody2D
-TileMap
 CharacterBody2D
 RigidBody2D
 AnimatedSprite2D

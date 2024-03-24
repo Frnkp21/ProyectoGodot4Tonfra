@@ -12,6 +12,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cjoj6")
+target_position = Vector2(-77, -1)
+target_scene = "BedRoom"
+target_zoom = Vector2(4.5, 4.5)
 
 [node name="BlackBack" type="Sprite2D" parent="."]
 position = Vector2(1186.5, 740.5)
@@ -63,7 +66,7 @@ offset_right = 38.0
 offset_bottom = 14.96
 grow_horizontal = 2
 grow_vertical = 0
-text = "Main Menu
+text = "Intentalo otra vez
 "
 
 [connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]

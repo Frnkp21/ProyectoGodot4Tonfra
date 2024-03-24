@@ -23,3 +23,5 @@ res://Scenes/Livingroom.gd
 res://Scenes/Street.gd
 res://Scenes/Forest.gd
 res://Scenes/Hallway.tscn
+res://Scenes/SpawnTrasMuerte.gd
+res://Dead.gd
