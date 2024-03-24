@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xbhl3"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3dx25"]
 
 [resource]
-script = ExtResource("1_xbhl3")
+script = ExtResource("1_3dx25")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -26,9 +26,9 @@ lines = {
 "notes": "",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "No, ahora mismo no me renta",
+"text": "No, ahora mismo no me renta.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "No, ahora mismo no me renta",
+"translation_key": "No, ahora mismo no me renta.",
 "type": "response"
 },
 "12": {
@@ -40,9 +40,9 @@ lines = {
 "notes": "",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "No",
+"text": "No.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "No",
+"translation_key": "No.",
 "type": "response"
 },
 "13": {
@@ -53,9 +53,9 @@ lines = {
 "next_id_after": "15",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Adios",
+"text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Adios",
+"translation_key": "Adios.",
 "type": "response"
 },
 "15": {
@@ -85,9 +85,9 @@ lines = {
 "notes": "",
 "responses": PackedStringArray("4", "13"),
 "tags": PackedStringArray(),
-"text": "Buenas",
+"text": "Buenas.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Buenas",
+"translation_key": "Buenas.",
 "type": "response"
 },
 "5": {
@@ -98,9 +98,9 @@ lines = {
 "notes": "",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Podrias ayudarme con una cosita?",
+"text": "¿Podrías ayudarme con una cosita?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Podrias ayudarme con una cosita?",
+"translation_key": "¿Podrías ayudarme con una cosita?",
 "type": "dialogue"
 },
 "6": {
@@ -113,9 +113,9 @@ lines = {
 "parent_id": "4",
 "responses": PackedStringArray("6", "12"),
 "tags": PackedStringArray(),
-"text": "Si",
+"text": "Si.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Si",
+"translation_key": "Si.",
 "type": "response"
 },
 "7": {
@@ -126,9 +126,9 @@ lines = {
 "notes": "",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?",
+"text": "Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?",
+"translation_key": "Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?",
 "type": "dialogue"
 },
 "8": {
@@ -141,9 +141,9 @@ lines = {
 "parent_id": "6",
 "responses": PackedStringArray("8", "10"),
 "tags": PackedStringArray(),
-"text": "Si, cuenta conmigo",
+"text": "Si, cuenta conmigo.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Si, cuenta conmigo",
+"translation_key": "Si, cuenta conmigo.",
 "type": "response"
 },
 "9": {
@@ -163,16 +163,16 @@ lines = {
 raw_text = "~ start
 
 Guarda Bosques: [[Buenas|Hola|Hey]], Aventurero.
-- Buenas
-	Guarda Bosques: Podrias ayudarme con una cosita?
-	- Si
-		Guarda Bosques: han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?
-		- Si, cuenta conmigo
+- Buenas.
+	Guarda Bosques: ¿Podrías ayudarme con una cosita?
+	- Si.
+		Guarda Bosques: Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?
+		- Si, cuenta conmigo.
 			Guarda Bosques: Gracias!!!
-		- No, ahora mismo no me renta => END
+		- No, ahora mismo no me renta. => END
 		
-	- No => END
-- Adios
+	- No. => END
+- Adios.
 
 => END"
 metadata/dialogue_manager_version = "2.36.0"

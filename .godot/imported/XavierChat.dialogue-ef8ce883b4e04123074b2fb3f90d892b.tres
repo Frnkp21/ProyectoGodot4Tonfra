@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_2bpyr"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_odpgb"]
 
 [resource]
-script = ExtResource("1_2bpyr")
+script = ExtResource("1_odpgb")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -30,9 +30,9 @@ lines = {
 "next_id": "4",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "[[KLK|Buenas|Hola]], vecino como te va?",
+"text": "[[KLK|Buenas|Hola]], vecino, ¿cómo te va?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "[[KLK|Buenas|Hola]], vecino como te va?",
+"translation_key": "[[KLK|Buenas|Hola]], vecino, ¿cómo te va?",
 "type": "dialogue"
 },
 "4": {
@@ -44,9 +44,9 @@ lines = {
 "notes": "",
 "responses": PackedStringArray("4", "9"),
 "tags": PackedStringArray(),
-"text": "Pues muy bien",
+"text": "Pues muy bien.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Pues muy bien",
+"translation_key": "Pues muy bien.",
 "type": "response"
 },
 "5": {
@@ -57,9 +57,9 @@ lines = {
 "notes": "",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas",
+"text": "Me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas",
+"translation_key": "Me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas.",
 "type": "dialogue"
 },
 "6": {
@@ -72,9 +72,9 @@ lines = {
 "parent_id": "4",
 "responses": PackedStringArray("6", "8"),
 "tags": PackedStringArray(),
-"text": "Eso me ha dicho mi madre, pero tranquilo yo se defenderme.",
+"text": "Eso me lo ha dicho mi madre, pero tranquilo, yo sé defenderme.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Eso me ha dicho mi madre, pero tranquilo yo se defenderme.",
+"translation_key": "Eso me lo ha dicho mi madre, pero tranquilo, yo sé defenderme.",
 "type": "response"
 },
 "7": {
@@ -85,9 +85,9 @@ lines = {
 "notes": "",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "vale, pero ves con cuidado chaval",
+"text": "Vale, pero ve con cuidado, chaval.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "vale, pero ves con cuidado chaval",
+"translation_key": "Vale, pero ve con cuidado, chaval.",
 "type": "dialogue"
 },
 "8": {
@@ -99,9 +99,9 @@ lines = {
 "notes": "",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Adios",
+"text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Adios",
+"translation_key": "Adios.",
 "type": "response"
 },
 "9": {
@@ -112,21 +112,21 @@ lines = {
 "next_id_after": "11",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Adios",
+"text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Adios",
+"translation_key": "Adios.",
 "type": "response"
 }
 }
 raw_text = "~ start
 
-Xavier: [[KLK|Buenas|Hola]], vecino como te va?
-- Pues muy bien
-	Xavier: me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas
-	- Eso me ha dicho mi madre, pero tranquilo yo se defenderme.
-		Xavier: vale, pero ves con cuidado chaval
-	- Adios => END
-- Adios
+Xavier: [[KLK|Buenas|Hola]], vecino, ¿cómo te va?
+- Pues muy bien.
+	Xavier: Me alegro, por cierto ten cuidado con el bosque dicen que estos dias han aparecido criaturas extrañas.
+	- Eso me lo ha dicho mi madre, pero tranquilo, yo sé defenderme.
+		Xavier: Vale, pero ve con cuidado, chaval.
+	- Adios. => END
+- Adios.
 
 => END"
 metadata/dialogue_manager_version = "2.36.0"

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qhk3x"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yspl0"]
 
 [resource]
-script = ExtResource("1_qhk3x")
+script = ExtResource("1_yspl0")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -42,9 +42,9 @@ lines = {
 "next_id": "6",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo",
+"text": "Hola chaval, no tenemos mucho tiempo. Te explico rápido lo que está sucediendo.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo",
+"translation_key": "Hola chaval, no tenemos mucho tiempo. Te explico rápido lo que está sucediendo.",
 "type": "dialogue"
 },
 "6": {
@@ -54,9 +54,9 @@ lines = {
 "next_id": "7",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales",
+"text": "Vengo de un futuro catastrófico y tú eres la única persona capaz de arreglarlo. Por culpa de este futuro desastroso, se están abriendo portales en todo el mundo, de los cuales vienen criaturas extrañas de otras dimensiones y líneas temporales.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales",
+"translation_key": "Vengo de un futuro catastrófico y tú eres la única persona capaz de arreglarlo. Por culpa de este futuro desastroso, se están abriendo portales en todo el mundo, de los cuales vienen criaturas extrañas de otras dimensiones y líneas temporales.",
 "type": "dialogue"
 },
 "7": {
@@ -66,9 +66,9 @@ lines = {
 "next_id": "8",
 "notes": "",
 "tags": PackedStringArray(),
-"text": "Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos",
+"text": "Tendrás que volver al pasado en numerosas ocasiones para corregir las brechas y cerrar los portales. Solo tú puedes hacerlo. La humanidad está en tus manos.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos",
+"translation_key": "Tendrás que volver al pasado en numerosas ocasiones para corregir las brechas y cerrar los portales. Solo tú puedes hacerlo. La humanidad está en tus manos.",
 "type": "dialogue"
 },
 "8": {
@@ -100,9 +100,9 @@ raw_text = "~ start
 
 Portal: ........
 
-Desconocido: Hola chaval no tenemos mucho tiempo te explico rapido lo que esta sucediendo
-Desconocido: Vengo un futuro catastrofico y tu eres la unica persona que es capaz de arreglarlo por culpa de este futuro desastroso se estan abriendo portales en todo el mundo del cual vienen criaturas extrañas de otras dimensiones y lineas temporales
-Desconocido: Tendras que volver al pasado en numerosas veces para correguir las brechas y cerrar los portales solo tu puedes hacerlo la humanidad esta en tus manos
+Desconocido: Hola chaval, no tenemos mucho tiempo. Te explico rápido lo que está sucediendo.
+Desconocido: Vengo de un futuro catastrófico y tú eres la única persona capaz de arreglarlo. Por culpa de este futuro desastroso, se están abriendo portales en todo el mundo, de los cuales vienen criaturas extrañas de otras dimensiones y líneas temporales.
+Desconocido: Tendrás que volver al pasado en numerosas ocasiones para corregir las brechas y cerrar los portales. Solo tú puedes hacerlo. La humanidad está en tus manos.
 Desconocido: Me quedo sin tiempo.... Vienen a por mi... 
 Desconocido: ............... 
 

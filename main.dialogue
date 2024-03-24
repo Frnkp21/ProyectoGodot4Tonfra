@@ -1,14 +1,14 @@
 ~ start
 
-Madre: [[Hola|Buenas]].. hijo como estas?
+Madre: [[Hola|Buenas]].. Hijo, ¿cómo estás?
 - Bien ma 
 	Madre: A donde vas?
-	- A la ciudad
-		Madre: Vale ten cuidado con el bosque
+	- A la ciudad.
+		Madre: Vale ten cuidado con el bosque.
 		- Porque dices eso?
-			Madre: estos dias el bosque esta muy peligroso
-	- Adios => END
+			Madre: Estos dias el bosque esta muy peligroso.
+	- Adios. => END
 	
-- adios => END
+- Adios. => END
 
 => END

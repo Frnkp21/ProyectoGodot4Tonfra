@@ -1,15 +1,15 @@
 ~ start
 
 Guarda Bosques: [[Buenas|Hola|Hey]], Aventurero.
-- Buenas
-	Guarda Bosques: Podrias ayudarme con una cosita?
-	- Si
-		Guarda Bosques: han aparecido una especie de bichos raros y me gustaria que me ayudases a acabar con ellos, estarias dispuesto?
-		- Si, cuenta conmigo
+- Buenas.
+	Guarda Bosques: ¿Podrías ayudarme con una cosita?
+	- Si.
+		Guarda Bosques: Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?
+		- Si, cuenta conmigo.
 			Guarda Bosques: Gracias!!!
-		- No, ahora mismo no me renta => END
+		- No, ahora mismo no me renta. => END
 		
-	- No => END
-- Adios
+	- No. => END
+- Adios.
 
 => END
