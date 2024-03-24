@@ -1,50 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmfdss347dvja"]
+[gd_scene load_steps=8 format=3 uid="uid://cmfdss347dvja"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
 [ext_resource type="Script" path="res://Scripts/Forest.gd" id="1_bmqeg"]
-[ext_resource type="Texture2D" uid="uid://cpjgxpbgs017e" path="res://Assets/Map/Exterior/cesped.png" id="2_24apy"]
-[ext_resource type="Texture2D" uid="uid://cnf0mrdji13d8" path="res://Assets/Map/Exterior/tierra.png" id="3_ahgp7"]
-[ext_resource type="Texture2D" uid="uid://dhhtg7nwspf57" path="res://Assets/Map/Exterior/tierra2.png" id="4_f3h3s"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_kclhs"]
-[ext_resource type="Texture2D" uid="uid://b47p7d7lispoe" path="res://Assets/Map/Cueva/suelo_entero_cueva.png" id="5_oqb3y"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="7_67dqw"]
 [ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="7_tn5fg"]
 [ext_resource type="Script" path="res://Scripts/MoveScene_smooth.gd" id="10_hgn4e"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_supsr"]
-texture = ExtResource("2_24apy")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ipl6k"]
-texture = ExtResource("3_ahgp7")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_umg5i"]
-texture = ExtResource("4_f3h3s")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktlm5"]
-texture = ExtResource("5_oqb3y")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_23f8w"]
-tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_supsr")
-sources/1 = SubResource("TileSetAtlasSource_ipl6k")
-sources/2 = SubResource("TileSetAtlasSource_umg5i")
-sources/3 = SubResource("TileSetAtlasSource_ktlm5")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5std7"]
 size = Vector2(24, 97)
@@ -59,13 +20,19 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_ara27")
 
 [node name="Background" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_23f8w")
+tile_set = ExtResource("7_tn5fg")
 format = 2
 layer_0/name = "Background"
-layer_0/tile_data = PackedInt32Array(393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 327690, 2, 0, 327689, 2, 0, 327688, 2, 0, 327687, 2, 0, 393223, 2, 0, 393222, 2, 0, 327685, 2, 0, 327686, 2, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 327691, 2, 0, 327692, 2, 0, 393228, 2, 0, 393221, 2, 0, 393227, 2, 0, 393220, 2, 0, 327684, 2, 0, 262149, 0, 0, 196614, 0, 0, 393229, 2, 0, 327693, 2, 0, 327694, 2, 0, 393230, 2, 0, 262158, 0, 0, 262157, 0, 0, 262156, 0, 0, 262155, 0, 0, 196617, 0, 0, 196616, 0, 0, 196615, 0, 0, 196613, 0, 0, 196612, 0, 0, 262148, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 458766, 0, 0, 458765, 0, 0, 458764, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 458757, 0, 0, 458756, 0, 0, 589838, 0, 0, 589837, 0, 0, 589836, 0, 0, 589835, 0, 0, 589834, 0, 0, 589833, 0, 0, 589832, 0, 0, 589831, 0, 0, 589830, 0, 0, 589829, 0, 0)
+layer_0/tile_data = PackedInt32Array(589837, 65566, 1, 327694, 65566, 2, 327693, 65566, 2, 327692, 65566, 2, 327691, 65566, 2, 327690, 65566, 2, 327689, 65566, 2, 327688, 65566, 2, 327687, 65566, 2, 327686, 65566, 2, 327685, 65566, 2, 327684, 65566, 2, 458766, 65566, 0, 458765, 65566, 0, 458764, 65566, 0, 458763, 65566, 0, 458762, 65566, 0, 458761, 65566, 0, 458760, 65566, 0, 458759, 65566, 0, 458758, 65566, 0, 458757, 65566, 0, 458756, 65566, 0, 262158, 65566, 1, 262157, 65566, 1, 262156, 65566, 1, 262155, 65566, 1, 262154, 65566, 1, 262153, 65566, 1, 262152, 65566, 1, 262151, 65566, 1, 262150, 65566, 1, 262149, 65566, 1, 262148, 65566, 1, 196612, 65566, 1, 196613, 65566, 1, 196614, 65566, 1, 196615, 65566, 1, 196616, 65566, 1, 196617, 65566, 1, 196618, 65566, 1, 196619, 65566, 1, 196620, 65566, 1, 196621, 65566, 1, 196622, 65566, 1, 131086, 65566, 1, 131085, 65566, 1, 131084, 65566, 1, 131083, 65566, 1, 131082, 65566, 1, 131081, 65566, 1, 131080, 65566, 1, 131079, 65566, 1, 131078, 65566, 1, 131077, 65566, 1, 131076, 65566, 1, 524292, 65566, 1, 524293, 65566, 1, 524294, 65566, 1, 524295, 65566, 1, 524296, 65566, 1, 524297, 65566, 1, 524298, 65566, 1, 524299, 65566, 1, 524300, 65566, 1, 524301, 65566, 1, 524302, 65566, 1, 589838, 65566, 1, 589836, 65566, 1, 589835, 65566, 1, 589834, 65566, 1, 589833, 65566, 1, 589832, 65566, 1, 589831, 65566, 1, 589830, 65566, 1, 589829, 65566, 1, 589828, 65566, 1, 655364, 65566, 1, 655365, 65566, 1, 655366, 65566, 1, 655367, 65566, 1, 655368, 65566, 1, 655369, 65566, 1, 655370, 65566, 1, 655371, 65566, 1, 655372, 65566, 1, 655373, 65566, 1, 655374, 65566, 1)
+
+[node name="ground path" type="TileMap" parent="."]
+tile_set = ExtResource("7_tn5fg")
+format = 2
+layer_0/name = "ground path"
+layer_0/tile_data = PackedInt32Array(327694, 65567, 0, 327693, 65567, 0, 327692, 65567, 0, 327691, 65567, 0, 327690, 65567, 0, 327689, 65567, 0, 327688, 65567, 0, 327687, 65567, 0, 327686, 65567, 0, 327685, 65567, 0, 327684, 65567, 0, 393230, 65567, 1, 393229, 65567, 1, 393228, 65567, 1, 393227, 65567, 1, 393226, 65567, 1, 393225, 65567, 1, 393224, 65567, 1, 393223, 65567, 1, 393222, 65567, 1, 393221, 65567, 1, 393220, 65567, 1, 458766, 65567, 2, 458765, 65567, 2, 458764, 65567, 2, 458763, 65567, 2, 458762, 65567, 2, 458761, 65567, 2, 458760, 65567, 2, 458759, 65567, 2, 458758, 65567, 2, 458757, 65567, 2, 458756, 65567, 2)
 
 [node name="player" parent="." instance=ExtResource("5_kclhs")]
-position = Vector2(460, 190)
+position = Vector2(459, 203)
 
 [node name="Montañita" type="TileMap" parent="."]
 tile_set = ExtResource("7_tn5fg")
