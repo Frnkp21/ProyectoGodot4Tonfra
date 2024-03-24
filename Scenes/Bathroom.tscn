@@ -1,7 +1,7 @@
 [gd_scene load_steps=43 format=3 uid="uid://cq8rnooqvps1d"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
-[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_3prne"]
+[ext_resource type="Script" path="res://Scripts/Bathroom.gd" id="1_rrdkc"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://74fptla1m3fg" path="res://Assets/Map/casa/azulejo.png" id="4"]
@@ -848,7 +848,7 @@ sources/11 = SubResource("TileSetAtlasSource_xpjo4")
 sources/12 = SubResource("TileSetAtlasSource_vfslw")
 
 [node name="Bathroom" type="Node2D" node_paths=PackedStringArray("player")]
-script = ExtResource("1_3prne")
+script = ExtResource("1_rrdkc")
 player = NodePath("player")
 
 [node name="BlackBack" type="Sprite2D" parent="."]

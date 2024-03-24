@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://deqmiiupipoiw"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
-[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_ws01v"]
+[ext_resource type="Script" path="res://Scripts/Street.gd" id="1_a2iqd"]
 [ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="4_wyo8l"]
-[ext_resource type="Script" path="res://Scenes/Forest_transition_point.gd" id="10_yfjyp"]
+[ext_resource type="Script" path="res://Scripts/MoveScene_smooth.gd" id="10_hhvf7"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="15"]
 [ext_resource type="Texture2D" uid="uid://c5dh0sotupijk" path="res://Assets/Map/Exterior/DecoExterior/monticulo_de_tierra.png" id="19_wudem"]
 [ext_resource type="PackedScene" uid="uid://dppkaro83hemm" path="res://Scenes/enemy.tscn" id="28_6hcq7"]
@@ -59,14 +59,8 @@ sources/0 = SubResource("TileSetAtlasSource_usgjt")
 size = Vector2(42, 84)
 
 [node name="Street" type="Node2D" node_paths=PackedStringArray("player")]
-script = ExtResource("1_ws01v")
+script = ExtResource("1_a2iqd")
 player = NodePath("player")
-
-[node name="MoveScene" parent="." instance=ExtResource("29_3lqnr")]
-position = Vector2(610, 197)
-target_scene = "Livingroom"
-target_position = Vector2(368, 212)
-target_zoom = Vector2(4.5, 4.5)
 
 [node name="Black" type="Sprite2D" parent="."]
 position = Vector2(50, 366)
@@ -110,7 +104,7 @@ position = Vector2(485, 322)
 position = Vector2(116, 314)
 
 [node name="player" parent="." instance=ExtResource("15")]
-position = Vector2(610, 209)
+position = Vector2(60, 357)
 
 [node name="techoHouses" type="TileMap" parent="."]
 position = Vector2(34, -53)
@@ -131,16 +125,17 @@ position = Vector2(595, 529)
 [node name="Enemy4" parent="." instance=ExtResource("28_6hcq7")]
 position = Vector2(713, 407)
 
-[node name="MoveScene2" parent="." instance=ExtResource("29_3lqnr")]
-visible = false
-position = Vector2(140, 313)
-rotation = 1.5708
-target_scene = "Forest"
-target_position = Vector2(472, 171)
-target_zoom = Vector2(3, 3)
+[node name="MoveScene" parent="." instance=ExtResource("29_3lqnr")]
+position = Vector2(610, 197)
+target_scene = "Livingroom"
+target_position = Vector2(368, 212)
+target_zoom = Vector2(4.5, 4.5)
 
 [node name="Forest_transition_point" type="Area2D" parent="."]
-script = ExtResource("10_yfjyp")
+script = ExtResource("10_hhvf7")
+target_scene = "Forest"
+target_position = Vector2(459, 190)
+target_zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Forest_transition_point"]
 position = Vector2(21, 352)

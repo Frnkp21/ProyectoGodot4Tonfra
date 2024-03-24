@@ -1,7 +1,7 @@
 [gd_scene load_steps=34 format=3 uid="uid://bed8impuogdfw"]
 
 [ext_resource type="Texture2D" uid="uid://cee0p48iy4te7" path="res://istock-1071006450_small.jpg" id="1"]
-[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_kxrb3"]
+[ext_resource type="Script" path="res://Scripts/Livingroom.gd" id="1_rca8m"]
 [ext_resource type="Texture2D" uid="uid://c6mgodwy2ndnw" path="res://Assets/Map/casa/decoracioncasa/armario.png" id="2"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://b2g08cmcp45yf" path="res://Assets/Map/casa/puerta.png" id="5"]
@@ -755,7 +755,7 @@ sources/14 = SubResource("TileSetAtlasSource_tvgo7")
 sources/15 = SubResource("TileSetAtlasSource_k1qia")
 
 [node name="Livingroom" type="Node2D" node_paths=PackedStringArray("player")]
-script = ExtResource("1_kxrb3")
+script = ExtResource("1_rca8m")
 player = NodePath("player")
 
 [node name="BlackBack" type="Sprite2D" parent="."]

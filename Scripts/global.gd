@@ -5,6 +5,9 @@ var player_current_attack = false
 var found_mother_item = false
 var given_mother_item = false
 
+var posicion = Vector2()
+var zoom = Vector2()
+
 
 #var current_scene = String
 var transition_scene = false

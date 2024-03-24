@@ -18,8 +18,8 @@ func cambiar_escena():
 	for body in bodies:
 		if body.name == "player":
 			# Guarda las coordenadas en la clase de coordenadas
-			Coordenadas.posicion = target_position
-			Coordenadas.zoom = target_zoom
+			global.posicion = target_position
+			global.zoom = target_zoom
 			# Abre la nueva escena
 			get_tree().change_scene_to_file("res://Scenes/" + target_scene + ".tscn")
 			return  # Evitar cambiar la escena múltiples veces si hay varios cuerpos solapados

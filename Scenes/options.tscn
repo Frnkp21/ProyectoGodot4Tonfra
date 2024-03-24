@@ -38,6 +38,7 @@ theme_override_font_sizes/font_size = 47
 text = "Interactuar"
 
 [node name="Attack" type="Label" parent="."]
+layout_mode = 0
 offset_left = 198.0
 offset_top = 305.0
 offset_right = 454.0
@@ -81,6 +82,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("8_aop8u")
 
 [node name="Attack2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 202.0
 offset_top = 402.0
 offset_right = 531.0

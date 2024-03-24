@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cimkrlrls0ywv"]
 
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="1"]
-[ext_resource type="Script" path="res://Scripts/Hallway.gd" id="1_n2dju"]
+[ext_resource type="Script" path="res://Scripts/BedRoom.gd" id="1_27xm5"]
 [ext_resource type="TileSet" uid="uid://b54boqsi6bs7m" path="res://tilemaps/bedroomtile.tres" id="2"]
 [ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="3"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="4"]
@@ -9,7 +9,7 @@
 
 [node name="BedRoom" type="Node2D" node_paths=PackedStringArray("player")]
 position = Vector2(319, 180)
-script = ExtResource("1_n2dju")
+script = ExtResource("1_27xm5")
 player = NodePath("player")
 
 [node name="Black" type="Sprite2D" parent="."]
