@@ -209,7 +209,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19.8425, -15.9732, 19.7433, -15.9732, 19.7433, 15.874, -19.9417, 15.874)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -856,6 +856,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("1")
 
 [node name="Background" type="TileMap" parent="."]
+position = Vector2(0, 3)
 tile_set = SubResource("3")
 format = 2
 layer_0/name = "Background"
@@ -864,9 +865,10 @@ layer_1/name = "Deco"
 layer_1/tile_data = PackedInt32Array(262154, 10, 0, 131077, 6, 0, 196618, 11, 0, 131078, 9, 0)
 
 [node name="Deco" type="TileMap" parent="."]
-position = Vector2(256, 97)
+position = Vector2(256, 106)
 tile_set = SubResource("7")
 format = 2
+layer_0/tile_data = PackedInt32Array(-131072, 3, 131072, -131071, 3, 196608, -65536, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("2")]
 position = Vector2(248, 118)
