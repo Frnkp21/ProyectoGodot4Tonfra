@@ -713,7 +713,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-37.5, -14, 39.5, -13.75, 52, -8.75, 60.25, 0.25, 65.5, 4.25, 66, 27, 64.5, 39, 56.25, 48.25, 42.5, 58.75, -42.75, 59.5, -57.75, 47.75, -63.5, 36.25, -66.25, 25.75, -66.75, 11, -64.75, 1.25, -54, -6.25, -47.25, -9.75)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60.3584, 1.7818, -58.5764, 0.747429, 58.1316, 0.670948, 59.6902, 2.6727, 61.472, 4.45449, 62.25, 16, -62.3629, 15.8134, -62.4643, 4.67206)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6vabp"]
 texture = ExtResource("21_iiiho")

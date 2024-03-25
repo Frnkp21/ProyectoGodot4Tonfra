@@ -140,7 +140,7 @@ func enemy_attack():
 		global.hpProtagonista = global.hpProtagonista - 10
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print(global.hpProtagonista)
+		
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
@@ -177,7 +177,6 @@ func _on_deal_attack_timer_timeout():
 func update_health():
 	var healthbar = $healthbar
 	healthbar.value = global.hpProtagonista
-	print(global.hpProtagonista)
 	
 	if global.hpProtagonista >= 100:
 		healthbar.visible = false

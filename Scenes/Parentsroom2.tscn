@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://c417qymmhxvs5"]
+
+[ext_resource type="Script" path="res://Scripts/Parentsroom2.gd" id="1_xqaa7"]
+[ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_xotw8"]
+[ext_resource type="TileSet" uid="uid://b54boqsi6bs7m" path="res://tilemaps/bedroomtile.tres" id="3_quinu"]
+[ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="4_2f3vu"]
+[ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_xwrgj"]
+[ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_wrdeu"]
+
+[node name="Parentsroom2" type="Node2D" node_paths=PackedStringArray("player")]
+position = Vector2(126, 122)
+script = ExtResource("1_xqaa7")
+player = NodePath("player")
+
+[node name="BlackBack" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_xotw8")
+
+[node name="Background" type="TileMap" parent="."]
+tile_set = ExtResource("3_quinu")
+format = 2
+layer_0/tile_data = PackedInt32Array(-131069, 10, 0, -131068, 10, 0, -131067, 10, 0, -131066, 10, 0, -131065, 10, 0, -131064, 10, 0, -131063, 10, 0, -131062, 10, 0, -65533, 10, 0, -65532, 2, 0, -65531, 2, 0, -65530, 2, 0, -65529, 2, 0, -65528, 2, 0, -65527, 2, 0, -65526, 10, 0, 3, 10, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 10, 0, 65539, 10, 0, 65540, 21, 0, 65541, 21, 0, 65542, 21, 0, 65543, 21, 0, 65544, 21, 0, 65545, 21, 0, 65546, 10, 0, 131075, 10, 0, 131076, 21, 0, 131077, 21, 0, 131078, 21, 0, 131079, 21, 0, 131080, 21, 0, 131081, 21, 0, 131082, 10, 0, 196611, 10, 0, 196612, 21, 0, 196613, 21, 0, 196614, 21, 0, 196615, 21, 0, 196616, 22, 0, 196617, 23, 0, 196618, 10, 0, 262147, 10, 0, 262148, 10, 0, 262149, 10, 0, 262150, 10, 0, 262151, 10, 0, 262152, 10, 0, 262153, 10, 0, 262154, 10, 0)
+
+[node name="Deco" type="TileMap" parent="."]
+position = Vector2(0, -17)
+tile_set = ExtResource("4_2f3vu")
+format = 2
+layer_0/tile_data = PackedInt32Array(8, 0, 0, 9, 1, 0, 65540, 15, 0, 65541, 11, 0, 65542, 12, 0, 65543, 15, 0, 65544, 2, 0, 65545, 3, 0, 131077, 13, 0, 131078, 14, 0)
+
+[node name="player" parent="." instance=ExtResource("5_xwrgj")]
+position = Vector2(243, 82)
+
+[node name="MoveScene2" parent="." instance=ExtResource("6_wrdeu")]
+position = Vector2(287, 124)
+target_scene = "Hallway2"
+target_position = Vector2(305, 89)
+target_zoom = Vector2(4.5, 4.5)

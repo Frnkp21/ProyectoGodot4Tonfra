@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcyxmwvxxkqr5"]
+
+[ext_resource type="Script" path="res://Scripts/BedRoom2.gd" id="1_35mvf"]
+[ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_jdwty"]
+[ext_resource type="TileSet" uid="uid://b54boqsi6bs7m" path="res://tilemaps/bedroomtile.tres" id="3_gjuhp"]
+[ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="4_ervfq"]
+[ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_loagu"]
+[ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_gry5q"]
+
+[node name="BedRoom2" type="Node2D" node_paths=PackedStringArray("player")]
+position = Vector2(319, 180)
+script = ExtResource("1_35mvf")
+player = NodePath("player")
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(12, 19)
+scale = Vector2(3, 3)
+texture = ExtResource("2_jdwty")
+
+[node name="Backgroud" type="TileMap" parent="."]
+tile_set = ExtResource("3_gjuhp")
+format = 2
+layer_0/name = "background"
+layer_0/tile_data = PackedInt32Array(-196612, 10, 0, -196611, 10, 0, -196610, 10, 0, -196609, 10, 0, -262144, 10, 0, -262141, 10, 0, -262140, 10, 0, -131076, 10, 0, -131075, 2, 0, -131074, 2, 0, -131073, 2, 0, -196608, 2, 0, -196607, 2, 0, -196606, 1, 0, -196605, 2, 0, -196604, 10, 0, -65540, 10, 0, -65539, 4, 0, -65538, 4, 0, -65537, 4, 0, -131072, 4, 0, -131071, 4, 0, -131070, 0, 0, -131069, 4, 0, -131068, 10, 0, -4, 10, 0, -3, 21, 0, -2, 21, 0, -1, 21, 0, -65536, 21, 0, -65535, 21, 0, -65534, 21, 0, -65533, 21, 0, -65532, 10, 0, 65532, 10, 0, 65533, 21, 0, 65534, 21, 0, 65535, 21, 0, 0, 21, 0, 1, 21, 0, 2, 21, 0, 3, 21, 0, 4, 10, 0, 131068, 10, 0, 131069, 21, 0, 131070, 21, 0, 131071, 21, 0, 65536, 21, 0, 65537, 21, 0, 65538, 21, 0, 65539, 21, 0, 65540, 10, 0, 196604, 10, 0, 196605, 10, 0, 196606, 10, 0, 196607, 10, 0, 131072, 10, 0, 131073, 10, 0, 131074, 10, 0, 131075, 10, 0, 131076, 10, 0)
+layer_1/name = "deco"
+layer_1/enabled = false
+layer_1/tile_data = PackedInt32Array(-65536, 18, 0, -196608, 19, 0, -2, 16, 0, 131070, 17, 0)
+
+[node name="Deco" type="TileMap" parent="."]
+position = Vector2(-1, -20)
+tile_set = ExtResource("4_ervfq")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65539, 0, 0, -65538, 1, 0, -65537, 9, 0, -131072, 10, 0, -3, 2, 0, -2, 3, 0, -1, 8, 0, -65536, 7, 0, 131069, 4, 0, 131070, 5, 0)
+
+[node name="player" parent="." instance=ExtResource("5_loagu")]
+position = Vector2(36, 18)
+
+[node name="MoveScene" parent="." instance=ExtResource("6_gry5q")]
+position = Vector2(80, -44)
+target_scene = "Hallway2"
+target_position = Vector2(432, 148)
+target_zoom = Vector2(4.5, 4.5)

@@ -874,7 +874,7 @@ layer_0/tile_data = PackedInt32Array(-131072, 3, 131072, -131071, 3, 196608, -65
 position = Vector2(248, 118)
 
 [node name="MoveScene" parent="." instance=ExtResource("3")]
-position = Vector2(287, 156)
+position = Vector2(287, 159)
 target_scene = "Hallway"
 target_position = Vector2(433, 89)
 target_zoom = Vector2(4.5, 4.5)
