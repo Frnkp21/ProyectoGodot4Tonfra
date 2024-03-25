@@ -10,6 +10,8 @@ var player_inattack_zone = false
 
 var can_take_damage = true
 
+var drop_exp = 50
+
 func _physics_process(delta):
 	deal_with_damage()
 	update_health()
@@ -55,6 +57,7 @@ func deal_with_damage():
 			print ("slime health ",health)
 			if health <= 0:
 				self.queue_free()
+				give_experience(player)
 
 
 func _on_take_damage_cooldown_timeout():
@@ -70,3 +73,5 @@ func update_health():
 	else:
 		healthbar.visible = true
 
+func give_experience(player):
+	player.gain_experience(drop_exp)

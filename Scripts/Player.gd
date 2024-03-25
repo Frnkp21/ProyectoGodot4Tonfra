@@ -10,7 +10,6 @@ var portalInicio_in_range = false
 var guardaBosques_in_range = false
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
-var health = 100
 var player_alive = true
 
 var attack_ip = false 
@@ -18,9 +17,11 @@ var is_attacking = false
 
 var interrogante = false
 
+
 func _ready():
 	$AnimatedSprite.play("Idle")
 	$Interact/interrogante.visible = interrogante
+	$xpbar.visible = false
 
 
 func _physics_process(delta):
@@ -28,6 +29,7 @@ func _physics_process(delta):
 	enemy_attack()
 	attack()
 	update_health()
+	update_experience_bar()
 	
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
@@ -50,9 +52,9 @@ func _physics_process(delta):
 			DialogueManager.show_example_dialogue_balloon(load("res://PortalInicioChat.dialogue"))
 			return
 	
-	if health <= 0:
+	if global.hpProtagonista <= 0:
 		player_alive=false #agregar un menu de respawn o algo
-		health = 0
+		global.hpProtagonista = 0
 		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 		print("player has been killed")
 		self.queue_free()
@@ -135,10 +137,10 @@ func _on_player_hitbox_body_exited(body):
 		
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown == true:
-		health = health - 10
+		global.hpProtagonista = global.hpProtagonista - 10
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print(health)
+		print(global.hpProtagonista)
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
@@ -174,21 +176,22 @@ func _on_deal_attack_timer_timeout():
 
 func update_health():
 	var healthbar = $healthbar
-	healthbar.value = health
+	healthbar.value = global.hpProtagonista
+	print(global.hpProtagonista)
 	
-	if health >= 100:
+	if global.hpProtagonista >= 100:
 		healthbar.visible = false
 	else: 
 		healthbar.visible = true
 	
 	
 func _on_regin_timer_timeout():
-	if health < 100:
-		health = health + 15
-		if health > 100:
-			health = 100
-	if health <= 0:
-		health = 0
+	if global.hpProtagonista < 100:
+		global.hpProtagonista = global.hpProtagonista + 15
+		if global.hpProtagonista > 100:
+			global.hpProtagonista = 100
+	if global.hpProtagonista <= 0:
+		global.hpProtagonista = 0
 
 
 func _on_detection_area_chat_body_entered(body):
@@ -227,4 +230,24 @@ func _on_interact_body_exited(body):
 		print("no se ve")
 		$Interact/interrogante.visible = interrogante
 
+func gain_experience(amount):
+	$xpbar.visible = true
+	global.expProtagonista += amount
+	while global.expProtagonista >= global.experience_threshold:
+		level_up()
+	update_experience_bar()
+	desactivar()
 
+func level_up():
+	global.lvlProtagonista += 1
+	print("Jugador ha subido de nivel al nivel: ", global.lvlProtagonista)
+	global.expProtagonista -= global.experience_threshold
+	global.experience_threshold *= 1.3 # Ejemplo de valor; ajusta según tus necesidades en el juego.
+
+func update_experience_bar():
+	var xpbar = $xpbar
+	xpbar.value = global.expProtagonista
+
+func desactivar():
+	await get_tree().create_timer(5).timeout
+	$xpbar.visible = false

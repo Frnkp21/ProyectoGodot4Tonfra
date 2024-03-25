@@ -17,4 +17,9 @@ var player_exit_forest_posy = 0
 var player_start_posx = 0
 var player_start_posy = 0
 
+var lvlProtagonista = 1
+var expProtagonista : int
+var hpProtagonista = 100
+var experience_threshold = 100
+
 
