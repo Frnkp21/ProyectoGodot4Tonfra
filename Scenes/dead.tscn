@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctlu4g2b7gm7s"]
 
-[ext_resource type="Script" path="res://Dead.gd" id="1_cjoj6"]
+[ext_resource type="Script" path="res://Scripts/Dead.gd" id="1_cjoj6"]
 [ext_resource type="VideoStream" path="res://Assets/Additional/Cj-arrepentido-Plantilla-meme-HD.ogv" id="2_fumeg"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_u8f8a"]
 

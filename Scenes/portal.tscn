@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://cwfyg5uc0p4xl"]
 
-[ext_resource type="Script" path="res://Portal.gd" id="1_885qt"]
+[ext_resource type="Script" path="res://Scripts/Portal.gd" id="1_885qt"]
 [ext_resource type="Texture2D" uid="uid://c2bhlxn5rh7v2" path="res://Assets/Additional/tp_petit-sheet.png" id="2_7a6vi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cf2yn"]

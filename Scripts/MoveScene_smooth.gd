@@ -25,5 +25,9 @@ func _process(delta):
 			if body.name == "player":
 				global.posicion = target_position
 				global.zoom = target_zoom
+				#llama a la funcion que hace que aparezca
+				Trans.aparecer()
 				get_tree().change_scene_to_file("res://Scenes/" + target_scene + ".tscn")
+				#llama a la funcion que hace que desaparezca
+				Trans.desaparecer()
 				return

@@ -4,6 +4,7 @@ extends Area2D
 @export var target_position: Vector2
 @export var target_zoom: Vector2
 
+
 func interactuable():
 	pass
 
@@ -20,6 +21,10 @@ func cambiar_escena():
 			# Guarda las coordenadas en la clase de coordenadas
 			global.posicion = target_position
 			global.zoom = target_zoom
+			#llama a la funcion que hace que aparezca
+			Trans.aparecer()
 			# Abre la nueva escena
 			get_tree().change_scene_to_file("res://Scenes/" + target_scene + ".tscn")
+			#llama a la funcion que hace que desaparezca
+			Trans.desaparecer()
 			return  # Evitar cambiar la escena múltiples veces si hay varios cuerpos solapados

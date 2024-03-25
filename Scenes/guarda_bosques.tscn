@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dpavm202gipoo"]
 
-[ext_resource type="Script" path="res://GuardaBosques.gd" id="1_uquao"]
+[ext_resource type="Script" path="res://Scripts/GuardaBosques.gd" id="1_uquao"]
 [ext_resource type="Texture2D" uid="uid://cklk4fmclftya" path="res://Assets/Npc/sarjento_idle.png" id="2_lb8ba"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkhta"]
