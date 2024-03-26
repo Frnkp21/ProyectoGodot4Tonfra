@@ -382,7 +382,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(18.1071, 12.7273)
+size = Vector2(18.1071, 11.4545)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cp0a5"]
 radius = 16.1245
@@ -414,7 +414,7 @@ animation = &"Down_Idle"
 frame_progress = 0.871284
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 2)
+position = Vector2(-0.499995, -1.3411e-06)
 rotation = -3.14159
 scale = Vector2(0.717949, -1.57143)
 shape = SubResource("1")

@@ -110,15 +110,19 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("5_0djex")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/z_index = 15
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.90588, -4.46878, 3.99877, -4.50739, 6.94523, -1.98185, 3.96369, 0.719077, -6.06831, 0.719077, -8.76923, -2.12215)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxy8i"]
 texture = ExtResource("6_sht6j")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/z_index = 15
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.89994, -6.6539, 4.34313, -6.70958, 4.375, -16, 16, -16, 16, 3.9375, 6, 4.1875, -6.625, 4.1875, -10.0783, 0.863058, -10.0226, -3.31303, -8.01809, -5.37323)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4q5ky"]
 texture = ExtResource("7_vk1qd")
@@ -209,7 +213,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19.8425, -15.9732, 19.7433, -15.9732, 19.7433, 15.874, -19.9417, 15.874)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -302,12 +306,17 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1g3w"]
 texture = ExtResource("11_3hag5")
-texture_region_size = Vector2i(32, 32)
+texture_region_size = Vector2i(48, 32)
+0:0/0 = 0
+0:0/0/z_index = 17
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jrvtr"]
 texture = ExtResource("12_umn3k")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/z_index = 16
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
@@ -514,6 +523,7 @@ margins = Vector2i(20, 19)
 texture_region_size = Vector2i(1, 1)
 0:0/next_alternative_id = 8
 0:0/0 = 0
+0:0/0/z_index = 16
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/1 = 1
@@ -557,7 +567,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.7632, -2.2832, -4.616, -4.8752, 4.0672, -4.8752, 6.7888, -2.024, 3.3, 0.4013, -5.658, 0.7745)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.30729, -4.64596, 6.61459, -1.96863, 3.1498, 0.551214, -5.82713, 0.393724, -8.50447, -1.96863, -6.14211, -4.80345)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -783,7 +793,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.8038, -15.9223, 15.9904, 4.2331, 5.5395, 4.6063, -6.96435, 4.6063, -10.5102, 1.4337, -10.5102, -2.8586, -8.08409, -5.2847, 4.4197, -5.8446, 4.6063, -15.5491)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.44094, -6.3, 4, -6.375, 4, -16, 16, -16, 16, 3.125, 5.85354, 4.21654, -6.34961, 4.31575, -9.82205, 2.52992, -11, -1.875)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -864,8 +874,8 @@ layer_0/tile_data = PackedInt32Array(4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0
 layer_1/name = "Deco"
 layer_1/tile_data = PackedInt32Array(262154, 10, 0, 131077, 6, 0, 196618, 11, 0, 131078, 9, 0)
 
-[node name="Deco" type="TileMap" parent="."]
-position = Vector2(256, 106)
+[node name="Deco" type="TileMap" parent="Background"]
+position = Vector2(256, 103)
 tile_set = SubResource("7")
 format = 2
 layer_0/tile_data = PackedInt32Array(-131072, 3, 131072, -131071, 3, 196608, -65536, 0, 0)
