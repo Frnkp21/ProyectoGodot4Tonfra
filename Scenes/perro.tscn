@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgcvciip11u1"]
+
+[ext_resource type="Script" path="res://Scenes/perro.gd" id="1_gyje0"]
+[ext_resource type="Texture2D" uid="uid://bx5u1totdlhqt" path="res://Assets/Npc/perro.png" id="2_v35sg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4hne"]
+atlas = ExtResource("2_v35sg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7quo"]
+atlas = ExtResource("2_v35sg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svanm"]
+atlas = ExtResource("2_v35sg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wk6uh"]
+animations = [{
+"frames": [{
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_g4hne")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_k7quo")
+}, {
+"duration": 2.5,
+"texture": SubResource("AtlasTexture_svanm")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5kbb"]
+size = Vector2(19, 22)
+
+[node name="Perro" type="CharacterBody2D"]
+script = ExtResource("1_gyje0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wk6uh")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_a5kbb")
