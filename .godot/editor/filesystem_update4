@@ -15,3 +15,5 @@ res://Scenes/Parentsroom2.tscn
 res://Scenes/Bathroom2.tscn
 res://Scenes/guarda_bosques.tscn
 res://Scenes/perro.tscn
+res://Scenes/Player.tscn
+res://Scripts/Player.gd
