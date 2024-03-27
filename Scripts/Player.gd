@@ -258,29 +258,29 @@ func player_movement_runing(delta):
 	if !is_attacking:
 		if Input.is_action_pressed("move_right") and Input.is_action_pressed("run"):
 			current_dir = "right"
-			play_anim_runing(1)
+			play_anim_runing(2)
 			velocity.x = speed
 			velocity.y = 0
 		elif Input.is_action_pressed("move_left") and Input.is_action_pressed("run"):
 			current_dir = "left"
-			play_anim_runing(1)
+			play_anim_runing(2)
 			velocity.x = -speed
 			velocity.y = 0
 		elif Input.is_action_pressed("move_down") and Input.is_action_pressed("run"):
 			current_dir = "down"
-			play_anim_runing(1)
+			play_anim_runing(2)
 			velocity.y = speed
 			velocity.x = 0
 		elif Input.is_action_pressed("move_up") and Input.is_action_pressed("run"):
 			current_dir = "up"
-			play_anim_runing(1)
+			play_anim_runing(2)
 			velocity.y = -speed
 			velocity.x = 0
 		else:
 			play_anim_runing(0)
 			velocity.x = 0
 			velocity.y = 0
-			
+		
 		move_and_slide()
 
 
@@ -290,29 +290,29 @@ func play_anim_runing(movement):
 	
 	if dir == "right":
 		anim.flip_h = false
-		if movement == 1:
+		if movement == 2:
 			anim.play("Runing_Right")
-		elif movement == 0:
+		elif movement == 3:
 			if attack_ip == false:
 				anim.play("Right_Idle")
 	if dir == "left":
 		anim.flip_h = false
-		if movement == 1:
+		if movement == 2:
 			anim.play("Runing_Left")
-		elif movement == 0:
+		elif movement == 3:
 			if attack_ip == false:
 				anim.play("Left_Idle")
 	if dir == "up":
 		anim.flip_h = false
-		if movement == 1:
+		if movement == 2:
 			anim.play("Runing_Up")
-		elif movement == 0:
+		elif movement == 3:
 			if attack_ip == false:
 				anim.play("Up_Idle")
 	if dir == "down":
 		anim.flip_h = false
-		if movement == 1:
+		if movement == 2:
 			anim.play("Runing_Down")
-		elif movement == 0:
+		elif movement == 3:
 			if attack_ip == false:
 				anim.play("Down_Idle")
