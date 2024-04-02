@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wswbs"]
-size = Vector2(17, 22)
+size = Vector2(21, 31)
 
 [node name="GuardaBosques" type="CharacterBody2D"]
 script = ExtResource("1_uquao")
@@ -43,5 +43,5 @@ sprite_frames = SubResource("SpriteFrames_n28ey")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_wswbs")

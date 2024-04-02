@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8qek0"]
+
+[resource]
+script = ExtResource("1_8qek0")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("said")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "said",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "guau guau guau..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "guau guau guau..",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "8",
+"notes": "",
+"responses": PackedStringArray("4", "6"),
+"tags": PackedStringArray(),
+"text": "Que monoooo",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Que monoooo",
+"type": "response"
+},
+"5": {
+"character": "said",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "8",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "guauuuuuuuu.....",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "guauuuuuuuu.....",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"next_id_after": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "adios",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "adios",
+"type": "response"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+raw_text = "~ start
+
+said: guau guau guau..
+- Que monoooo
+	said: guauuuuuuuu.....
+- adios
+
+=> END"
+metadata/dialogue_manager_version = "2.37.1"

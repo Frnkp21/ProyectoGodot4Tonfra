@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnqee"]
-size = Vector2(19, 20)
+size = Vector2(25, 26)
 
 [node name="Xavier" type="CharacterBody2D" groups=["Interactuable"]]
 script = ExtResource("1_wi005")

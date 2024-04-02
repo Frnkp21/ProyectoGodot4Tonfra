@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bgtutqnlgbfo0"]
 
-[ext_resource type="Script" path="res://Scenes/madreGitana.gd" id="1_2ugnq"]
+[ext_resource type="Script" path="res://Scripts/madreGitana.gd" id="1_2ugnq"]
 [ext_resource type="Texture2D" uid="uid://be5nlqxshs608" path="res://Assets/Npc/madregitana.png" id="1_uua61"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vc4jc"]
@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkcxx"]
-size = Vector2(17, 20)
+size = Vector2(19, 25)
 
 [node name="MadreGitana" type="CharacterBody2D"]
 script = ExtResource("1_2ugnq")
@@ -43,5 +43,5 @@ sprite_frames = SubResource("SpriteFrames_d54v3")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_wkcxx")

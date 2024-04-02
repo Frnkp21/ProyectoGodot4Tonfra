@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dagpwrahejtn8"
+path="res://.godot/imported/niño2Chat.dialogue-81f38747e3d2b5fcc6644324cbd1ea25.tres"
+
+[deps]
+
+source_file="res://Dialog/niño2Chat.dialogue"
+dest_files=["res://.godot/imported/niño2Chat.dialogue-81f38747e3d2b5fcc6644324cbd1ea25.tres"]
+
+[params]
+
+defaults=true

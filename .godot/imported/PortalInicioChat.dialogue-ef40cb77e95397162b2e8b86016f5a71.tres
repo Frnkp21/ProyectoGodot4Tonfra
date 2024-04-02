@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yspl0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bhthr"]
 
 [resource]
-script = ExtResource("1_yspl0")
+script = ExtResource("1_bhthr")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -107,4 +107,4 @@ Desconocido: Me quedo sin tiempo.... Vienen a por mi...
 Desconocido: ............... 
 
 => END"
-metadata/dialogue_manager_version = "2.36.0"
+metadata/dialogue_manager_version = "2.37.1"

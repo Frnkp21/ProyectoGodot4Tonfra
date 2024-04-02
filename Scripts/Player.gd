@@ -8,6 +8,11 @@ var cartelBosque_in_range = false
 var xavier_in_range = false
 var portalInicio_in_range = false
 var guardaBosques_in_range = false
+var perro_in_range = false
+var niño1_in_range = false
+var niño2_in_range = false
+var vieja_in_range = false
+var madregitana_in_range = false
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 var player_alive = true
@@ -34,23 +39,43 @@ func _physics_process(delta):
 	
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://main.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"))
 			return
 	if cartelBosque_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://cartelToBosque.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/cartelToBosque.dialogue"))
 			return
 	if xavier_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://XavierChat.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/XavierChat.dialogue"))
 			return
 	if guardaBosques_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://GuardaBosquesChat.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/GuardaBosquesChat.dialogue"))
 			return
 	if portalInicio_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://PortalInicioChat.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/PortalInicioChat.dialogue"))
+			return
+	if perro_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/perroChat.dialogue"))
+			return
+	if madregitana_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/madreGitanaChat.dialogue"))
+			return
+	if niño1_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño1Chat.dialogue"))
+			return
+	if niño2_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño2Chat.dialogue"))
+			return
+	if vieja_in_range == true:
+		if Input.is_action_just_pressed("Interact"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/viejaChat.dialogue"))
 			return
 	
 	if global.hpProtagonista <= 0:
@@ -205,6 +230,16 @@ func _on_detection_area_chat_body_entered(body):
 		guardaBosques_in_range = true
 	if body.has_method("portalInicio"):
 		portalInicio_in_range = true
+	if body.has_method("perro"):
+		perro_in_range = true
+	if body.has_method("madregitana"):
+		madregitana_in_range = true
+	if body.has_method("niño1"):
+		niño1_in_range = true
+	if body.has_method("niño2"):
+		niño2_in_range = true
+	if body.has_method("vieja"):
+		vieja_in_range = true
 
 func _on_detection_area_chat_body_exited(body):
 	if body.has_method("mother"):
@@ -217,6 +252,16 @@ func _on_detection_area_chat_body_exited(body):
 		guardaBosques_in_range = false
 	if body.has_method("portalInicio"):
 		portalInicio_in_range = false
+	if body.has_method("perro"):
+		perro_in_range = false
+	if body.has_method("madregitana"):
+		madregitana_in_range = false
+	if body.has_method("niño1"):
+		niño1_in_range = false
+	if body.has_method("niño2"):
+		niño2_in_range = false
+	if body.has_method("vieja"):
+		vieja_in_range = false
 
 func _on_interact_body_entered(body):
 	if body.has_method("interactuable"):

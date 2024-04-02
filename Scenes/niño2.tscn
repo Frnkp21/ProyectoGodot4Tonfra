@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c0c6347sf36nx"]
 
-[ext_resource type="Script" path="res://Scenes/niño2.gd" id="1_37fab"]
 [ext_resource type="Texture2D" uid="uid://c68n0tce6w373" path="res://Assets/Npc/niño2.png" id="1_crplc"]
+[ext_resource type="Script" path="res://Scripts/niño2.gd" id="1_uaqug"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nj2pv"]
 atlas = ExtResource("1_crplc")
@@ -33,15 +33,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jphg"]
-size = Vector2(17, 17)
+size = Vector2(21, 28)
 
 [node name="Niño2" type="CharacterBody2D"]
-script = ExtResource("1_37fab")
+script = ExtResource("1_uaqug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_86ykj")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_2jphg")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ds2yrw1tn5mbk"
+path="res://.godot/imported/madreGitanaChat.dialogue-8d9bab9360fbc41666427a7fd532543a.tres"
+
+[deps]
+
+source_file="res://Dialog/madreGitanaChat.dialogue"
+dest_files=["res://.godot/imported/madreGitanaChat.dialogue-8d9bab9360fbc41666427a7fd532543a.tres"]
+
+[params]
+
+defaults=true

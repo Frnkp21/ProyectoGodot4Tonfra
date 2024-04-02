@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_odpgb"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dbvsh"]
 
 [resource]
-script = ExtResource("1_odpgb")
+script = ExtResource("1_dbvsh")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -129,4 +129,4 @@ Xavier: [[KLK|Buenas|Hola]], vecino, ¿cómo te va?
 - Adios.
 
 => END"
-metadata/dialogue_manager_version = "2.36.0"
+metadata/dialogue_manager_version = "2.37.1"

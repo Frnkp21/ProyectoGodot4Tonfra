@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cada8"]
+
+[resource]
+script = ExtResource("1_cada8")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Dolores")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "Dolores",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Primoo|Buenas|Hola]], Ke hace tu aki payo",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Primoo|Buenas|Hola]], Ke hace tu aki payo",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "6",
+"next_id_after": "6",
+"notes": "",
+"responses": PackedStringArray("4"),
+"tags": PackedStringArray(),
+"text": "Perdon... Lo siento mucho adios.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Perdon... Lo siento mucho adios.",
+"type": "response"
+},
+"6": {
+"id": "6",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+raw_text = "~ start
+
+Dolores: [[Primoo|Buenas|Hola]], Ke hace tu aki payo
+- Perdon... Lo siento mucho adios.
+
+=> END"
+metadata/dialogue_manager_version = "2.37.1"

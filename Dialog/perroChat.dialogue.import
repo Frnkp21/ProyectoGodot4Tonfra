@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bsq53js4m6nfs"
+path="res://.godot/imported/perroChat.dialogue-1c0f8792a5238a4e6af86a7943dad947.tres"
+
+[deps]
+
+source_file="res://Dialog/perroChat.dialogue"
+dest_files=["res://.godot/imported/perroChat.dialogue-1c0f8792a5238a4e6af86a7943dad947.tres"]
+
+[params]
+
+defaults=true

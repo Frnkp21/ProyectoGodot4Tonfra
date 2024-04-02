@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dgcvciip11u1"]
 
-[ext_resource type="Script" path="res://Scenes/perro.gd" id="1_gyje0"]
+[ext_resource type="Script" path="res://Scripts/perro.gd" id="1_sfc8d"]
 [ext_resource type="Texture2D" uid="uid://bx5u1totdlhqt" path="res://Assets/Npc/perro.png" id="2_v35sg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g4hne"]
@@ -33,15 +33,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5kbb"]
-size = Vector2(19, 22)
+size = Vector2(23, 30)
 
 [node name="Perro" type="CharacterBody2D"]
-script = ExtResource("1_gyje0")
+script = ExtResource("1_sfc8d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wk6uh")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_a5kbb")

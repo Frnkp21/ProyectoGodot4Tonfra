@@ -1,0 +1,103 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_otuq6"]
+
+[resource]
+script = ExtResource("1_otuq6")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Conchi")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"3": {
+"character": "Conchi",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "buenas jovenzuelo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "buenas jovenzuelo.",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "9",
+"notes": "",
+"responses": PackedStringArray("4", "7"),
+"tags": PackedStringArray(),
+"text": "Hola conchi",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hola conchi",
+"type": "response"
+},
+"5": {
+"character": "Conchi",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Que tengas buen dia guapo",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Que tengas buen dia guapo",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "9",
+"next_id_after": "9",
+"notes": "",
+"parent_id": "4",
+"responses": PackedStringArray("6"),
+"tags": PackedStringArray(),
+"text": "Gracias igualmente!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Gracias igualmente!",
+"type": "response"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"next_id_after": "9",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "Adios",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Adios",
+"type": "response"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+raw_text = "~ start
+
+Conchi: buenas jovenzuelo.
+- Hola conchi
+	Conchi: Que tengas buen dia guapo
+	- Gracias igualmente!
+- Adios
+
+=> END"
+metadata/dialogue_manager_version = "2.37.1"

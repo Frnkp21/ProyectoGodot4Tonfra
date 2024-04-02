@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bpancr52n42no"
+path="res://.godot/imported/cartelToBosque.dialogue-8ef86942529f1bc55330a226d2d6371d.tres"
+
+[deps]
+
+source_file="res://Dialog/cartelToBosque.dialogue"
+dest_files=["res://.godot/imported/cartelToBosque.dialogue-8ef86942529f1bc55330a226d2d6371d.tres"]
+
+[params]
+
+defaults=true

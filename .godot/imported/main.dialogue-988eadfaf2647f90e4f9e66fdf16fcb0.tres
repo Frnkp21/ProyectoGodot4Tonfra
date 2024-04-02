@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_r26t7"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ehrhv"]
 
 [resource]
-script = ExtResource("1_r26t7")
+script = ExtResource("1_ehrhv")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -160,4 +160,4 @@ Madre: [[Hola|Buenas]].. Hijo, ¿cómo estás?
 - Adios. => END
 
 => END"
-metadata/dialogue_manager_version = "2.36.0"
+metadata/dialogue_manager_version = "2.37.1"

@@ -85,7 +85,7 @@ run={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://main.dialogue", "res://cartelToBosque.dialogue", "res://XavierChat.dialogue", "res://GuardaBosquesChat.dialogue", "res://PortalInicioChat.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialog/cartelToBosque.dialogue", "res://Dialog/GuardaBosquesChat.dialogue", "res://Dialog/main.dialogue", "res://Dialog/XavierChat.dialogue", "res://Dialog/PortalInicioChat.dialogue", "res://Dialog/perroChat.dialogue", "res://main.dialogue", "res://Dialog/madreGitanaChat.dialogue", "res://Dialog/niño1Chat.dialogue", "res://Dialog/niño2Chat.dialogue", "res://Dialog/viejaChat.dialogue")
 
 [mono]
 

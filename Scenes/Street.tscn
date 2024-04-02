@@ -111,9 +111,6 @@ position = Vector2(840, 792)
 [node name="CartelToBosque" parent="." instance=ExtResource("32_euup7")]
 position = Vector2(54, 113)
 
-[node name="player" parent="." instance=ExtResource("15")]
-position = Vector2(294, 557)
-
 [node name="Niño1" parent="." instance=ExtResource("9_f35o2")]
 position = Vector2(347, 787)
 
@@ -122,6 +119,9 @@ position = Vector2(205, 795)
 
 [node name="Perro" parent="." instance=ExtResource("10_0eghd")]
 position = Vector2(744, 793)
+
+[node name="player" parent="." instance=ExtResource("15")]
+position = Vector2(294, 557)
 
 [node name="techoHouses" type="TileMap" parent="."]
 position = Vector2(34, -52)

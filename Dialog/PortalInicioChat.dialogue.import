@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dakqu1wnhnu47"
+path="res://.godot/imported/PortalInicioChat.dialogue-400f1e2c6a87f951cff7f7c1afcb5806.tres"
+
+[deps]
+
+source_file="res://Dialog/PortalInicioChat.dialogue"
+dest_files=["res://.godot/imported/PortalInicioChat.dialogue-400f1e2c6a87f951cff7f7c1afcb5806.tres"]
+
+[params]
+
+defaults=true

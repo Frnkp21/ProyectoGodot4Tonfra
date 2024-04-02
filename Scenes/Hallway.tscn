@@ -290,7 +290,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-19.3465, -16.0724, 19.2472, -15.9732, 19.2472, 15.9732, -19.4457, 16.0724)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-22, -19.625, 21.1588, -19.5998, 21.1588, 16.0362, -21.827, 15.8134)
 0:0/1 = 1
 0:0/1/flip_h = true
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -452,6 +452,7 @@ script = ExtResource("1_6xppr")
 player = NodePath("player")
 
 [node name="Black" type="Sprite2D" parent="."]
+position = Vector2(1, 55)
 scale = Vector2(3, 3)
 texture = ExtResource("11")
 
