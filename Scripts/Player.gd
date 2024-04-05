@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 const speed = 100
+const speedRuning = 150
+
 var current_dir ="none"
 
 var mother_in_range = false
@@ -21,6 +23,8 @@ var attack_ip = false
 var is_attacking = false
 
 var interrogante = false
+
+var puede_correr = false
 
 
 func _ready():
@@ -86,7 +90,7 @@ func _physics_process(delta):
 		self.queue_free()
 
 func player_movement(delta):
-	if !is_attacking:
+	if !is_attacking and !puede_correr:
 		if Input.is_action_pressed("move_right"):
 			current_dir = "right"
 			play_anim(1)
@@ -300,29 +304,34 @@ func desactivar():
 
 
 func player_movement_runing(delta):
+	if Input.is_action_just_pressed("run"):
+		puede_correr = true
+	elif Input.is_action_just_released("run"):
+		puede_correr = false
+	
 	if !is_attacking:
-		if Input.is_action_pressed("move_right") and Input.is_action_pressed("run"):
+		if Input.is_action_pressed("move_right") and puede_correr:
 			current_dir = "right"
 			play_anim_runing(2)
-			velocity.x = speed
+			velocity.x = speedRuning
 			velocity.y = 0
-		elif Input.is_action_pressed("move_left") and Input.is_action_pressed("run"):
+		elif Input.is_action_pressed("move_left") and puede_correr:
 			current_dir = "left"
 			play_anim_runing(2)
-			velocity.x = -speed
+			velocity.x = -speedRuning
 			velocity.y = 0
-		elif Input.is_action_pressed("move_down") and Input.is_action_pressed("run"):
+		elif Input.is_action_pressed("move_down") and puede_correr:
 			current_dir = "down"
 			play_anim_runing(2)
-			velocity.y = speed
+			velocity.y = speedRuning
 			velocity.x = 0
-		elif Input.is_action_pressed("move_up") and Input.is_action_pressed("run"):
+		elif Input.is_action_pressed("move_up") and puede_correr:
 			current_dir = "up"
 			play_anim_runing(2)
-			velocity.y = -speed
+			velocity.y = -speedRuning
 			velocity.x = 0
 		else:
-			play_anim_runing(0)
+			play_anim_runing(0) 
 			velocity.x = 0
 			velocity.y = 0
 		
