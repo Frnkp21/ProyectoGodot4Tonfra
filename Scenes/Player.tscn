@@ -367,16 +367,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_57d0f")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_fkfou")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_rpfeb")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_5fds7")
 }],
 "loop": true,
@@ -384,16 +384,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_h763m")
 }, {
-"duration": 1.0,
+"duration": 0.9,
 "texture": SubResource("AtlasTexture_vjy33")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_xmn43")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_xomin")
 }],
 "loop": true,
@@ -401,16 +401,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_1bpl2")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_m4dnu")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_w8mcv")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_j54t7")
 }],
 "loop": true,
@@ -418,16 +418,16 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_ptlro")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_p3ym7")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_tgmpl")
 }, {
-"duration": 1.0,
+"duration": 0.8,
 "texture": SubResource("AtlasTexture_4qm46")
 }],
 "loop": true,
@@ -546,8 +546,7 @@ script = ExtResource("2")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rfh70")
-animation = &"Runing_Down"
-frame_progress = 0.920428
+animation = &"Runing_Up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.499995, -1.3411e-06)
