@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qewio"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7vxvj"]
 
 [resource]
-script = ExtResource("1_qewio")
+script = ExtResource("1_7vxvj")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "3": {
 "character": "Cartel",
@@ -27,13 +27,13 @@ lines = {
 "text": "<-------- BOSQUE",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "<-------- BOSQUE",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "5": {
 "id": "5",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 }
 }
 raw_text = "~ start
@@ -41,4 +41,4 @@ raw_text = "~ start
 Cartel:  <-------- BOSQUE
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

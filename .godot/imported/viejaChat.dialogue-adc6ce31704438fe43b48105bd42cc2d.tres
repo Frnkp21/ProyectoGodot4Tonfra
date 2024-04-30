@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_mudcu"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d05xi"]
 
 [resource]
-script = ExtResource("1_mudcu")
+script = ExtResource("1_d05xi")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "3": {
 "character": "Conchi",
@@ -27,7 +27,7 @@ lines = {
 "text": "buenas jovenzuelo.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "buenas jovenzuelo.",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "4": {
 "character": "",
@@ -41,7 +41,7 @@ lines = {
 "text": "Hola conchi",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Hola conchi",
-"type": "response"
+"type": &"response"
 },
 "5": {
 "character": "Conchi",
@@ -54,7 +54,7 @@ lines = {
 "text": "Que tengas buen dia guapo",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Que tengas buen dia guapo",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "6": {
 "character": "",
@@ -69,7 +69,7 @@ lines = {
 "text": "Gracias igualmente!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Gracias igualmente!",
-"type": "response"
+"type": &"response"
 },
 "7": {
 "character": "",
@@ -82,13 +82,13 @@ lines = {
 "text": "Adios",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Adios",
-"type": "response"
+"type": &"response"
 },
 "9": {
 "id": "9",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 }
 }
 raw_text = "~ start
@@ -100,4 +100,4 @@ Conchi: buenas jovenzuelo.
 - Adios
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

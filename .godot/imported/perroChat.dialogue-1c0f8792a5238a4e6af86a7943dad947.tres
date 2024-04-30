@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5vq2c"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_t6uyd"]
 
 [resource]
-script = ExtResource("1_5vq2c")
+script = ExtResource("1_t6uyd")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "3": {
 "character": "said",
@@ -27,7 +27,7 @@ lines = {
 "text": "guau guau guau..",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "guau guau guau..",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "4": {
 "character": "",
@@ -41,7 +41,7 @@ lines = {
 "text": "Que monoooo",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Que monoooo",
-"type": "response"
+"type": &"response"
 },
 "5": {
 "character": "said",
@@ -54,7 +54,7 @@ lines = {
 "text": "guauuuuuuuu.....",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "guauuuuuuuu.....",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "6": {
 "character": "",
@@ -67,13 +67,13 @@ lines = {
 "text": "adios",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "adios",
-"type": "response"
+"type": &"response"
 },
 "8": {
 "id": "8",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 }
 }
 raw_text = "~ start
@@ -84,4 +84,4 @@ said: guau guau guau..
 - adios
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

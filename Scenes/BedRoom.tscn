@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cimkrlrls0ywv"]
+[gd_scene load_steps=10 format=3 uid="uid://cimkrlrls0ywv"]
 
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="1"]
 [ext_resource type="Script" path="res://Scripts/BedRoom.gd" id="1_27xm5"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="4"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_oel5p"]
 [ext_resource type="PackedScene" uid="uid://cwfyg5uc0p4xl" path="res://Scenes/portal.tscn" id="7_svsdl"]
+[ext_resource type="Script" path="res://Scripts/BloqueInvisibleParaPuerta.gd" id="8_cihsm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uaqo3"]
+size = Vector2(43, 23)
 
 [node name="BedRoom" type="Node2D" node_paths=PackedStringArray("player")]
 position = Vector2(319, 180)
@@ -44,3 +48,10 @@ target_zoom = Vector2(4.5, 4.5)
 
 [node name="Portal" parent="." instance=ExtResource("7_svsdl")]
 position = Vector2(108, 17)
+
+[node name="Bloque invisible" type="Node2D" parent="."]
+
+[node name="BloqueInvisible" type="CollisionShape2D" parent="Bloque invisible"]
+position = Vector2(79.5, -36.5)
+shape = SubResource("RectangleShape2D_uaqo3")
+script = ExtResource("8_cihsm")

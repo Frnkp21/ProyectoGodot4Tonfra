@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d3tyt"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_81inn"]
 
 [resource]
-script = ExtResource("1_d3tyt")
+script = ExtResource("1_81inn")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "3": {
 "character": "Amador",
@@ -27,13 +27,13 @@ lines = {
 "text": "pasamelaaaaaaaaa",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "pasamelaaaaaaaaa",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "6": {
 "id": "6",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 }
 }
 raw_text = "~ start
@@ -42,4 +42,4 @@ Amador: pasamelaaaaaaaaa
 
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

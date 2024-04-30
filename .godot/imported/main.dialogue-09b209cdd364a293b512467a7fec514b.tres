@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_euy5w"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qcdok"]
 
 [resource]
-script = ExtResource("1_euy5w")
+script = ExtResource("1_qcdok")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "10": {
 "character": "",
@@ -29,7 +29,7 @@ lines = {
 "text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Adios.",
-"type": "response"
+"type": &"response"
 },
 "12": {
 "character": "",
@@ -42,13 +42,13 @@ lines = {
 "text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Adios.",
-"type": "response"
+"type": &"response"
 },
 "14": {
 "id": "14",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 },
 "3": {
 "character": "Madre",
@@ -60,7 +60,7 @@ lines = {
 "text": "[[Hola|Buenas]].. Hijo, ¿cómo estás?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "[[Hola|Buenas]].. Hijo, ¿cómo estás?",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "4": {
 "character": "",
@@ -74,7 +74,7 @@ lines = {
 "text": "Bien ma",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Bien ma",
-"type": "response"
+"type": &"response"
 },
 "5": {
 "character": "Madre",
@@ -87,7 +87,7 @@ lines = {
 "text": "A donde vas?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "A donde vas?",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "6": {
 "character": "",
@@ -102,7 +102,7 @@ lines = {
 "text": "A la ciudad.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "A la ciudad.",
-"type": "response"
+"type": &"response"
 },
 "7": {
 "character": "Madre",
@@ -115,7 +115,7 @@ lines = {
 "text": "Vale ten cuidado con el bosque.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Vale ten cuidado con el bosque.",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "8": {
 "character": "",
@@ -130,7 +130,7 @@ lines = {
 "text": "Porque dices eso?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Porque dices eso?",
-"type": "response"
+"type": &"response"
 },
 "9": {
 "character": "Madre",
@@ -143,7 +143,7 @@ lines = {
 "text": "Estos dias el bosque esta muy peligroso.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Estos dias el bosque esta muy peligroso.",
-"type": "dialogue"
+"type": &"dialogue"
 }
 }
 raw_text = "~ start
@@ -160,4 +160,4 @@ Madre: [[Hola|Buenas]].. Hijo, ¿cómo estás?
 - Adios. => END
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

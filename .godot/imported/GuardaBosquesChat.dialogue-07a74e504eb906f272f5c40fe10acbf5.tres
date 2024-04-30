@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xespr"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rdvmp"]
 
 [resource]
-script = ExtResource("1_xespr")
+script = ExtResource("1_rdvmp")
 using_states = PackedStringArray()
 titles = {
 "start": "3"
@@ -15,7 +15,7 @@ lines = {
 "id": "1",
 "next_id": "3",
 "text": "start",
-"type": "title"
+"type": &"title"
 },
 "10": {
 "character": "",
@@ -29,7 +29,7 @@ lines = {
 "text": "No, ahora mismo no me renta.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "No, ahora mismo no me renta.",
-"type": "response"
+"type": &"response"
 },
 "12": {
 "character": "",
@@ -43,7 +43,7 @@ lines = {
 "text": "No.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "No.",
-"type": "response"
+"type": &"response"
 },
 "13": {
 "character": "",
@@ -56,13 +56,13 @@ lines = {
 "text": "Adios.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Adios.",
-"type": "response"
+"type": &"response"
 },
 "15": {
 "id": "15",
 "is_snippet": false,
 "next_id": "end",
-"type": "goto"
+"type": &"goto"
 },
 "3": {
 "character": "Guarda Bosques",
@@ -74,7 +74,7 @@ lines = {
 "text": "[[Buenas|Hola|Hey]], Aventurero.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "[[Buenas|Hola|Hey]], Aventurero.",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "4": {
 "character": "",
@@ -88,7 +88,7 @@ lines = {
 "text": "Buenas.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Buenas.",
-"type": "response"
+"type": &"response"
 },
 "5": {
 "character": "Guarda Bosques",
@@ -101,7 +101,7 @@ lines = {
 "text": "¿Podrías ayudarme con una cosita?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "¿Podrías ayudarme con una cosita?",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "6": {
 "character": "",
@@ -116,7 +116,7 @@ lines = {
 "text": "Si.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Si.",
-"type": "response"
+"type": &"response"
 },
 "7": {
 "character": "Guarda Bosques",
@@ -129,7 +129,7 @@ lines = {
 "text": "Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Han aparecido una especie de bichos raros y me gustaría que me ayudaras a acabar con ellos, ¿estarías dispuesto?",
-"type": "dialogue"
+"type": &"dialogue"
 },
 "8": {
 "character": "",
@@ -144,7 +144,7 @@ lines = {
 "text": "Si, cuenta conmigo.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Si, cuenta conmigo.",
-"type": "response"
+"type": &"response"
 },
 "9": {
 "character": "Guarda Bosques",
@@ -157,7 +157,7 @@ lines = {
 "text": "Gracias!!!",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Gracias!!!",
-"type": "dialogue"
+"type": &"dialogue"
 }
 }
 raw_text = "~ start
@@ -175,4 +175,4 @@ Guarda Bosques: [[Buenas|Hola|Hey]], Aventurero.
 - Adios.
 
 => END"
-metadata/dialogue_manager_version = "2.37.1"
+metadata/dialogue_manager_version = "2.39.0"

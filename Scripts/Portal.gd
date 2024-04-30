@@ -1,10 +1,11 @@
-extends CharacterBody2D
+extends CollisionShape2D
+
+signal bloque_puerta
 
 func _ready():
 	$AnimatedSprite2D.play("Idle")
-
-func portalInicio():
-	pass
+	bloque_invisible = $BloqueInvisibleParaPuerta
 
 func interactuable():
-	pass
+	emit_signal("bloque_puerta")
+	queue_free()
