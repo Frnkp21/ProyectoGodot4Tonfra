@@ -6,12 +6,7 @@ res://tilemaps/1.tres
 res://Scenes/Livingroom.tscn
 res://Scenes/BedRoom.tscn
 res://Scenes/portal.tscn
-res://Scripts/Portal.gd
 res://Scenes/Bathroom2.tscn
 res://Scenes/Bathroom.tscn
 res://Scenes/BedRoom2.tscn
 res://Scenes/mother.tscn
-res://Scripts/global.gd
-res://Scripts/MoveScene.gd
-res://Scripts/Player.gd
-res://Scripts/MoveSceneFuera.gd
