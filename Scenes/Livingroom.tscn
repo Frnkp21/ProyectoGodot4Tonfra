@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bed8impuogdfw"]
+[gd_scene load_steps=35 format=3 uid="uid://bed8impuogdfw"]
 
 [ext_resource type="Texture2D" uid="uid://cee0p48iy4te7" path="res://istock-1071006450_small.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Livingroom.gd" id="1_rca8m"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://q6eqbxde54rp" path="res://Scenes/mother.tscn" id="14_0xfms"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="15_c7bce"]
 [ext_resource type="Texture2D" uid="uid://cqxxlii083yvh" path="res://Assets/Map/casa/sueloconalfombra6.png" id="17"]
-[ext_resource type="Script" path="res://Scripts/BloqueInvisibleParaPuerta.gd" id="17_2weg7"]
+[ext_resource type="Script" path="res://Scripts/MoveSceneFuera.gd" id="17_svpwu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rublu"]
 texture = ExtResource("5")
@@ -757,9 +757,6 @@ sources/13 = SubResource("TileSetAtlasSource_3uwj0")
 sources/14 = SubResource("TileSetAtlasSource_tvgo7")
 sources/15 = SubResource("TileSetAtlasSource_k1qia")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kel4h"]
-size = Vector2(40, 20)
-
 [node name="Livingroom" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_rca8m")
 player = NodePath("player")
@@ -814,13 +811,7 @@ target_zoom = Vector2(4.5, 4.5)
 
 [node name="MoveScene2" parent="." instance=ExtResource("15_c7bce")]
 position = Vector2(367, 220)
+script = ExtResource("17_svpwu")
 target_scene = "Street"
 target_position = Vector2(290, 520)
 target_zoom = Vector2(3, 3)
-
-[node name="Bloque invisible" type="Node2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bloque invisible"]
-position = Vector2(367, 213)
-shape = SubResource("RectangleShape2D_kel4h")
-script = ExtResource("17_2weg7")

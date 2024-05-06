@@ -22,4 +22,6 @@ var expProtagonista : int
 var hpProtagonista = 100
 var experience_threshold = 100
 
+var puedetp = false
+var puedetp2 = false
 

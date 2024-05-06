@@ -43,6 +43,7 @@ func _physics_process(delta):
 	
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
+			global.puedetp2 = true
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"))
 			return
 	if cartelBosque_in_range == true:
@@ -59,6 +60,7 @@ func _physics_process(delta):
 			return
 	if portalInicio_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
+			global.puedetp = true
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/PortalInicioChat.dialogue"))
 			return
 	if perro_in_range == true:

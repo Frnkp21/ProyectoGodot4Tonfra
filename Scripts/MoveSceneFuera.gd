@@ -10,7 +10,7 @@ func interactuable():
 
 func _input(event):
 	# Verificar si el evento es de tipo KEY y si la tecla es la que deseas
-	if event is InputEventKey and event.pressed and event.keycode == KEY_E and global.puedetp:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_E and global.puedetp2:
 		call("cambiar_escena")
 
 func cambiar_escena():
