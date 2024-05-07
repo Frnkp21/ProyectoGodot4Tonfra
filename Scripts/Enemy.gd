@@ -12,6 +12,9 @@ var can_take_damage = true
 
 var drop_exp = 50
 
+var colorDiferente = false
+var originalModulateColor = Color(1, 1, 1, 1)
+	
 func _physics_process(delta):
 	deal_with_damage()
 	update_health()
@@ -52,13 +55,22 @@ func deal_with_damage():
 	if player_inattack_zone and global.player_current_attack == true:
 		if can_take_damage == true:
 			health = health -30
+			colorDiferente = true
 			$take_damage_cooldown.start()
+			if colorDiferente == true:
+				$AnimatedSprite2D.modulate = Color(1,0,0,1)
+				time_out()
 			can_take_damage = false
 			print ("slime health ",health)
 			if health <= 0:
 				self.queue_free()
 				give_experience(player)
 
+func time_out():
+	await get_tree().create_timer(0.5).timeout
+	colorDiferente = false
+	$AnimatedSprite2D.modulate = originalModulateColor
+	print("cambia a false")
 
 func _on_take_damage_cooldown_timeout():
 	can_take_damage = true

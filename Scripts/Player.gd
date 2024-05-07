@@ -26,11 +26,14 @@ var interrogante = false
 
 var puede_correr = false
 
+var colorDiferente = false
+var originalModulateColor = Color(1, 1, 1, 1)
 
 func _ready():
 	$AnimatedSprite.play("Idle")
 	$Interact/interrogante.visible = interrogante
 	$xpbar.visible = false
+	originalModulateColor = $AnimatedSprite.modulate
 
 
 func _physics_process(delta):
@@ -170,9 +173,20 @@ func _on_player_hitbox_body_exited(body):
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown == true:
 		global.hpProtagonista = global.hpProtagonista - 10
+		colorDiferente = true
+		print("cambia a true")
+		if colorDiferente == true:
+			$AnimatedSprite.modulate = Color(1,0,0,1)
+			time_out()
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
 		
+func time_out():
+	await get_tree().create_timer(0.5).timeout
+	colorDiferente = false
+	$AnimatedSprite.modulate = originalModulateColor
+	print("cambia a false")
+	
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
