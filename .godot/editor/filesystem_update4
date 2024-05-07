@@ -14,3 +14,5 @@ res://Scenes/Player.tscn
 res://Scripts/Player.gd
 res://Scripts/Enemy.gd
 res://Scenes/enemy.tscn
+res://Scenes/dead.tscn
+res://Scripts/Dead.gd

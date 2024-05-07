@@ -60,6 +60,9 @@ func deal_with_damage():
 			if colorDiferente == true:
 				$AnimatedSprite2D.modulate = Color(1,0,0,1)
 				time_out()
+				var direction = (position - player.position).normalized()
+				var push_distance = 20
+				position += direction * push_distance
 			can_take_damage = false
 			print ("slime health ",health)
 			if health <= 0:

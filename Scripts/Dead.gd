@@ -9,5 +9,6 @@ extends Control
 func _on_respawn_pressed():
 	global.posicion = target_position
 	global.zoom = target_zoom
+	global.hpProtagonista = 100
 	get_tree().change_scene_to_file("res://Scenes/" + target_scene + ".tscn")
 	return
