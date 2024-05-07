@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxcp2xgc2kpf8"]
+
+[ext_resource type="Script" path="res://Scripts/Dialogo.gd" id="1_0knhp"]
+[ext_resource type="Texture2D" uid="uid://buqaei781s8qi" path="res://Assets/Additional/FondoDialogo.png" id="1_xmry6"]
+[ext_resource type="FontFile" uid="uid://b0gfgt23frvcx" path="res://Grand9K Pixel.ttf" id="3_0mugr"]
+
+[node name="Dialogo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0knhp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = -66.0
+offset_top = -58.0
+offset_right = 66.0
+offset_bottom = -18.0
+texture = ExtResource("1_xmry6")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+metadata/_edit_group_ = true
+
+[node name="name" type="RichTextLabel" parent="NinePatchRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 42.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_0mugr")
+theme_override_font_sizes/normal_font_size = 15
+text = "name"
+
+[node name="text" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.75
+offset_right = 283.0
+offset_bottom = 56.75
+scale = Vector2(0.4, 0.4)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_0mugr")
+theme_override_font_sizes/normal_font_size = 13
+text = "hola buenas tardes"

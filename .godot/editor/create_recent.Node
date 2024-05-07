@@ -1,5 +1,10 @@
+Timer
 CollisionShape2D
 Area2D
+RichTextLabel
+NinePatchRect
+TextureRect
+Node
 Node2D
 RigidBody2D
 AnimatedSprite2D
@@ -8,7 +13,3 @@ AnimatableBody2D
 ProgressBar
 CanvasLayer
 AnimationPlayer
-AnimationTree
-ColorRect
-TileMap
-Button
