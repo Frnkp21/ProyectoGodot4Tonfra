@@ -1,9 +1,9 @@
 res://tilemaps/default_env.tres
-res://Scenes/BedRoom.tscn
+res://Scenes/Livingroom.tscn
 res://tilemaps/LivingroomDeco.tres
 res://tilemaps/bedroomtile.tres
 res://tilemaps/1.tres
-res://Scenes/Livingroom.tscn
+res://Scenes/BedRoom.tscn
 res://Scenes/Forest.tscn
 res://Scenes/portal.tscn
 res://Scenes/Bathroom2.tscn
@@ -14,5 +14,11 @@ res://Scenes/Player.tscn
 res://Scenes/enemy.tscn
 res://Scenes/dead.tscn
 res://Scenes/Dialogo.tscn
-res://Scripts/Player.gd
 res://Scripts/Portal.gd
+res://Scripts/Mother.gd
+res://Scripts/Dialogo.gd
+res://Dialog/portal_dialogo1.json
+res://Scenes/Dialogos/DialogoPortal.tscn
+res://Scenes/Dialogos/DialogoMadre.tscn
+res://Scripts/Dialogos/DialogoPortal.gd
+res://Dialog/madre_dialogo.json

@@ -19,17 +19,13 @@ func choose(array):
 	return array.front()
 	
 
-
 func _on_chatdetection_area_body_entered(body):
 	if body.has_method("player"):
-		print("guapo")
 		player_in_chat_zone = true
 		
 
-
 func _on_chatdetection_area_body_exited(body):
 	if body.has_method("player"):
-		print("feo")
 		player_in_chat_zone = false
 
 func _process(delta):

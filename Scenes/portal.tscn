@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Portal.gd" id="1_885qt"]
 [ext_resource type="Texture2D" uid="uid://c2bhlxn5rh7v2" path="res://Assets/Additional/tp_petit-sheet.png" id="2_7a6vi"]
-[ext_resource type="PackedScene" uid="uid://cxcp2xgc2kpf8" path="res://Scenes/Dialogo.tscn" id="3_dmndm"]
+[ext_resource type="PackedScene" uid="uid://cxcp2xgc2kpf8" path="res://Scenes/Dialogos/DialogoPortal.tscn" id="3_dmndm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cf2yn"]
 atlas = ExtResource("2_7a6vi")

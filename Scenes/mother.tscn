@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://q6eqbxde54rp"]
+[gd_scene load_steps=11 format=3 uid="uid://q6eqbxde54rp"]
 
 [ext_resource type="Script" path="res://Scripts/Mother.gd" id="1_85ky3"]
 [ext_resource type="Texture2D" uid="uid://blf7jxh0vym24" path="res://Assets/Npc/madre_defrente-sheet.png" id="2_npci4"]
+[ext_resource type="PackedScene" uid="uid://dltwsgk6sfecl" path="res://Scenes/Dialogos/DialogoMadre.tscn" id="3_acskh"]
+[ext_resource type="Script" path="res://Scripts/Dialogos/DialogoMadre.gd" id="4_4rhsj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mwc4q"]
 atlas = ExtResource("2_npci4")
@@ -35,6 +37,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pvi6v"]
 size = Vector2(21, 27)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4jx7a"]
+radius = 17.0
+height = 34.0
+
 [node name="Mother" type="CharacterBody2D" groups=["Interactuable"]]
 script = ExtResource("1_85ky3")
 
@@ -47,3 +53,19 @@ frame_progress = 0.839067
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_pvi6v")
+
+[node name="ChatDetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetectionArea"]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_4jx7a")
+
+[node name="DialogoMadre" parent="." instance=ExtResource("3_acskh")]
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1.0
+offset_bottom = 6.0
+script = ExtResource("4_4rhsj")
+
+[connection signal="body_entered" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="ChatDetectionArea" to="." method="_on_chat_detection_area_body_exited"]
