@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 
-var is_roaming = true
 var is_chatting = false
 
 var player
@@ -23,20 +22,24 @@ func choose(array):
 
 func _on_chatdetection_area_body_entered(body):
 	if body.has_method("player"):
-		player = body
+		print("guapo")
 		player_in_chat_zone = true
+		
 
 
 func _on_chatdetection_area_body_exited(body):
 	if body.has_method("player"):
+		print("feo")
 		player_in_chat_zone = false
 
 func _process(delta):
-	if Input.is_action_just_pressed("chat"):
+	if Input.is_action_just_pressed("chat") and player_in_chat_zone:
 		print("chatting")
+		$Dialogo.start()
 		is_chatting = true
 
-func _on_control_dialogo_finish():
+func _on_Dialogo_dialogo_finish():
 	is_chatting = false
-	is_roaming = true
+	player_in_chat_zone = false
+
  

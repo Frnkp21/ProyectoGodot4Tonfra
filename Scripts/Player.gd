@@ -8,7 +8,6 @@ var current_dir ="none"
 var mother_in_range = false
 var cartelBosque_in_range = false
 var xavier_in_range = false
-var portalInicio_in_range = false
 var guardaBosques_in_range = false
 var perro_in_range = false
 var niño1_in_range = false
@@ -60,11 +59,6 @@ func _physics_process(delta):
 	if guardaBosques_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/GuardaBosquesChat.dialogue"))
-			return
-	if portalInicio_in_range == true:
-		if Input.is_action_just_pressed("Interact"):
-			global.puedetp = true
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/PortalInicioChat.dialogue"))
 			return
 	if perro_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
@@ -248,8 +242,6 @@ func _on_detection_area_chat_body_entered(body):
 		xavier_in_range = true
 	if body.has_method("guardaBosques"):
 		guardaBosques_in_range = true
-	if body.has_method("portalInicio"):
-		portalInicio_in_range = true
 	if body.has_method("perro"):
 		perro_in_range = true
 	if body.has_method("madregitana"):
@@ -270,8 +262,6 @@ func _on_detection_area_chat_body_exited(body):
 		xavier_in_range = false
 	if body.has_method("guardaBosques"):
 		guardaBosques_in_range = false
-	if body.has_method("portalInicio"):
-		portalInicio_in_range = false
 	if body.has_method("perro"):
 		perro_in_range = false
 	if body.has_method("madregitana"):

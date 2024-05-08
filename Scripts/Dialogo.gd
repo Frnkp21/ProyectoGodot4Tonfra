@@ -16,6 +16,7 @@ func start():
 	if d_active:
 		return
 	d_active = true
+	$NinePatchRect.visible = true 
 	dialogo = load_dialogo()
 	current_dialogo_id = -1
 	next_script()
