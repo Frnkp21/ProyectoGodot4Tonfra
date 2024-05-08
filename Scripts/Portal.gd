@@ -36,6 +36,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("chat") and player_in_chat_zone:
 		print("chatting")
 		$Dialogo.start()
+		global.puedetp = true
 		is_chatting = true
 
 func _on_Dialogo_dialogo_finish():

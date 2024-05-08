@@ -46,39 +46,39 @@ func _physics_process(delta):
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
 			global.puedetp2 = true
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/main.dialogue"))
 			return
 	if cartelBosque_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/cartelToBosque.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/cartelToBosque.dialogue"))
 			return
 	if xavier_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/XavierChat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/XavierChat.dialogue"))
 			return
 	if guardaBosques_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/GuardaBosquesChat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/GuardaBosquesChat.dialogue"))
 			return
 	if perro_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/perroChat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/perroChat.dialogue"))
 			return
 	if madregitana_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/madreGitanaChat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/madreGitanaChat.dialogue"))
 			return
 	if niño1_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño1Chat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño1Chat.dialogue"))
 			return
 	if niño2_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño2Chat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/niño2Chat.dialogue"))
 			return
 	if vieja_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
-			DialogueManager.show_example_dialogue_balloon(load("res://Dialog/viejaChat.dialogue"))
+			#DialogueManager.show_example_dialogue_balloon(load("res://Dialog/viejaChat.dialogue"))
 			return
 	
 	if global.hpProtagonista <= 0:
