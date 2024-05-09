@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpavm202gipoo"]
+[gd_scene load_steps=11 format=3 uid="uid://dpavm202gipoo"]
 
 [ext_resource type="Script" path="res://Scripts/GuardaBosques.gd" id="1_uquao"]
 [ext_resource type="Texture2D" uid="uid://cklk4fmclftya" path="res://Assets/Npc/sarjento_idle.png" id="2_lb8ba"]
+[ext_resource type="PackedScene" uid="uid://bstmxqst0psf1" path="res://Scenes/guardabosques_quest.tscn" id="3_x73nu"]
+[ext_resource type="PackedScene" uid="uid://h0rst5r3wpgp" path="res://Scenes/Dialogos/DialogoGuardaBosques.tscn" id="4_px8af"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkhta"]
 atlas = ExtResource("2_lb8ba")
@@ -35,6 +37,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wswbs"]
 size = Vector2(21, 31)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45a5d"]
+radius = 18.0
+height = 38.0
+
 [node name="GuardaBosques" type="CharacterBody2D"]
 script = ExtResource("1_uquao")
 
@@ -45,3 +51,17 @@ animation = &"Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_wswbs")
+
+[node name="ChatdetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChatdetectionArea"]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_45a5d")
+
+[node name="Dialogo" parent="." instance=ExtResource("4_px8af")]
+
+[node name="guardabosques_quest" parent="." instance=ExtResource("3_x73nu")]
+
+[connection signal="body_entered" from="ChatdetectionArea" to="." method="_on_chatdetection_area_body_entered"]
+[connection signal="body_exited" from="ChatdetectionArea" to="." method="_on_chatdetection_area_body_exited"]
+[connection signal="quest_menu_closed" from="guardabosques_quest" to="." method="_on_guardabosques_quest_quest_menu_closed"]

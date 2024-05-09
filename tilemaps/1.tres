@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=82 format=3 uid="uid://bj0sju3foal3c"]
+[gd_resource type="TileSet" load_steps=84 format=3 uid="uid://bj0sju3foal3c"]
 
 [ext_resource type="Texture2D" uid="uid://hlxpeq7vcp80" path="res://Assets/Map/Exterior/hierba1.png" id="1_o5jrc"]
 [ext_resource type="Texture2D" uid="uid://x5guiv4wnish" path="res://Assets/Map/Exterior/DecoExterior/arbusto2.png" id="2_p2eiy"]
@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://bmj1s3lr1odhe" path="res://Assets/Map/Exterior/farola.png" id="31_g0dr7"]
 [ext_resource type="Texture2D" uid="uid://d1wa8a8xtvxth" path="res://Assets/Map/Exterior/DecoExterior/casaPerro.png" id="32_upbts"]
 [ext_resource type="Texture2D" uid="uid://dvwghp7qr3cem" path="res://Assets/Map/Exterior/pelota.png" id="33_y3cqf"]
+[ext_resource type="Texture2D" uid="uid://b47p7d7lispoe" path="res://Assets/Map/Cueva/suelo_entero_cueva.png" id="35_ddctx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lc4cc"]
 texture = ExtResource("1_o5jrc")
@@ -1000,6 +1001,37 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5, -8.75, 3.88909, -9.01561, 7.71693, -6.73477, 9.12, 0.140307, 7.43631, 6.31385, 2.65165, 9.19239, -6.54074, 8.13173, -9.19239, 2.82843, -8.83883, -5.65686)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jncxi"]
+texture = ExtResource("35_ddctx")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8b1o8"]
 texture = ExtResource("24_kmgdv")
 texture_region_size = Vector2i(32, 32)
@@ -1249,3 +1281,4 @@ sources/37 = SubResource("TileSetAtlasSource_1ig17")
 sources/38 = SubResource("TileSetAtlasSource_gal43")
 sources/40 = SubResource("TileSetAtlasSource_x26lj")
 sources/39 = SubResource("TileSetAtlasSource_xxqy7")
+sources/41 = SubResource("TileSetAtlasSource_jncxi")

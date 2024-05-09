@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal lagrimadebabosa_collected
+signal apple_
+
 const speed = 100
 const speedRuning = 150
 
@@ -376,3 +379,8 @@ func play_anim_runing(movement):
 		elif movement == 3:
 			if attack_ip == false:
 				anim.play("Down_Idle")
+
+
+func collect(item):
+	print(item)
+	

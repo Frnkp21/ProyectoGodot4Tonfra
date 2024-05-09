@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=3 uid="uid://bstmxqst0psf1"]
+
+[ext_resource type="Script" path="res://Scripts/guardabosques_quest.gd" id="1_en56f"]
+[ext_resource type="Texture2D" uid="uid://buqaei781s8qi" path="res://Assets/Additional/FondoDialogo.png" id="1_vo6u3"]
+[ext_resource type="FontFile" uid="uid://b0gfgt23frvcx" path="res://Grand9K Pixel.ttf" id="2_8e50n"]
+
+[node name="guardabosques_quest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_en56f")
+
+[node name="quest1_ui" type="NinePatchRect" parent="."]
+offset_left = -66.0
+offset_top = -58.0
+offset_right = 66.0
+offset_bottom = -18.0
+texture = ExtResource("1_vo6u3")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="quest1_ui"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 42.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 15
+text = "Guarda bosques quest:"
+
+[node name="text" type="RichTextLabel" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 17.0
+offset_right = 283.0
+offset_bottom = 65.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 13
+text = "mata a todos crack
+"
+
+[node name="yesButton1" type="Button" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 23.0
+offset_right = 107.0
+offset_bottom = 54.0
+scale = Vector2(0.4, 0.4)
+text = "yes"
+
+[node name="noButtton1" type="Button" parent="quest1_ui"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 23.0
+offset_right = 122.0
+offset_bottom = 54.0
+scale = Vector2(0.4, 0.4)
+text = "no"
+
+[node name="no_quest" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -66.0
+offset_top = -58.0
+offset_right = 66.0
+offset_bottom = -18.0
+texture = ExtResource("1_vo6u3")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="no_quest"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 42.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 15
+text = "Guarda bosques quest:"
+
+[node name="text" type="RichTextLabel" parent="no_quest"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.75
+offset_right = 283.0
+offset_bottom = 56.75
+scale = Vector2(0.4, 0.4)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 13
+text = "no hay ninguna quest
+"
+
+[node name="finished_quest" type="NinePatchRect" parent="."]
+visible = false
+offset_left = -66.0
+offset_top = -58.0
+offset_right = 66.0
+offset_bottom = -18.0
+texture = ExtResource("1_vo6u3")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="name" type="RichTextLabel" parent="finished_quest"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 5.0
+offset_right = 219.0
+offset_bottom = 42.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 15
+text = "Guarda bosques quest:"
+
+[node name="text" type="RichTextLabel" parent="finished_quest"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 309.0
+offset_bottom = 69.0
+scale = Vector2(0.4, 0.4)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_8e50n")
+theme_override_font_sizes/normal_font_size = 13
+text = "Bien hecho gracias por la ayuda
+
+"
+
+[connection signal="pressed" from="quest1_ui/yesButton1" to="." method="_on_yes_button_1_pressed"]
+[connection signal="pressed" from="quest1_ui/noButtton1" to="." method="_on_no_buttton_1_pressed"]
