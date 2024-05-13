@@ -1,7 +1,8 @@
-[gd_scene load_steps=81 format=3 uid="uid://deqiv7y1s5d6y"]
+[gd_scene load_steps=83 format=3 uid="uid://deqiv7y1s5d6y"]
 
 [ext_resource type="Texture2D" uid="uid://bo2smhy3rtw0r" path="res://Assets/Player/player.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2"]
+[ext_resource type="Resource" uid="uid://bwsy5ud4neyyk" path="res://Inventory/playerinv.tres" id="2_00mtt"]
 [ext_resource type="Texture2D" uid="uid://p53c0c8ohn4d" path="res://Assets/Player/playerPEGARABAJOPALO.png" id="2_5o7fb"]
 [ext_resource type="Texture2D" uid="uid://e8s6yno27sqp" path="res://Assets/Player/playerATAQUEIZQUIERDAPALO.png" id="3_4m3t8"]
 [ext_resource type="Texture2D" uid="uid://ba2h1vi7iyfte" path="res://Assets/Player/playerATAQUEDERECHAPALO.png" id="4_as72o"]
@@ -15,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ce1n0um45pmgx" path="res://Assets/Player/PlayerCorriendoIzquierda.png" id="10_oartf"]
 [ext_resource type="Texture2D" uid="uid://dikxyokue7b5a" path="res://Assets/Player/playerCorriendoDerecha.png" id="11_kh2wa"]
 [ext_resource type="Texture2D" uid="uid://caxwdaa4a43cq" path="res://Assets/Player/playerCorriendoEspalda.png" id="12_7soqx"]
+[ext_resource type="PackedScene" uid="uid://c16pf6l0yxj20" path="res://Inventory/inv_ui.tscn" id="17_e63fe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_653op"]
 atlas = ExtResource("2_5o7fb")
@@ -543,6 +545,7 @@ animations = [{
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 3
 script = ExtResource("2")
+inv = ExtResource("2_00mtt")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_rfh70")
@@ -607,6 +610,12 @@ offset_right = 142.0
 offset_bottom = 37.0
 scale = Vector2(0.1, 0.1)
 show_percentage = false
+
+[node name="Inv_UI" parent="." instance=ExtResource("17_e63fe")]
+offset_left = -74.0
+offset_top = -25.0
+offset_right = -11.0
+offset_bottom = 24.0
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

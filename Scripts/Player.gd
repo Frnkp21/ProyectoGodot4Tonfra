@@ -3,6 +3,8 @@ extends CharacterBody2D
 signal lagrimadebabosa_collected
 signal apple_
 
+@export var inv: Inv
+
 const speed = 100
 const speedRuning = 150
 

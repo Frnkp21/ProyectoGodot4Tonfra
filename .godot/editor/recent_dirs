@@ -1,9 +1,12 @@
+res://Inventory
+res://Assets/Additional
+res://Inventory/items
+res://Assets/items
+res://Scripts
 res://Scenes
 res://Scripts/Dialogos
-res://Scripts
 res://
 res://tilemaps
 res://Assets/Player
 res://Assets/Npc
-res://Assets/Additional
 res://Assets/Enemies

@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_en56f")
 
 [node name="quest1_ui" type="NinePatchRect" parent="."]
+layout_mode = 0
 offset_left = -66.0
 offset_top = -58.0
 offset_right = 66.0
@@ -70,6 +71,7 @@ text = "no"
 
 [node name="no_quest" type="NinePatchRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -66.0
 offset_top = -58.0
 offset_right = 66.0
@@ -108,6 +110,7 @@ text = "no hay ninguna quest
 
 [node name="finished_quest" type="NinePatchRect" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -66.0
 offset_top = -58.0
 offset_right = 66.0
