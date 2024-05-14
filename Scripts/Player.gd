@@ -303,6 +303,7 @@ func level_up():
 	print("Jugador ha subido de nivel al nivel: ", global.lvlProtagonista)
 	global.expProtagonista -= global.experience_threshold
 	global.experience_threshold *= 1.3 # Ejemplo de valor; ajusta según tus necesidades en el juego.
+	
 
 func update_experience_bar():
 	var xpbar = $xpbar
@@ -311,6 +312,7 @@ func update_experience_bar():
 func desactivar():
 	await get_tree().create_timer(5).timeout
 	$xpbar.visible = false
+	$healthbar.visible = false
 
 
 

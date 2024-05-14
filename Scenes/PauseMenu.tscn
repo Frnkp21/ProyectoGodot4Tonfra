@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdhjc7c0r1vjx"]
+
+[ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_neqqn"]
+
+[sub_resource type="SystemFont" id="SystemFont_3k1lm"]
+font_names = PackedStringArray("Ubuntu")
+subpixel_positioning = 0
+
+[node name="Control" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_neqqn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270588, 0.396078, 0.294118, 0.780392)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 16
+text = "                      Pausado
+
+           Pulsa P para continuar"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separetor" type="Control" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = SubResource("SystemFont_3k1lm")
+theme_override_font_sizes/font_size = 16
+text = "Menu de pausa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+process_mode = 3
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+text = "Restart"
+
+[node name="Separetor2" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

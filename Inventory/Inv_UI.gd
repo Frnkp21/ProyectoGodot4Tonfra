@@ -20,3 +20,8 @@ func close():
 func open():
 	self.visible = true
 	is_open = true
+
+
+func _on_vida_button_down():
+	global.hpProtagonista += 5;
+	print(global.hpProtagonista)
