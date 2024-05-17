@@ -48,3 +48,7 @@ func _on_Dialogo_dialogo_finish():
 
 func _on_guardabosques_quest_quest_menu_closed():
 	is_chatting = false
+
+
+func _on_player_huevodebabosa_collected():
+	$guardabosques_quest.huevodebabosa_collected()

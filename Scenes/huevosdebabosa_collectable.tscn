@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7jd4mbmvpu0v"]
+
+[ext_resource type="Script" path="res://Scripts/huevosdebabosa_collectable.gd" id="1_1bp8p"]
+[ext_resource type="Resource" uid="uid://b6jqc0b02njji" path="res://Inventory/items/huevodebabosa.tres" id="2_2c0fo"]
+[ext_resource type="Texture2D" uid="uid://bpomashm3rx5u" path="res://Assets/items/lagrimadebabosa.png" id="2_p27ky"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_86a3f"]
+
+[node name="huevosdebabosa_collectable" type="StaticBody2D"]
+script = ExtResource("1_1bp8p")
+item = ExtResource("2_2c0fo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p27ky")
+
+[node name="Interactuable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactuable_area"]
+shape = SubResource("CircleShape2D_86a3f")
+
+[connection signal="body_entered" from="Interactuable_area" to="." method="_on_interactuable_area_body_entered"]

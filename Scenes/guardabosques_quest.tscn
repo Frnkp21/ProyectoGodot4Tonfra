@@ -14,6 +14,7 @@ grow_vertical = 2
 script = ExtResource("1_en56f")
 
 [node name="quest1_ui" type="NinePatchRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -66.0
 offset_top = -58.0

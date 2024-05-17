@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmfdss347dvja"]
+[gd_scene load_steps=11 format=3 uid="uid://cmfdss347dvja"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
 [ext_resource type="Script" path="res://Scripts/Forest.gd" id="1_bmqeg"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="7_67dqw"]
 [ext_resource type="PackedScene" uid="uid://dpavm202gipoo" path="res://Scenes/guarda_bosques.tscn" id="7_myib3"]
 [ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="7_tn5fg"]
+[ext_resource type="PackedScene" uid="uid://b7jd4mbmvpu0v" path="res://Scenes/huevosdebabosa_collectable.tscn" id="8_1shik"]
 [ext_resource type="PackedScene" uid="uid://dppkaro83hemm" path="res://Scenes/enemy.tscn" id="8_6cabg"]
 [ext_resource type="Script" path="res://Scripts/MoveScene_smooth.gd" id="10_hgn4e"]
 
@@ -73,8 +74,24 @@ position = Vector2(-59, 214)
 [node name="Enemy5" parent="." instance=ExtResource("8_6cabg")]
 position = Vector2(-451, 555)
 
+[node name="huevosdebabosa_collectable" parent="." instance=ExtResource("8_1shik")]
+position = Vector2(618, -192)
+
+[node name="huevosdebabosa_collectable2" parent="." instance=ExtResource("8_1shik")]
+position = Vector2(-488, -231)
+
+[node name="huevosdebabosa_collectable3" parent="." instance=ExtResource("8_1shik")]
+position = Vector2(-509, 614)
+
+[node name="huevosdebabosa_collectable4" parent="." instance=ExtResource("8_1shik")]
+position = Vector2(511, 639)
+
+[node name="huevosdebabosa_collectable5" parent="." instance=ExtResource("8_1shik")]
+position = Vector2(-194, 259)
+
 [node name="player" parent="." instance=ExtResource("5_kclhs")]
 position = Vector2(459, 203)
 
 [connection signal="body_entered" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_entered"]
 [connection signal="body_exited" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_exited"]
+[connection signal="huevodebabosa_collected" from="player" to="GuardaBosques" method="_on_player_huevodebabosa_collected"]

@@ -4,15 +4,16 @@ signal quest_menu_closed
 
 var quest1_active = false
 var quest1_completed = false
-var lagrimasdebabosa = 0
+var huevodebabosa = 0
 
 
 func _process(delta):
 	if quest1_active:
-		if lagrimasdebabosa == 4:
+		if huevodebabosa == 5:
 			print("quest1 completed")
 			quest1_active = false
 			quest1_completed = true
+			play_finish_quest_anim()
 	
 
 func quest1_chat():
@@ -29,7 +30,7 @@ func next_quest():
 func _on_yes_button_1_pressed():
 	$quest1_ui.visible = false
 	quest1_active = true
-	lagrimasdebabosa = 0
+	huevodebabosa = 0
 	emit_signal("quest_menu_closed")
 
 
@@ -37,3 +38,12 @@ func _on_no_buttton_1_pressed():
 	$quest1_ui.visible = false
 	quest1_active = false
 	emit_signal("quest_menu_closed")
+	
+func huevodebabosa_collected():
+	huevodebabosa += 1
+	print("huevo para la quest")
+
+func play_finish_quest_anim():
+	$finished_quest.visible = true
+	await get_tree().create_timer(400).timeout
+	$finished_quest.visible = false

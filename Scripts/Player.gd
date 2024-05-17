@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-signal lagrimadebabosa_collected
-signal apple_
+signal huevodebabosa_collected
+
 
 @export var inv: Inv
 
@@ -386,5 +386,9 @@ func play_anim_runing(movement):
 
 
 func collect(item):
+	inv.insert(item)
 	print(item)
+	if str(item) == "<Resource#-9223371853748238841>":
+		print("Picked up huevo")
+		emit_signal("huevodebabosa_collected")
 	
