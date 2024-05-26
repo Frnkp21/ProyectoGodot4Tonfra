@@ -1,5 +1,12 @@
 [
-	{"name": "Madre:", "text": "buenas tardes"},
-	{"name": "Madre:", "text": "klk mi lokooooo"},
-	{"name": "You:", "text": "pues na aqui estamos"}
+	{"name": "Madre:", "text": "Buenos días, hijo."},
+	{"name": "Tú:", "text": "Buenos días, mamá."},
+	{"name": "Tú:", "text": "Me ha sucedido algo extraño en la habitación y no sé si era un sueño."},
+	{"name": "Madre:", "text": "¿Qué pasó, cariño?"},
+	{"name": "Tú:", "text": "Había un portal y una voz extraña comenzó a hablarme."},
+	{"name": "Madre:", "text": "Debe haber sido un sueño, eso no es posible."},
+	{"name": "Tú:", "text": "No sé... se sintió tan real."},
+	{"name": "Madre:", "text": "Ve al bosque a dar una vuelta y despejarte un poco."},
+	{"name": "Madre:", "text": "Aquí tienes la llave de casa, por si vuelves tarde."},
+	{"name": "Tú:", "text": "Vale, mamá. Vuelvo más tarde."}
 ]

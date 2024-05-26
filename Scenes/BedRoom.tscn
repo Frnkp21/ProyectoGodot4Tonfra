@@ -46,4 +46,4 @@ target_zoom = Vector2(4.5, 4.5)
 [node name="Portal" parent="." instance=ExtResource("7_svsdl")]
 position = Vector2(108, 17)
 
-[node name="Control" parent="." instance=ExtResource("8_b4m2b")]
+[node name="Pause" parent="." instance=ExtResource("8_b4m2b")]

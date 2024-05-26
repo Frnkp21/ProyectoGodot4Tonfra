@@ -37,7 +37,7 @@ offset_bottom = 42.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_1swh7")
-theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/normal_font_size = 16
 text = "name"
 
 [node name="text" type="RichTextLabel" parent="NinePatchRect"]
@@ -49,5 +49,5 @@ offset_bottom = 56.75
 scale = Vector2(0.4, 0.4)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_1swh7")
-theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/normal_font_size = 8
 text = "hola buenas tardes"

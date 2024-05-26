@@ -387,8 +387,7 @@ func play_anim_runing(movement):
 
 func collect(item):
 	inv.insert(item)
-	print(item)
-	if str(item) == "<Resource#-9223371853748238841>":
+	print(item.id)
+	if item.name == "huevodebabosa":
 		print("Picked up huevo")
 		emit_signal("huevodebabosa_collected")
-	

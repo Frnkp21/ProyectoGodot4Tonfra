@@ -1,5 +1,12 @@
 [
-	{"name": "Desconocido:", "text": "buenas tardes"},
-	{"name": "Desconocido:", "text": "Queeee"},
-	{"name": "You:", "text": "pues na aqui estamos"}
+	{"name": "Tú:", "text": "¿Qué... qué está pasando? ¿Qué es este portal...?"},
+	{"name": "Voz Misteriosa:", "text": "Saludos, joven aventurero."},
+	{"name": "Tú:", "text": "¿Quién eres tú? ¿Qué está ocurriendo?"},
+	{"name": "Voz Misteriosa:", "text": "No puedo revelarte mi identidad ahora, pero necesito tu ayuda desesperadamente."},
+	{"name": "Tú:", "text": "¿Mi ayuda? ¿Por qué yo?"},
+	{"name": "Voz Misteriosa:", "text": "El futuro de nuestro mundo está en grave peligro. Solo tú puedes salvarlo."},
+	{"name": "Voz Misteriosa:", "text": "Debes viajar a través del tiempo, derrotar a las criaturas que han invadido desde otras épocas y sellar las brechas temporales."},
+	{"name": "Tú:", "text": "¿Cómo es eso posible? ¿Y por qué yo?"},
+	{"name": "Voz Misteriosa:", "text": "No hay tiempo para explicaciones. Dirígete al bosque, allí se ha abierto el primer portal."},
+	{"name": "Voz Misteriosa:", "text": "Me mantendré en contacto contigo. Están viniendo por mí... debo huir ahora."}
 ]

@@ -24,7 +24,7 @@ func next_quest():
 		quest1_chat()
 	else:
 		$no_quest.visible = true
-		await get_tree().create_timer(4).timeout
+		await get_tree().create_timer(3).timeout
 		$no_quest.visible = false
 
 func _on_yes_button_1_pressed():
@@ -45,5 +45,5 @@ func huevodebabosa_collected():
 
 func play_finish_quest_anim():
 	$finished_quest.visible = true
-	await get_tree().create_timer(400).timeout
+	await get_tree().create_timer(120).timeout
 	$finished_quest.visible = false
