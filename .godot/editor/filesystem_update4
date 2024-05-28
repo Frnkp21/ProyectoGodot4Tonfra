@@ -28,3 +28,5 @@ res://Scenes/mother.tscn
 res://Scenes/MoveScene.tscn
 res://Scenes/Street.tscn
 res://Inventory/stats numeros/puntos_vida.tscn
+res://Inventory/Inv_UI.gd
+res://Scripts/showTextInvent.gd

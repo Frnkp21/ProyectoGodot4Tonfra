@@ -34,3 +34,11 @@ func open():
 func _on_vida_button_down():
 	global.hpProtagonista += 5;
 	print(global.hpProtagonista)
+
+func _on_vida_button_mouse_entered():
+	$NinePatchRect2/Corazon/VidaStats/VidaButton/VidaBackBlack.visible = true
+	$NinePatchRect2/Corazon/VidaStats/VidaButton/VidaTextInfo.visible = true
+
+func _on_vida_button_mouse_exited():
+	$NinePatchRect2/Corazon/VidaStats/VidaButton/VidaBackBlack.visible = false
+	$NinePatchRect2/Corazon/VidaStats/VidaButton/VidaTextInfo.visible = false

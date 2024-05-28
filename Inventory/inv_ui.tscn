@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c16pf6l0yxj20"]
+[gd_scene load_steps=11 format=3 uid="uid://c16pf6l0yxj20"]
 
 [ext_resource type="Script" path="res://Inventory/Inv_UI.gd" id="1_bmmb1"]
 [ext_resource type="Texture2D" uid="uid://6p2t1bqrawib" path="res://Assets/Additional/inventario.png" id="2_0qygn"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://drrwxm6hpm4ex" path="res://Assets/Additional/vidas.png" id="6_esnqf"]
 [ext_resource type="FontFile" uid="uid://m56f0wyj3sci" path="res://Pixeltype.ttf" id="7_0yg6s"]
 [ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="7_e2qr3"]
+[ext_resource type="Texture2D" uid="uid://c02ps1rkwh4jv" path="res://Assets/Additional/blackbackground.png" id="10_eddbr"]
+
+[sub_resource type="Theme" id="Theme_n6dkn"]
 
 [node name="Inv_UI" type="Control"]
 custom_minimum_size = Vector2(63, 49)
@@ -92,31 +95,6 @@ position = Vector2(42, 26)
 scale = Vector2(1.52995, 1.52995)
 texture = ExtResource("5_jl11i")
 
-[node name="Corazon" type="Sprite2D" parent="NinePatchRect2"]
-position = Vector2(23.2656, 58.2656)
-scale = Vector2(0.533203, 0.533203)
-texture = ExtResource("6_esnqf")
-
-[node name="Label" type="Label" parent="NinePatchRect2/Corazon"]
-offset_left = 11.2527
-offset_top = -1.87546
-offset_right = 26.2527
-offset_bottom = 5.12454
-theme_override_fonts/font = ExtResource("7_e2qr3")
-theme_override_font_sizes/font_size = 8
-text = "100"
-
-[node name="Button" type="Button" parent="NinePatchRect2/Corazon/Label"]
-layout_mode = 0
-offset_left = -34.0
-offset_top = -6.0
-offset_right = -23.0
-offset_bottom = 8.0
-theme_override_fonts/font = ExtResource("7_0yg6s")
-theme_override_font_sizes/font_size = 16
-text = "+"
-flat = true
-
 [node name="Corazon2" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(23.2656, 67.2656)
 scale = Vector2(0.517153, 0.517153)
@@ -132,6 +110,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon2/Label"]
+layout_mode = 0
 offset_left = -34.9703
 offset_top = -8.30648
 offset_right = -20.9703
@@ -156,6 +135,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon3/Label"]
+layout_mode = 0
 offset_left = -35.3633
 offset_top = -8.47521
 offset_right = -21.3633
@@ -180,6 +160,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon4/Label"]
+layout_mode = 0
 offset_left = -36.0
 offset_top = -7.0
 offset_right = -20.0
@@ -204,6 +185,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon5/Label"]
+layout_mode = 0
 offset_left = -35.0
 offset_top = -6.0
 offset_right = -21.0
@@ -228,6 +210,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon6/Label"]
+layout_mode = 0
 offset_left = -35.4486
 offset_top = -6.18983
 offset_right = -21.4486
@@ -252,6 +235,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon7/Label"]
+layout_mode = 0
 offset_left = -36.0
 offset_top = -6.0
 offset_right = -20.0
@@ -276,6 +260,7 @@ theme_override_font_sizes/font_size = 8
 text = "100"
 
 [node name="Button" type="Button" parent="NinePatchRect2/Corazon8/Label"]
+layout_mode = 0
 offset_left = -36.0
 offset_top = -6.0
 offset_right = -20.0
@@ -284,3 +269,50 @@ theme_override_fonts/font = ExtResource("7_0yg6s")
 theme_override_font_sizes/font_size = 16
 text = "+"
 flat = true
+
+[node name="Corazon" type="Sprite2D" parent="NinePatchRect2"]
+position = Vector2(23.2656, 58.2656)
+scale = Vector2(0.533203, 0.533203)
+texture = ExtResource("6_esnqf")
+
+[node name="VidaStats" type="Label" parent="NinePatchRect2/Corazon"]
+offset_left = 11.2527
+offset_top = -1.87546
+offset_right = 26.2527
+offset_bottom = 5.12454
+theme_override_fonts/font = ExtResource("7_e2qr3")
+theme_override_font_sizes/font_size = 8
+text = "100"
+
+[node name="VidaButton" type="Button" parent="NinePatchRect2/Corazon/VidaStats"]
+layout_mode = 0
+offset_left = -34.0
+offset_top = -6.0
+offset_right = -2.0
+offset_bottom = 12.0
+theme_override_fonts/font = ExtResource("7_0yg6s")
+theme_override_font_sizes/font_size = 16
+text = "+"
+flat = true
+alignment = 0
+
+[node name="VidaBackBlack" type="Sprite2D" parent="NinePatchRect2/Corazon/VidaStats/VidaButton"]
+visible = false
+position = Vector2(52.2564, 7.37729)
+scale = Vector2(1.08608, 1.25018)
+texture = ExtResource("10_eddbr")
+
+[node name="VidaTextInfo" type="Label" parent="NinePatchRect2/Corazon/VidaStats/VidaButton"]
+visible = false
+layout_mode = 0
+offset_left = 41.0037
+offset_top = 3.62637
+offset_right = 65.0037
+offset_bottom = 10.6264
+theme = SubResource("Theme_n6dkn")
+theme_override_fonts/font = ExtResource("7_e2qr3")
+theme_override_font_sizes/font_size = 8
+text = "Vida"
+
+[connection signal="mouse_entered" from="NinePatchRect2/Corazon/VidaStats/VidaButton" to="." method="_on_vida_button_mouse_entered"]
+[connection signal="mouse_exited" from="NinePatchRect2/Corazon/VidaStats/VidaButton" to="." method="_on_vida_button_mouse_exited"]

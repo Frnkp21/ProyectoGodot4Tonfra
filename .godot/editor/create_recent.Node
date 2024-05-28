@@ -1,9 +1,9 @@
-Button
+Sprite2D
 Label
+Button
 StaticBody2D
 CollisionShape2D
 Area2D
-Sprite2D
 AnimationPlayer
 AnimatedSprite2D
 Marker2D
