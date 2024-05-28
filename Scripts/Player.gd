@@ -38,6 +38,7 @@ func _ready():
 	$Interact/interrogante.visible = interrogante
 	$xpbar.visible = false
 	originalModulateColor = $AnimatedSprite.modulate
+	var inv_ui = get_node("res://Inventory/Inv_UI.gd")
 
 
 func _physics_process(delta):
@@ -303,6 +304,7 @@ func level_up():
 	print("Jugador ha subido de nivel al nivel: ", global.lvlProtagonista)
 	global.expProtagonista -= global.experience_threshold
 	global.experience_threshold *= 1.3 # Ejemplo de valor; ajusta según tus necesidades en el juego.
+	global.botonesActivados = true
 	
 
 func update_experience_bar():
