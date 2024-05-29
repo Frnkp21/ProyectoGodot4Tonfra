@@ -1,10 +1,12 @@
 res://tilemaps/default_env.tres
-res://Scenes/portal.tscn
+res://Inventory/inv_ui.tscn
 res://Inventory/inventory_item.gd
 res://Inventory/playerinv.tres
 res://tilemaps/1.tres
 res://tilemaps/bedroomtile.tres
 res://tilemaps/LivingroomDeco.tres
+res://Inventory/Inv_UI.gd
+res://Scenes/portal.tscn
 res://Scenes/Player.tscn
 res://Scenes/guardabosques_quest.tscn
 res://Scenes/guarda_bosques.tscn
@@ -26,7 +28,6 @@ res://Scenes/menu.tscn
 res://Scenes/mother.tscn
 res://Scenes/MoveScene.tscn
 res://Scenes/Street.tscn
-res://Inventory/inv_ui.tscn
-res://Inventory/Inv_UI.gd
 res://Scripts/Player.gd
 res://Scripts/global.gd
+res://Scripts/Enemy.gd

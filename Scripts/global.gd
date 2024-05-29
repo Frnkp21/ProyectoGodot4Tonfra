@@ -19,10 +19,19 @@ var player_start_posy = 0
 
 var lvlProtagonista = 1
 var expProtagonista : int
-var hpProtagonista = 100
 var experience_threshold = 100
 
 var puedetp = false
 var puedetp2 = false
 var botonesActivados = false
 
+var hpProtagonista = 100
+var maxvida = 100
+var defensa = 10
+var dañoEnemigo = 25
+var ataqueProtagonista = 25
+var evasionProtagonista = 1
+var suerteProtagonista = 1
+var aprendeizajePersonaje = 1
+var criticoPersonaje = 1
+var regeneracionPersonaje = 1

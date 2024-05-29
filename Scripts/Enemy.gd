@@ -52,22 +52,29 @@ func _on_enemy_hitbox_body_exited(body):
 		player_inattack_zone = false
 		
 func deal_with_damage():
-	if player_inattack_zone and global.player_current_attack == true:
-		if can_take_damage == true:
-			health = health -30
-			colorDiferente = true
-			$take_damage_cooldown.start()
-			if colorDiferente == true:
-				$AnimatedSprite2D.modulate = Color(1,0,0,1)
-				time_out()
-				var direction = (position - player.position).normalized()
-				var push_distance = 20
-				position += direction * push_distance
-			can_take_damage = false
-			print ("slime health ",health)
-			if health <= 0:
-				self.queue_free()
-				give_experience(player)
+	var random_number = randi() % 100
+	if (random_number != null):
+		if player_inattack_zone and global.player_current_attack == true:
+			if can_take_damage == true:
+				if (random_number >= global.criticoPersonaje):
+					health = health - global.ataqueProtagonista
+					colorDiferente = true
+					$take_damage_cooldown.start()
+				else:
+					health = health - global.ataqueProtagonista * 2
+					colorDiferente = true
+					$take_damage_cooldown.start()
+				if colorDiferente == true:
+					$AnimatedSprite2D.modulate = Color(1,0,0,1)
+					time_out()
+					var direction = (position - player.position).normalized()
+					var push_distance = 20
+					position += direction * push_distance
+				can_take_damage = false
+				print ("slime health ",health)
+				if health <= 0:
+					self.queue_free()
+					give_experience(player)
 
 func time_out():
 	await get_tree().create_timer(0.5).timeout
@@ -89,4 +96,5 @@ func update_health():
 		healthbar.visible = true
 
 func give_experience(player):
-	player.gain_experience(drop_exp)
+	var exp = global.aprendeizajePersonaje + drop_exp
+	player.gain_experience(exp)

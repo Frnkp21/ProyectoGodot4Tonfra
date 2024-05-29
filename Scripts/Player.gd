@@ -171,15 +171,22 @@ func _on_player_hitbox_body_exited(body):
 		enemy_inattack_range = false
 		
 func enemy_attack():
-	if enemy_inattack_range and enemy_attack_cooldown == true:
-		global.hpProtagonista = global.hpProtagonista - 10
-		colorDiferente = true
-		print("cambia a true")
-		if colorDiferente == true:
-			$AnimatedSprite.modulate = Color(1,0,0,1)
-			time_out()
-		enemy_attack_cooldown = false
-		$attack_cooldown.start()
+	var random_number = randi() % 100
+	if (random_number != null):
+		if enemy_inattack_range and enemy_attack_cooldown == true:
+			print("Random Number:", random_number)
+			print("Evasion Chance:", global.evasionProtagonista)
+			if (random_number >= global.evasionProtagonista):
+				global.hpProtagonista = global.hpProtagonista - global.dañoEnemigo
+				print(global.hpProtagonista)
+				print(global.dañoEnemigo)
+				colorDiferente = true
+				print("cambia a true")
+				if colorDiferente == true:
+					$AnimatedSprite.modulate = Color(1,0,0,1)
+					time_out()
+				enemy_attack_cooldown = false
+				$attack_cooldown.start()
 		
 func time_out():
 	await get_tree().create_timer(0.5).timeout
@@ -231,9 +238,9 @@ func update_health():
 	
 	
 func _on_regin_timer_timeout():
-	if global.hpProtagonista < 100:
-		global.hpProtagonista = global.hpProtagonista + 15
-		if global.hpProtagonista > 100:
+	if global.hpProtagonista < global.maxvida:
+		global.hpProtagonista = global.hpProtagonista + 15 + global.regeneracionPersonaje
+		if global.hpProtagonista > global.maxvida:
 			global.hpProtagonista = 100
 	if global.hpProtagonista <= 0:
 		global.hpProtagonista = 0
