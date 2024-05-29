@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://1egnnow07n0w"]
+[gd_scene load_steps=38 format=3 uid="uid://1egnnow07n0w"]
 
 [ext_resource type="Script" path="res://Scripts/Livingroom2.gd" id="1_p5m5e"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_avug4"]
@@ -17,6 +17,7 @@
 [ext_resource type="TileSet" uid="uid://cnovmyy43q87m" path="res://tilemaps/LivingroomDeco.tres" id="13_od14s"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="15_s7umu"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="16_0c847"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="18_g4vfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rublu"]
 texture = ExtResource("3_rxsp7")
@@ -825,3 +826,5 @@ position = Vector2(367, 220)
 target_scene = "Street"
 target_position = Vector2(770, 517)
 target_zoom = Vector2(3, 3)
+
+[node name="Pause" parent="." instance=ExtResource("18_g4vfs")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c417qymmhxvs5"]
+[gd_scene load_steps=10 format=3 uid="uid://c417qymmhxvs5"]
 
 [ext_resource type="Script" path="res://Scripts/Parentsroom2.gd" id="1_xqaa7"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_xotw8"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cru4hx16fhnbv" path="res://Scenes/xavier.tscn" id="6_jvjo2"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_wrdeu"]
 [ext_resource type="PackedScene" uid="uid://bgtutqnlgbfo0" path="res://Scenes/madreGitana.tscn" id="7_6jsms"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="9_7kepw"]
 
 [node name="Parentsroom2" type="Node2D" node_paths=PackedStringArray("player")]
 position = Vector2(126, 122)
@@ -43,3 +44,5 @@ position = Vector2(287, 124)
 target_scene = "Hallway2"
 target_position = Vector2(305, 89)
 target_zoom = Vector2(4.5, 4.5)
+
+[node name="Pause" parent="." instance=ExtResource("9_7kepw")]

@@ -35,3 +35,5 @@ var suerteProtagonista = 1
 var aprendeizajePersonaje = 1
 var criticoPersonaje = 1
 var regeneracionPersonaje = 1
+
+var dañoSuperAttackEnemigo = 30

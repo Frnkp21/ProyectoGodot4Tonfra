@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcyxmwvxxkqr5"]
+[gd_scene load_steps=8 format=3 uid="uid://dcyxmwvxxkqr5"]
 
 [ext_resource type="Script" path="res://Scripts/BedRoom2.gd" id="1_35mvf"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_jdwty"]
@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" path="res://tilemaps/BedRoomDeco.tres" id="4_ervfq"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_loagu"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="6_gry5q"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="7_6xhm8"]
 
 [node name="BedRoom2" type="Node2D" node_paths=PackedStringArray("player")]
 position = Vector2(319, 180)
@@ -40,3 +41,5 @@ position = Vector2(80, -44)
 target_scene = "Hallway2"
 target_position = Vector2(432, 148)
 target_zoom = Vector2(4.5, 4.5)
+
+[node name="Pause" parent="." instance=ExtResource("7_6xhm8")]

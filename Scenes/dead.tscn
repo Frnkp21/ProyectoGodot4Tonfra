@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctlu4g2b7gm7s"]
 
 [ext_resource type="Script" path="res://Scripts/Dead.gd" id="1_cjoj6"]
-[ext_resource type="VideoStream" path="res://Assets/Additional/Cj-arrepentido-Plantilla-meme-HD.ogv" id="2_fumeg"]
-[ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_u8f8a"]
+[ext_resource type="Texture2D" uid="uid://pi23xjkptbb1" path="res://Assets/Additional/gameover.png" id="2_qce8a"]
+[ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="3_haq7r"]
 
 [node name="Dead" type="Control"]
 layout_mode = 3
@@ -16,57 +16,37 @@ target_position = Vector2(-77, -1)
 target_scene = "BedRoom"
 target_zoom = Vector2(4.5, 4.5)
 
-[node name="BlackBack" type="Sprite2D" parent="."]
-position = Vector2(1186.5, 740.5)
-scale = Vector2(0.923225, 0.795782)
-texture = ExtResource("2_u8f8a")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -184.0
-offset_right = 320.0
-offset_bottom = 184.0
-grow_horizontal = 2
-grow_vertical = 2
-audio_track = 1
-stream = ExtResource("2_fumeg")
-autoplay = true
-
-[node name="Label" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.192
-anchor_right = 0.5
-anchor_bottom = 0.192
-offset_left = -148.0
-offset_top = -37.12
-offset_right = 148.0
-offset_bottom = 31.88
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 50
-text = "Moriste wey"
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = -1.0
+texture = ExtResource("2_qce8a")
+expand_mode = 1
 
 [node name="Respawn" type="Button" parent="."]
+texture_filter = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.914
-anchor_right = 0.5
-anchor_bottom = 0.914
-offset_left = -40.0
-offset_top = -16.04
-offset_right = 38.0
-offset_bottom = 14.96
+anchor_left = 0.409
+anchor_top = 0.739
+anchor_right = 0.581
+anchor_bottom = 0.878
+offset_left = -10.76
+offset_top = 3.95999
+offset_right = 21.16
+offset_bottom = -0.0800171
 grow_horizontal = 2
 grow_vertical = 0
-text = "Intentalo otra vez
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_haq7r")
+theme_override_font_sizes/font_size = 24
+text = "Play again
 "
+flat = true
 
 [connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]

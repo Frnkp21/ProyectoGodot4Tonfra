@@ -6,9 +6,8 @@
 font_names = PackedStringArray("Ubuntu")
 subpixel_positioning = 0
 
-[node name="Control" type="Control"]
+[node name="Pause" type="Control"]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.270588, 0.396078, 0.294118, 0.780392)
+color = Color(0.305882, 0.215686, 0.835294, 0.403922)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 process_mode = 3
@@ -95,12 +94,24 @@ layout_mode = 2
 theme_override_constants/separation = 18
 alignment = 1
 
+[node name="Separetor4" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+
 [node name="Button" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
-text = "Restart"
+text = "Resume"
 
 [node name="Separetor2" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+
+[node name="Separetor3" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
 process_mode = 3
 layout_mode = 2
 
@@ -110,4 +121,5 @@ layout_mode = 2
 text = "Exit"
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cq8rnooqvps1d"]
+[gd_scene load_steps=44 format=3 uid="uid://cq8rnooqvps1d"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Bathroom.gd" id="1_rrdkc"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dble0mcnu7mfi" path="res://Assets/Map/casa/decoracioncasa/bater.png" id="12"]
 [ext_resource type="Texture2D" uid="uid://0tjfrxqtunut" path="res://Assets/Map/casa/decoracioncasa/espejo.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://o2iiu25s4d8y" path="res://Assets/Map/casa/pared-baño2.png" id="14"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="16_o70a3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgkvc"]
 texture = ExtResource("8")
@@ -878,3 +879,5 @@ position = Vector2(287, 159)
 target_scene = "Hallway"
 target_position = Vector2(433, 89)
 target_zoom = Vector2(4.5, 4.5)
+
+[node name="Pause" parent="." instance=ExtResource("16_o70a3")]

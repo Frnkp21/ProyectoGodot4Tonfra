@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://37cnfeylmdn4"]
+[gd_scene load_steps=8 format=3 uid="uid://d15eaje7qbi2d"]
 
 [ext_resource type="Script" path="res://labrimadebabosa_Collectable.gd" id="1_euy76"]
 [ext_resource type="Texture2D" uid="uid://bpomashm3rx5u" path="res://Assets/items/lagrimadebabosa.png" id="2_3x4so"]

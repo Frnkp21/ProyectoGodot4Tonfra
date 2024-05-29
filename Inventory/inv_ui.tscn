@@ -1,14 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://c16pf6l0yxj20"]
+[gd_scene load_steps=18 format=3 uid="uid://c16pf6l0yxj20"]
 
 [ext_resource type="Script" path="res://Inventory/Inv_UI.gd" id="1_bmmb1"]
 [ext_resource type="Texture2D" uid="uid://6p2t1bqrawib" path="res://Assets/Additional/inventario.png" id="2_0qygn"]
 [ext_resource type="PackedScene" uid="uid://cilmjtllou66m" path="res://Inventory/inv_ui_slot.tscn" id="3_u6l07"]
 [ext_resource type="Texture2D" uid="uid://chkii7i8kb6jb" path="res://Assets/Additional/inventarioStats.png" id="4_eegxn"]
 [ext_resource type="Texture2D" uid="uid://caei1b4jd7kbi" path="res://Assets/Player/pjcortado.png" id="5_jl11i"]
-[ext_resource type="Texture2D" uid="uid://drrwxm6hpm4ex" path="res://Assets/Additional/vidas.png" id="6_esnqf"]
+[ext_resource type="Texture2D" uid="uid://cgxyv620h5qd" path="res://Assets/Additional/suerte.png" id="6_o0au5"]
 [ext_resource type="FontFile" uid="uid://m56f0wyj3sci" path="res://Pixeltype.ttf" id="7_0yg6s"]
 [ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="7_e2qr3"]
 [ext_resource type="Texture2D" uid="uid://c02ps1rkwh4jv" path="res://Assets/Additional/blackbackground.png" id="10_eddbr"]
+[ext_resource type="Texture2D" uid="uid://dtcfth8mdqha8" path="res://Assets/Additional/Aprender1.png" id="10_xyfa4"]
+[ext_resource type="Texture2D" uid="uid://crski5u6oba1s" path="res://Assets/Additional/Critico.png" id="11_lx165"]
+[ext_resource type="Texture2D" uid="uid://b43gjv0qkx23m" path="res://Assets/Additional/supervivencia.png" id="12_d7vqj"]
+[ext_resource type="Texture2D" uid="uid://bdh51yog37el3" path="res://Assets/Additional/Evasion.png" id="13_k8ia5"]
+[ext_resource type="Texture2D" uid="uid://ojbt2gppipeq" path="res://Assets/Additional/espada.png" id="14_sanp0"]
+[ext_resource type="Texture2D" uid="uid://be2bqowiledam" path="res://Assets/Additional/Escudo.png" id="15_6akrp"]
+[ext_resource type="Texture2D" uid="uid://u8js6fgy3kk0" path="res://Assets/Additional/Corazon.png" id="16_2ppbk"]
 
 [sub_resource type="Theme" id="Theme_n6dkn"]
 
@@ -41,11 +48,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -25.5
 offset_top = -20.0
-offset_right = 46.5
-offset_bottom = 31.0
+offset_right = 26.5
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 4
+columns = 6
 
 [node name="Inv_UI_slot1" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
 layout_mode = 2
@@ -83,6 +90,24 @@ layout_mode = 2
 [node name="Inv_UI_slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
 layout_mode = 2
 
+[node name="Inv_UI_slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
+[node name="Inv_UI_slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
+[node name="Inv_UI_slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
+[node name="Inv_UI_slot16" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
+[node name="Inv_UI_slot17" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
+[node name="Inv_UI_slot18" parent="NinePatchRect/GridContainer" instance=ExtResource("3_u6l07")]
+layout_mode = 2
+
 [node name="NinePatchRect2" type="NinePatchRect" parent="."]
 layout_mode = 0
 offset_left = 56.0
@@ -99,7 +124,7 @@ texture = ExtResource("5_jl11i")
 [node name="Corazon5" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(69.5, 74.5)
 scale = Vector2(0.687498, 0.687498)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("6_o0au5")
 
 [node name="SuerteStat" type="Label" parent="NinePatchRect2/Corazon5"]
 offset_left = 11.2527
@@ -108,7 +133,8 @@ offset_right = 26.2527
 offset_bottom = 5.12454
 theme_override_fonts/font = ExtResource("7_e2qr3")
 theme_override_font_sizes/font_size = 8
-text = "1"
+text = "0
+"
 
 [node name="SuerteButton" type="Button" parent="NinePatchRect2/Corazon5/SuerteStat"]
 layout_mode = 0
@@ -144,7 +170,7 @@ text = "Suerte"
 [node name="Corazon6" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(69.5162, 85.5162)
 scale = Vector2(0.685474, 0.685474)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("10_xyfa4")
 
 [node name="AprendizajeStat" type="Label" parent="NinePatchRect2/Corazon6"]
 offset_left = 11.2527
@@ -189,7 +215,7 @@ text = "Aprendizaje"
 [node name="Corazon7" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(69.5247, 96.5247)
 scale = Vector2(0.684412, 0.684412)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("11_lx165")
 
 [node name="CriticoStat" type="Label" parent="NinePatchRect2/Corazon7"]
 offset_left = 11.2527
@@ -234,7 +260,7 @@ text = "Critico"
 [node name="Corazon8" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(69.5291, 107.529)
 scale = Vector2(0.683865, 0.683865)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("12_d7vqj")
 
 [node name="RegenStat" type="Label" parent="NinePatchRect2/Corazon8"]
 offset_left = 11.2527
@@ -280,7 +306,7 @@ text = "Regeneracion"
 [node name="Corazon4" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(29.6152, 107.615)
 scale = Vector2(0.673098, 0.673098)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("13_k8ia5")
 
 [node name="EvasionStat" type="Label" parent="NinePatchRect2/Corazon4"]
 offset_left = 11.2527
@@ -325,7 +351,7 @@ text = "Evasion"
 [node name="Corazon3" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(29.5979, 96.5979)
 scale = Vector2(0.67526, 0.67526)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("14_sanp0")
 
 [node name="AtaqueStat" type="Label" parent="NinePatchRect2/Corazon3"]
 offset_left = 11.2527
@@ -370,7 +396,7 @@ text = "Ataque"
 [node name="Corazon2" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(29.5642, 85.5642)
 scale = Vector2(0.679475, 0.679475)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("15_6akrp")
 
 [node name="DefensaStat" type="Label" parent="NinePatchRect2/Corazon2"]
 offset_left = 11.2527
@@ -419,7 +445,7 @@ text = "Defensa"
 [node name="Corazon" type="Sprite2D" parent="NinePatchRect2"]
 position = Vector2(29.5, 74.5)
 scale = Vector2(0.6875, 0.6875)
-texture = ExtResource("6_esnqf")
+texture = ExtResource("16_2ppbk")
 
 [node name="VidaStat" type="Label" parent="NinePatchRect2/Corazon"]
 offset_left = 11.2527

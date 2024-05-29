@@ -20,12 +20,12 @@ config/icon="res://icon.png"
 global="*res://Scripts/global.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Trans="*res://Scenes/trans.tscn"
+BgMusic="*res://Scenes/bg_music.tscn"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/mode=3
 window/size/window_width_override=1200
 window/size/window_height_override=720
 window/stretch/mode="2d"
@@ -37,6 +37,12 @@ enabled=PackedStringArray()
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+animation_library={
+"animation/fps": 120.0
+}
 
 [input]
 

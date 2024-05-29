@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bed8impuogdfw"]
+[gd_scene load_steps=36 format=3 uid="uid://bed8impuogdfw"]
 
 [ext_resource type="Texture2D" uid="uid://cee0p48iy4te7" path="res://istock-1071006450_small.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Livingroom.gd" id="1_rca8m"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="15_c7bce"]
 [ext_resource type="Texture2D" uid="uid://cqxxlii083yvh" path="res://Assets/Map/casa/sueloconalfombra6.png" id="17"]
 [ext_resource type="Script" path="res://Scripts/MoveSceneFuera.gd" id="17_svpwu"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="18_a4fma"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rublu"]
 texture = ExtResource("5")
@@ -815,3 +816,5 @@ script = ExtResource("17_svpwu")
 target_scene = "Street"
 target_position = Vector2(290, 520)
 target_zoom = Vector2(3, 3)
+
+[node name="Pause" parent="." instance=ExtResource("18_a4fma")]

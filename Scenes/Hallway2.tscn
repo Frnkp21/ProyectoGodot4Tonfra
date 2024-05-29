@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://t6ep8ms63623"]
+[gd_scene load_steps=29 format=3 uid="uid://t6ep8ms63623"]
 
 [ext_resource type="Script" path="res://Scripts/Hallway2.gd" id="1_qaq1h"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_j825m"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="11_0p6jn"]
 [ext_resource type="Texture2D" uid="uid://c646ewl5pkwxi" path="res://Assets/Map/casa/suelo10.png" id="11_a4is0"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="12_8bvrq"]
+[ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="15_lmcst"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k0t7d"]
 texture = ExtResource("3_srr8q")
@@ -509,3 +510,5 @@ position = Vector2(304, 84)
 target_scene = "Parentsroom2"
 target_position = Vector2(288, 117)
 target_zoom = Vector2(4.5, 4.5)
+
+[node name="Pause" parent="." instance=ExtResource("15_lmcst")]

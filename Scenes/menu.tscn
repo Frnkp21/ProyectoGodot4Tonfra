@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://gehfmyirjliq"]
+[gd_scene load_steps=4 format=3 uid="uid://gehfmyirjliq"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_gkscv"]
+[ext_resource type="Texture2D" uid="uid://0h4k0qql1ywd" path="res://Assets/Additional/inicio_portada.png" id="2_keu6k"]
+[ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="3_76jn5"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,44 +13,80 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gkscv")
 
-[node name="Tonfra" type="Label" parent="."]
-layout_mode = 0
-offset_left = 103.0
-offset_top = 1.0
-offset_right = 256.0
-offset_bottom = 27.0
-scale = Vector2(3, 3)
-theme_override_font_sizes/font_size = 15
-text = "Tonfra's Adventure"
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_keu6k")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -60.0
-offset_right = 135.0
-offset_bottom = 115.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.708
+anchor_right = 0.648
+anchor_bottom = 0.792
+offset_left = 0.279984
+offset_top = 0.119995
+offset_right = 0.279999
+offset_bottom = 3.87997
 alignment = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 4
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_76jn5")
+theme_override_font_sizes/font_size = 24
 text = "Play"
+flat = true
 
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options"
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.8
+anchor_right = 0.65
+anchor_bottom = 0.886
+offset_left = 0.279984
+offset_right = -3.05176e-05
+offset_bottom = 2.03998
+alignment = 1
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_76jn5")
+theme_override_font_sizes/font_size = 24
+text = "Controles"
+flat = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.347
+anchor_top = 0.892
+anchor_right = 0.648
+anchor_bottom = 0.958
+offset_left = -0.0800018
+offset_top = 1.88
+offset_right = 0.279999
+offset_bottom = 13.12
+alignment = 1
+
+[node name="Quit" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_76jn5")
+theme_override_font_sizes/font_size = 24
 text = "Exit"
+flat = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Quit" to="." method="_on_quit_pressed"]
