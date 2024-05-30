@@ -37,3 +37,4 @@ var criticoPersonaje = 1
 var regeneracionPersonaje = 1
 
 var dañoSuperAttackEnemigo = 30
+var inventarioAbiertoJugador : bool

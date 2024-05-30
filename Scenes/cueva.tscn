@@ -185,7 +185,6 @@ layer_0/tile_data = PackedInt32Array(393234, 65578, 1, 393233, 65578, 1, 15, 41,
 
 [node name="player" parent="." instance=ExtResource("4_vjgoy")]
 position = Vector2(670, 209)
-scale = Vector2(1, 1)
 
 [node name="Boss" parent="." instance=ExtResource("3_e8bs8")]
 position = Vector2(-106, 215)

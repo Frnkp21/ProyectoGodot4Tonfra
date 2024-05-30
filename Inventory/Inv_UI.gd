@@ -8,6 +8,8 @@ var btnTrue = global.botonesActivados
 var is_open = false
 var hideButtons = false
 
+var inventarioAbierto = false
+
 func _ready():
 	inv.update.connect(update_slots)
 	update_slots()
@@ -57,10 +59,14 @@ func _process(delta):
 func close():
 	visible = false
 	is_open = false
+	inventarioAbierto = false
+	global.inventarioAbiertoJugador = inventarioAbierto
 
 func open():
 	self.visible = true
 	is_open = true
+	inventarioAbierto = true
+	global.inventarioAbiertoJugador = inventarioAbierto
 
 
 func _on_vida_button_down():
