@@ -55,6 +55,8 @@ position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_pvi6v")
 
 [node name="ChatDetectionArea" type="Area2D" parent="."]
+position = Vector2(0, 7)
+scale = Vector2(1, 0.581613)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChatDetectionArea"]
 position = Vector2(-1, 1)

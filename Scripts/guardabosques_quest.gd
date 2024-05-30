@@ -45,5 +45,6 @@ func huevodebabosa_collected():
 
 func play_finish_quest_anim():
 	$finished_quest.visible = true
+	$completed.play()
 	await get_tree().create_timer(120).timeout
 	$finished_quest.visible = false

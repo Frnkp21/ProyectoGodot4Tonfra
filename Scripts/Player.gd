@@ -94,7 +94,7 @@ func _physics_process(delta):
 			return
 	
 	if global.hpProtagonista <= 0:
-		player_alive=false #agregar un menu de respawn o algo
+		player_alive=false
 		global.hpProtagonista = 0
 		get_tree().change_scene_to_file("res://Scenes/dead.tscn")
 		print("player has been killed")
@@ -168,12 +168,12 @@ func player():
 	pass
 
 func _on_player_hitbox_body_entered(body):
-	if body.has_method("enemy") or body.has_method("boss"):
+	if body.has_method("enemy") or body.has_method("boss") or body.has_method("snake"):
 		enemy_inattack_range = true
 
 
 func _on_player_hitbox_body_exited(body):
-	if body.has_method("enemy") or body.has_method("boss"):
+	if body.has_method("enemy") or body.has_method("boss") or body.has_method("snake"):
 		enemy_inattack_range = false
 		
 
@@ -190,22 +190,22 @@ func _on_player_hitbox_attack_super_body_exited(body):
 		bossfinalattack_inattack_range = false
 		
 func enemy_attack():
-	var random_number = randi() % 100
-	if (random_number != null):
-		if enemy_inattack_range and enemy_attack_cooldown == true:
-			print("Random Number:", random_number)
-			print("Evasion Chance:", global.evasionProtagonista)
-			if (random_number >= global.evasionProtagonista):
-				global.hpProtagonista = global.hpProtagonista - global.dañoEnemigo
-				print(global.hpProtagonista)
-				print(global.dañoEnemigo)
-				colorDiferente = true
-				print("cambia a true")
-				if colorDiferente == true:
-					$AnimatedSprite.modulate = Color(1,0,0,1)
-					time_out()
-				enemy_attack_cooldown = false
-				$attack_cooldown.start()
+		var random_number = randi() % 100
+		if (random_number != null):
+			if enemy_inattack_range and enemy_attack_cooldown == true:
+				print("Random Number:", random_number)
+				print("Evasion Chance:", global.evasionProtagonista)
+				if (random_number >= global.evasionProtagonista):
+					global.hpProtagonista = global.hpProtagonista - global.dañoEnemigo
+					print(global.hpProtagonista)
+					print(global.dañoEnemigo)
+					colorDiferente = true
+					print("cambia a true")
+					if colorDiferente == true:
+						$AnimatedSprite.modulate = Color(1,0,0,1)
+						time_out()
+					enemy_attack_cooldown = false
+					$attack_cooldown.start()
 				
 func enemy_superattack():
 	var random_number = randi() % 100
@@ -248,15 +248,19 @@ func attack():
 		attack_ip = true
 		if dir == "right":
 			$AnimatedSprite.play("Attack_Right")
+			$hitsound.play()
 			$deal_attack_timer.start()
 		if dir == "left":
 			$AnimatedSprite.play("Attack_Left")
+			$hitsound.play()
 			$deal_attack_timer.start()
 		if dir == "down":
 			$AnimatedSprite.play("Attack_Down")
+			$hitsound.play()
 			$deal_attack_timer.start()
 		if dir == "up":
 			$AnimatedSprite.play("Attack_Up")
+			$hitsound.play()
 			$deal_attack_timer.start()
 		
 
@@ -349,6 +353,7 @@ func gain_experience(amount):
 
 func level_up():
 	global.lvlProtagonista += 1
+	$LevelUp.play()
 	print("Jugador ha subido de nivel al nivel: ", global.lvlProtagonista)
 	global.expProtagonista -= global.experience_threshold
 	global.experience_threshold *= 1.3 # Ejemplo de valor; ajusta según tus necesidades en el juego.
@@ -444,6 +449,11 @@ func collect(item):
 		emit_signal("huevodebabosa_collected")
 
 
+func _on_sound_snake_area_body_entered(body):
+	if body.has_method("snake"):
+		$snakedamage.play()
 
 
-
+func _on_sound_slime_area_body_entered(body):
+	if body.has_method("enemy"):
+		$slimedamage.play()

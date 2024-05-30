@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctlu4g2b7gm7s"]
+[gd_scene load_steps=5 format=3 uid="uid://ctlu4g2b7gm7s"]
 
 [ext_resource type="Script" path="res://Scripts/Dead.gd" id="1_cjoj6"]
 [ext_resource type="Texture2D" uid="uid://pi23xjkptbb1" path="res://Assets/Additional/gameover.png" id="2_qce8a"]
 [ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="3_haq7r"]
+[ext_resource type="AudioStream" uid="uid://is1q1gqimnha" path="res://Sound/GameOver.wav" id="4_k0nnl"]
 
 [node name="Dead" type="Control"]
 layout_mode = 3
@@ -48,5 +49,10 @@ theme_override_font_sizes/font_size = 24
 text = "Play again
 "
 flat = true
+
+[node name="DeadSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_k0nnl")
+volume_db = -17.465
+autoplay = true
 
 [connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]

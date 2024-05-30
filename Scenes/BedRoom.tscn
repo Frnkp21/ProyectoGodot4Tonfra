@@ -34,9 +34,6 @@ tile_set = ExtResource("3")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65539, 0, 0, -65538, 1, 0, -65537, 9, 0, -131072, 10, 0, -3, 2, 0, -2, 3, 0, -1, 8, 0, -65536, 7, 0, 131069, 4, 0, 131070, 5, 0)
 
-[node name="player" parent="." instance=ExtResource("1")]
-position = Vector2(36, 18)
-
 [node name="MoveScene" parent="." instance=ExtResource("6_oel5p")]
 position = Vector2(80, -44)
 target_scene = "Hallway"
@@ -45,5 +42,8 @@ target_zoom = Vector2(4.5, 4.5)
 
 [node name="Portal" parent="." instance=ExtResource("7_svsdl")]
 position = Vector2(108, 17)
+
+[node name="player" parent="." instance=ExtResource("1")]
+position = Vector2(36, 18)
 
 [node name="Pause" parent="." instance=ExtResource("8_b4m2b")]

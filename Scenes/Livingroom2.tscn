@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://1egnnow07n0w"]
+[gd_scene load_steps=40 format=3 uid="uid://1egnnow07n0w"]
 
 [ext_resource type="Script" path="res://Scripts/Livingroom2.gd" id="1_p5m5e"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_avug4"]
@@ -773,6 +773,12 @@ sources/15 = SubResource("TileSetAtlasSource_k1qia")
 sources/16 = SubResource("TileSetAtlasSource_bo3p5")
 sources/17 = SubResource("TileSetAtlasSource_x7xbb")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x5wb"]
+size = Vector2(25.5806, 35.5274)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1avg4"]
+size = Vector2(124, 37)
+
 [node name="Livingroom2" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_p5m5e")
 player = NodePath("player")
@@ -792,28 +798,41 @@ tile_set = ExtResource("13_od14s")
 format = 2
 layer_0/tile_data = PackedInt32Array(262150, 0, 0, 262151, 16, 0, 262152, 17, 0, 327686, 3, 0, 327687, 4, 0, 327688, 5, 0, 5, 19, 0, 65541, 19, 1, 65542, 24, 1, 6, 24, 0, 65543, 25, 1, 7, 25, 0, 65544, 26, 0, 8, 23, 0)
 
-[node name="ChairLeft" type="TileMap" parent="Deco"]
-position = Vector2(47, 23)
-scale = Vector2(1.01412, 0.959472)
+[node name="ChairTopDown" type="TileMap" parent="."]
+position = Vector2(0, 34)
 tile_set = ExtResource("13_od14s")
 format = 2
-layer_0/tile_data = PackedInt32Array(196612, 14, 0, 262148, 15, 0)
+layer_0/tile_data = PackedInt32Array(131079, 6, 0, 196615, 7, 0, 327687, 9, 0, 262150, 9, 0, 327686, 9, 0, 327688, 9, 0, 262152, 9, 0, 327689, 9, 0, 262151, 8, 0)
 
-[node name="ChairRight" type="TileMap" parent="Deco"]
-position = Vector2(21, 21)
+[node name="ChairRight" type="TileMap" parent="ChairTopDown"]
+position = Vector2(22, -2)
 scale = Vector2(1.01412, 0.959472)
 tile_set = ExtResource("13_od14s")
 format = 2
 layer_0/tile_data = PackedInt32Array(196616, 12, 0, 262152, 18, 0)
 
-[node name="player" parent="." instance=ExtResource("15_s7umu")]
-position = Vector2(343, 184)
-
-[node name="ChairTopDown" type="TileMap" parent="."]
-position = Vector2(0, 34)
+[node name="ChairLeft" type="TileMap" parent="ChairTopDown"]
+position = Vector2(48, 0)
+scale = Vector2(1.01412, 0.959472)
 tile_set = ExtResource("13_od14s")
 format = 2
-layer_0/tile_data = PackedInt32Array(131079, 6, 0, 196615, 7, 0, 262151, 8, 0, 327687, 9, 0)
+layer_0/tile_data = PackedInt32Array(196612, 14, 0, 262148, 15, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ChairTopDown"]
+position = Vector2(-1, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChairTopDown/StaticBody2D"]
+position = Vector2(241.5, 149)
+rotation = -3.14159
+scale = Vector2(0.89912, 2.47696)
+shape = SubResource("RectangleShape2D_7x5wb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ChairTopDown/StaticBody2D"]
+position = Vector2(243, 160.5)
+shape = SubResource("RectangleShape2D_1avg4")
+
+[node name="player" parent="." instance=ExtResource("15_s7umu")]
+position = Vector2(343, 184)
 
 [node name="MoveScene" parent="." instance=ExtResource("16_0c847")]
 position = Vector2(368, 55)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bed8impuogdfw"]
+[gd_scene load_steps=38 format=3 uid="uid://bed8impuogdfw"]
 
 [ext_resource type="Texture2D" uid="uid://cee0p48iy4te7" path="res://istock-1071006450_small.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Livingroom.gd" id="1_rca8m"]
@@ -758,6 +758,12 @@ sources/13 = SubResource("TileSetAtlasSource_3uwj0")
 sources/14 = SubResource("TileSetAtlasSource_tvgo7")
 sources/15 = SubResource("TileSetAtlasSource_k1qia")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k0l2"]
+size = Vector2(25.5806, 41.9869)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ha637"]
+size = Vector2(124, 37)
+
 [node name="Livingroom" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_rca8m")
 player = NodePath("player")
@@ -792,17 +798,30 @@ tile_set = ExtResource("11")
 format = 2
 layer_0/tile_data = PackedInt32Array(196616, 12, 0, 262152, 18, 0)
 
-[node name="player" parent="." instance=ExtResource("4")]
-position = Vector2(348, 157)
-
 [node name="ChairTopDown" type="TileMap" parent="."]
 position = Vector2(1, 33)
 tile_set = ExtResource("11")
 format = 2
 layer_0/tile_data = PackedInt32Array(131079, 6, 0, 196615, 7, 0, 262151, 8, 0, 327687, 9, 0)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="ChairTopDown"]
+position = Vector2(-1, -33)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChairTopDown/StaticBody2D"]
+position = Vector2(241.5, 157)
+rotation = -3.14159
+scale = Vector2(0.89912, 2.47696)
+shape = SubResource("RectangleShape2D_3k0l2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ChairTopDown/StaticBody2D"]
+position = Vector2(243, 160.5)
+shape = SubResource("RectangleShape2D_ha637")
+
 [node name="Mother" parent="." instance=ExtResource("14_0xfms")]
 position = Vector2(281, 120)
+
+[node name="player" parent="." instance=ExtResource("4")]
+position = Vector2(348, 157)
 
 [node name="MoveScene" parent="." instance=ExtResource("15_c7bce")]
 position = Vector2(368, 55)

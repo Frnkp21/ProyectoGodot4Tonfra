@@ -51,6 +51,7 @@ func _process(delta):
 		$NinePatchRect2/Corazon6/AprendizajeStat/AprendizajeButton.visible = false
 		$NinePatchRect2/Corazon5/SuerteStat/SuerteButton.visible = false
 	if Input.is_action_just_pressed("i"):
+		$invsound.play()
 		if is_open:
 			close()
 		else:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://deqiv7y1s5d6y"]
+[gd_scene load_steps=90 format=3 uid="uid://deqiv7y1s5d6y"]
 
 [ext_resource type="Texture2D" uid="uid://bo2smhy3rtw0r" path="res://Assets/Player/player.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://dikxyokue7b5a" path="res://Assets/Player/playerCorriendoDerecha.png" id="11_kh2wa"]
 [ext_resource type="Texture2D" uid="uid://caxwdaa4a43cq" path="res://Assets/Player/playerCorriendoEspalda.png" id="12_7soqx"]
 [ext_resource type="PackedScene" uid="uid://c16pf6l0yxj20" path="res://Inventory/inv_ui.tscn" id="17_e63fe"]
+[ext_resource type="AudioStream" uid="uid://chao4ojs60wtc" path="res://Sound/golpearconelpalo.mp3" id="18_v14gp"]
+[ext_resource type="AudioStream" uid="uid://ckiu0uddmr02c" path="res://Sound/levelup.mp3" id="19_bdkhu"]
+[ext_resource type="AudioStream" uid="uid://damm0r0d1nttm" path="res://Sound/snakedmg.mp3" id="20_i0rtj"]
+[ext_resource type="AudioStream" uid="uid://bjaodb0aw6sgk" path="res://Sound/slimeattack.mp3" id="21_aim8l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_653op"]
 atlas = ExtResource("2_5o7fb")
@@ -545,6 +549,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iut4i"]
+radius = 16.1245
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nie3k"]
+radius = 16.0312
+
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 3
 script = ExtResource("2")
@@ -629,6 +639,32 @@ offset_bottom = 24.0
 [node name="superattack_cooldown" type="Timer" parent="."]
 wait_time = 30.0
 
+[node name="hitsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_v14gp")
+volume_db = -7.938
+
+[node name="LevelUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_bdkhu")
+volume_db = -15.083
+
+[node name="snakedamage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_i0rtj")
+volume_db = -7.144
+
+[node name="soundSnakeArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soundSnakeArea"]
+shape = SubResource("CircleShape2D_iut4i")
+
+[node name="soundSlimeArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soundSlimeArea"]
+shape = SubResource("CircleShape2D_nie3k")
+
+[node name="slimedamage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_aim8l")
+volume_db = -7.08
+
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="body_entered" from="player_hitboxAttackSuper" to="." method="_on_player_hitbox_attack_super_body_entered"]
@@ -641,3 +677,5 @@ wait_time = 30.0
 [connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]
 [connection signal="timeout" from="superattack_cooldown" to="." method="_on_superattack_cooldown_timeout"]
+[connection signal="body_entered" from="soundSnakeArea" to="." method="_on_sound_snake_area_body_entered"]
+[connection signal="body_entered" from="soundSlimeArea" to="." method="_on_sound_slime_area_body_entered"]

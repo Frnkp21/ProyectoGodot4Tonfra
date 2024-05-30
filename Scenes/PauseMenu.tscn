@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdhjc7c0r1vjx"]
+[gd_scene load_steps=4 format=3 uid="uid://cdhjc7c0r1vjx"]
 
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="1_neqqn"]
+[ext_resource type="AudioStream" uid="uid://c2ls6uukqct3a" path="res://Sound/pause.mp3" id="2_epfdo"]
 
 [sub_resource type="SystemFont" id="SystemFont_3k1lm"]
 font_names = PackedStringArray("Ubuntu")
@@ -119,6 +120,10 @@ layout_mode = 2
 process_mode = 3
 layout_mode = 2
 text = "Exit"
+
+[node name="pausesound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_epfdo")
+volume_db = -14.771
 
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

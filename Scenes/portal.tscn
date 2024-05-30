@@ -90,8 +90,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d4wyy"]
-radius = 17.0
-height = 62.0
+radius = 16.0
+height = 70.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xhoo"]
 radius = 22.0
@@ -108,6 +108,8 @@ animation = &"Idle"
 shape = SubResource("CapsuleShape2D_d4wyy")
 
 [node name="ChatdetectionArea" type="Area2D" parent="."]
+position = Vector2(-1, 13)
+scale = Vector2(1.12, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ChatdetectionArea"]
 position = Vector2(1, -10)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://b5u1d36vt3t48"]
+[gd_scene load_steps=46 format=3 uid="uid://b5u1d36vt3t48"]
 
 [ext_resource type="Script" path="res://Scripts/Bathroom2.gd" id="1_h1qx1"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="2_swmxf"]
@@ -858,6 +858,12 @@ sources/10 = SubResource("TileSetAtlasSource_pufny")
 sources/11 = SubResource("TileSetAtlasSource_xpjo4")
 sources/12 = SubResource("TileSetAtlasSource_vfslw")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ugcj"]
+radius = 14.1421
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mykii"]
+size = Vector2(16, 13)
+
 [node name="Bathroom2" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_h1qx1")
 player = NodePath("player")
@@ -891,3 +897,15 @@ target_position = Vector2(433, 89)
 target_zoom = Vector2(4.5, 4.5)
 
 [node name="Pause" parent="." instance=ExtResource("16_d1wo7")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(336, 118)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3, -5)
+scale = Vector2(1, 1.12)
+shape = SubResource("CircleShape2D_8ugcj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 30.5)
+shape = SubResource("RectangleShape2D_mykii")

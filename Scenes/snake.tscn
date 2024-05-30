@@ -1,0 +1,204 @@
+[gd_scene load_steps=27 format=3 uid="uid://np8xdqrl4jca"]
+
+[ext_resource type="Script" path="res://Scripts/snake.gd" id="1_lwnci"]
+[ext_resource type="Texture2D" uid="uid://bl1en3a8cgbmn" path="res://Assets/Enemies/Gusanodeladocaminando.png" id="2_a752i"]
+[ext_resource type="Texture2D" uid="uid://ik6fyq40tlka" path="res://Assets/Enemies/gusanodelante-sheet.png" id="3_se3j7"]
+[ext_resource type="Texture2D" uid="uid://c61b7jvcvqkcw" path="res://Assets/Enemies/gusanoDerecha.png" id="4_k2lnh"]
+[ext_resource type="Texture2D" uid="uid://btp25ucd3ygr4" path="res://Assets/Enemies/gusanoAtras-sheet.png" id="5_ow24g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mi4e"]
+atlas = ExtResource("2_a752i")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qa6v5"]
+atlas = ExtResource("3_se3j7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knvf2"]
+atlas = ExtResource("3_se3j7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5awes"]
+atlas = ExtResource("3_se3j7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p4fs"]
+atlas = ExtResource("3_se3j7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_km1sq"]
+atlas = ExtResource("4_k2lnh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40gqe"]
+atlas = ExtResource("4_k2lnh")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpolq"]
+atlas = ExtResource("4_k2lnh")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gm2u7"]
+atlas = ExtResource("4_k2lnh")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bmcm"]
+atlas = ExtResource("2_a752i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qeid"]
+atlas = ExtResource("2_a752i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7r0xc"]
+atlas = ExtResource("2_a752i")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73m27"]
+atlas = ExtResource("2_a752i")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trr5c"]
+atlas = ExtResource("5_ow24g")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hfo8"]
+atlas = ExtResource("5_ow24g")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu2vh"]
+atlas = ExtResource("5_ow24g")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nblg0"]
+atlas = ExtResource("5_ow24g")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hbxmn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mi4e")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qa6v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knvf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5awes")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p4fs")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_km1sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40gqe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpolq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gm2u7")
+}],
+"loop": true,
+"name": &"WalkLeft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bmcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qeid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7r0xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73m27")
+}],
+"loop": true,
+"name": &"WalkRight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trr5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hfo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu2vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nblg0")
+}],
+"loop": true,
+"name": &"WalkUp",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cf6b"]
+size = Vector2(27, 19)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jeall"]
+radius = 84.006
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_26moh"]
+radius = 31.0
+
+[node name="Snake" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_lwnci")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hbxmn")
+animation = &"WalkDown"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_8cf6b")
+
+[node name="detecting_area" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detecting_area"]
+shape = SubResource("CircleShape2D_jeall")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+shape = SubResource("CircleShape2D_26moh")
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = -10.0
+offset_top = 15.0
+offset_right = 190.0
+offset_bottom = 42.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
+
+[connection signal="body_entered" from="detecting_area" to="." method="_on_detecting_area_body_entered"]
+[connection signal="body_exited" from="detecting_area" to="." method="_on_detecting_area_body_exited"]
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]

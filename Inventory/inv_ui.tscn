@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c16pf6l0yxj20"]
+[gd_scene load_steps=19 format=3 uid="uid://c16pf6l0yxj20"]
 
 [ext_resource type="Script" path="res://Inventory/Inv_UI.gd" id="1_bmmb1"]
 [ext_resource type="Texture2D" uid="uid://6p2t1bqrawib" path="res://Assets/Additional/inventario.png" id="2_0qygn"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ojbt2gppipeq" path="res://Assets/Additional/espada.png" id="14_sanp0"]
 [ext_resource type="Texture2D" uid="uid://be2bqowiledam" path="res://Assets/Additional/Escudo.png" id="15_6akrp"]
 [ext_resource type="Texture2D" uid="uid://u8js6fgy3kk0" path="res://Assets/Additional/Corazon.png" id="16_2ppbk"]
+[ext_resource type="AudioStream" uid="uid://c2ls6uukqct3a" path="res://Sound/pause.mp3" id="17_m7irv"]
 
 [sub_resource type="Theme" id="Theme_n6dkn"]
 
@@ -486,6 +487,10 @@ theme = SubResource("Theme_n6dkn")
 theme_override_fonts/font = ExtResource("7_e2qr3")
 theme_override_font_sizes/font_size = 8
 text = "Vida"
+
+[node name="invsound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_m7irv")
+volume_db = -18.337
 
 [connection signal="mouse_entered" from="NinePatchRect2/Corazon5/SuerteStat/SuerteButton" to="." method="_on_suerte_button_mouse_entered"]
 [connection signal="mouse_exited" from="NinePatchRect2/Corazon5/SuerteStat/SuerteButton" to="." method="_on_suerte_button_mouse_exited"]

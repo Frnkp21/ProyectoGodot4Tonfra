@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bstmxqst0psf1"]
+[gd_scene load_steps=5 format=3 uid="uid://bstmxqst0psf1"]
 
 [ext_resource type="Script" path="res://Scripts/guardabosques_quest.gd" id="1_en56f"]
 [ext_resource type="Texture2D" uid="uid://buqaei781s8qi" path="res://Assets/Additional/FondoDialogo.png" id="1_vo6u3"]
 [ext_resource type="FontFile" uid="uid://b0gfgt23frvcx" path="res://Grand9K Pixel.ttf" id="2_8e50n"]
+[ext_resource type="AudioStream" uid="uid://d1q4rnbk3k6aj" path="res://Sound/misionCompleted.wav" id="4_81p76"]
 
 [node name="guardabosques_quest" type="Control"]
 layout_mode = 3
@@ -148,6 +149,10 @@ theme_override_font_sizes/normal_font_size = 13
 text = "Bien hecho gracias por la ayuda
 
 "
+
+[node name="completed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_81p76")
+volume_db = -19.053
 
 [connection signal="pressed" from="quest1_ui/yesButton1" to="." method="_on_yes_button_1_pressed"]
 [connection signal="pressed" from="quest1_ui/noButtton1" to="." method="_on_no_buttton_1_pressed"]
