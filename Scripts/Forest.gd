@@ -8,4 +8,9 @@ func _ready():
 
 
 func _process(delta):
-	pass
+	if (global.questIniciada):
+		$huevosdebabosa_collectable.visible = true
+		$huevosdebabosa_collectable2.visible = true
+		$huevosdebabosa_collectable3.visible = true
+		$huevosdebabosa_collectable4.visible = true
+		$huevosdebabosa_collectable5.visible = true

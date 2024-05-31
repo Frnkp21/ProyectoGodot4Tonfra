@@ -50,3 +50,5 @@ var chatPortalAbierto : bool
 var chatMadreAbierto : bool
 var chatGuardaAbierto : bool
 
+var questIniciada : bool
+

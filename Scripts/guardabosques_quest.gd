@@ -31,6 +31,7 @@ func _on_yes_button_1_pressed():
 	$quest1_ui.visible = false
 	quest1_active = true
 	huevodebabosa = 0
+	global.questIniciada = true
 	emit_signal("quest_menu_closed")
 
 

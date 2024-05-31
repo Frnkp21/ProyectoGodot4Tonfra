@@ -30,3 +30,7 @@ res://Scripts/Dialogos/DialogoPortal.gd
 res://Scenes/Dialogos/DialogoPortal.tscn
 res://Scripts/Dialogos/DialogoMadre.gd
 res://Scripts/Dialogos/DialogoGuardaBosques.gd
+res://Scripts/guardabosques_quest.gd
+res://tilemaps/bedroomtile.tres
+res://Scenes/BedRoom.tscn
+res://Scenes/MoveScene.tscn
