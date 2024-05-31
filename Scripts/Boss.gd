@@ -14,24 +14,45 @@ var drop_exp = 100
 
 var colorDiferente = false
 var originalModulateColor = Color(1, 1, 1, 1)
-	
+
+var pararIdle : bool
+
+var superAttackPre = true
+
+var last_direction = Vector2(1, 0)  # Variable para almacenar la última dirección del movimiento
+
+var tiempo_transcurrido = 0.0
+var tiempo_espera = 5.0
+var cronometro = false
+
+var count = 0
+
 func _physics_process(delta):
+	tiempo_transcurrido += delta
+	if (tiempo_transcurrido >= tiempo_espera):
+		cronometro = true
+	else:
+		cronometro = false
 	deal_with_damage()
 	update_health()
-	
-	if player_chase:
-		position += (player.position - position)/speed
-		
-		$AnimatedSprite2D.play("Idle")
-	else:
-		$AnimatedSprite2D.play("Walk")
-	move_and_collide(Vector2(0,0))
+	if (!pararIdle):
+		if player_chase:
+			var direction = (player.position - position).normalized()
+			position += direction * speed * delta
+			if direction.x > 0:
+				$AnimatedSprite2D.play("WalkRight")
+				last_direction = direction  # Actualiza la última dirección
+			elif direction.x < 0:
+				$AnimatedSprite2D.play("WalkLeft")
+				last_direction = direction  # Actualiza la última dirección
+		else:
+			$AnimatedSprite2D.play("Idle")
 
+		move_and_collide(Vector2(0, 0))
 
 func _on_detecting_area_body_entered(body):
 	player = body
 	player_chase = true
-
 
 func _on_detecting_area_body_exited(body):
 	player = null
@@ -40,17 +61,14 @@ func _on_detecting_area_body_exited(body):
 func boss():
 	pass
 
-
 func _on_enemy_hitbox_body_entered(body):
 	if body.has_method("player"):
 		player_inattack_zone = true
-		
-
 
 func _on_enemy_hitbox_body_exited(body):
 	if body.has_method("player"):
 		player_inattack_zone = false
-		
+
 func deal_with_damage():
 	var random_number = randi() % 100
 	if (random_number != null):
@@ -65,13 +83,13 @@ func deal_with_damage():
 					colorDiferente = true
 					$take_damage_cooldown.start()
 				if colorDiferente == true:
-					$AnimatedSprite2D.modulate = Color(1,0,0,1)
+					$AnimatedSprite2D.modulate = Color(1, 0, 0, 1)
 					time_out()
 					var direction = (position - player.position).normalized()
 					var push_distance = 20
 					position += direction * push_distance
 				can_take_damage = false
-				print ("boss health ",health)
+				print("boss health ", health)
 				if health <= 0:
 					self.queue_free()
 					give_experience(player)
@@ -85,7 +103,6 @@ func time_out():
 func _on_take_damage_cooldown_timeout():
 	can_take_damage = true
 
-
 func update_health():
 	var healthbar = $healthbar
 
@@ -98,3 +115,31 @@ func update_health():
 func give_experience(player):
 	var exp = global.aprendeizajePersonaje + drop_exp
 	player.gain_experience(exp)
+
+func _on_attack_area_body_entered(body):
+	if (count < 1):
+		if (body.has_method("player")):
+			count += 1
+			if (last_direction.x > 0):
+				$AnimatedSprite2D.play("AttackRight")
+			else:
+				$AnimatedSprite2D.play("AttackLeft")
+			pararIdle = true
+	elif (count == 1):
+		$AnimatedSprite2D.play("rocks")
+		
+
+func _on_attack_area_body_exited(body):
+		if (body.has_method("player")):
+			print("adios gordito")
+			pararIdle = false
+
+
+func _on_super_attack_area_body_entered(body):
+	if (body.has_method("player")):
+		$AnimatedSprite2D.play("rocks")
+
+
+func desactivar():
+	await get_tree().create_timer(5).timeout
+

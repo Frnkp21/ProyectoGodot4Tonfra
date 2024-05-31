@@ -14,18 +14,18 @@ var drop_exp = 50
 
 var colorDiferente = false
 var originalModulateColor = Color(1, 1, 1, 1)
+var pararIdle : bool
 	
 func _physics_process(delta):
 	deal_with_damage()
 	update_health()
-	
-	if player_chase:
-		position += (player.position - position)/speed
-		
-		$AnimatedSprite2D.play("Idle")
-	else:
-		$AnimatedSprite2D.play("Walk")
-	move_and_collide(Vector2(0,0))
+	if (!pararIdle):
+		if (player_chase):
+			position += (player.position - position)/speed
+			$AnimatedSprite2D.play("Idle")
+		else:
+			$AnimatedSprite2D.play("Walk")
+		move_and_collide(Vector2(0,0))
 
 
 func _on_detecting_area_body_entered(body):
@@ -98,3 +98,16 @@ func update_health():
 func give_experience(player):
 	var exp = global.aprendeizajePersonaje + drop_exp
 	player.gain_experience(exp)
+
+
+func _on_area_2d_body_entered(body):
+	if body.has_method("player"):
+		print("gordito")
+		$AnimatedSprite2D.play("MonsterAttack")
+		pararIdle = true
+
+
+func _on_area_2d_body_exited(body):
+	if body.has_method("player"):
+		print("adios gordito")
+		pararIdle = false

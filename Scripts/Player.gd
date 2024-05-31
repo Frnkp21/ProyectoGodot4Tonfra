@@ -38,12 +38,15 @@ var puede_correr = false
 var colorDiferente = false
 var originalModulateColor = Color(1, 1, 1, 1)
 
+
+
 func _ready():
 	$AnimatedSprite.play("Idle")
 	$Interact/interrogante.visible = interrogante
 	$xpbar.visible = false
 	originalModulateColor = $AnimatedSprite.modulate
 	var inv_ui = get_node("res://Inventory/Inv_UI.gd")
+	var enemyAnim = get_node("res://Scripts/Enemy.gd")
 
 
 func _physics_process(delta):
@@ -170,6 +173,7 @@ func player():
 func _on_player_hitbox_body_entered(body):
 	if body.has_method("enemy") or body.has_method("boss") or body.has_method("snake"):
 		enemy_inattack_range = true
+		
 
 
 func _on_player_hitbox_body_exited(body):
@@ -457,3 +461,4 @@ func _on_sound_snake_area_body_entered(body):
 func _on_sound_slime_area_body_entered(body):
 	if body.has_method("enemy"):
 		$slimedamage.play()
+		

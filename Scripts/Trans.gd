@@ -19,3 +19,4 @@ func desaparecer():
 	anim.play_backwards("trans")
 	await ($AnimationPlayer. animation_finished)
 	layer = -1
+

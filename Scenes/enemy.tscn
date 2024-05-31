@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dppkaro83hemm"]
+[gd_scene load_steps=16 format=3 uid="uid://dppkaro83hemm"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="2_pa0oh"]
 [ext_resource type="Texture2D" uid="uid://0fjnw5njdfof" path="res://Assets/Enemies/monsterWalk.png" id="2_uo5kj"]
@@ -13,13 +13,13 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("2_uo5kj")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2stkt"]
-atlas = ExtResource("3_hff2f")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fqbog"]
 atlas = ExtResource("3_hff2f")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2stkt"]
+atlas = ExtResource("3_hff2f")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gqn8w"]
 atlas = ExtResource("4_2ykw8")
@@ -44,10 +44,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2stkt")
+"texture": SubResource("AtlasTexture_fqbog")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fqbog")
+"texture": SubResource("AtlasTexture_2stkt")
 }],
 "loop": true,
 "name": &"MonsterAttack",
@@ -74,12 +74,15 @@ radius = 84.006
 [sub_resource type="CircleShape2D" id="CircleShape2D_26moh"]
 radius = 31.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_brm0b"]
+radius = 23.0
+
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("2_pa0oh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hbxmn")
-animation = &"Idle"
+animation = &"MonsterAttack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -0.5)
@@ -109,8 +112,15 @@ offset_bottom = 42.0
 scale = Vector2(0.1, 0.1)
 show_percentage = false
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_brm0b")
+
 [connection signal="body_entered" from="detecting_area" to="." method="_on_detecting_area_body_entered"]
 [connection signal="body_exited" from="detecting_area" to="." method="_on_detecting_area_body_exited"]
 [connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
 [connection signal="timeout" from="take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
