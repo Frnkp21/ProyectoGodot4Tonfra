@@ -1,6 +1,5 @@
 extends Control
 
-
 signal dialogo_finish
 
 @export_file("*.json") var d_file
@@ -20,6 +19,7 @@ func start():
 	dialogo = load_dialogo()
 	current_dialogo_id = -1
 	next_script()
+	global.chatMadreAbierto = true
 
 func load_dialogo():
 	var file = FileAccess.open("res://Dialog/madre_dialogo.json", FileAccess.READ)
@@ -37,6 +37,7 @@ func next_script():
 	if current_dialogo_id >= len(dialogo):
 		d_active = false
 		$NinePatchRect.visible = false
+		global.chatMadreAbierto = false
 		emit_signal("dialogo_finish")
 		return
 		

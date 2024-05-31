@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 var is_chatting = false
 
 var player
@@ -14,6 +13,7 @@ func portalInicio():
 
 func interactuable():
 	pass
+	
 func choose(array):
 	array.shuffle()
 	return array.front()
@@ -22,7 +22,6 @@ func choose(array):
 func _on_chatdetection_area_body_entered(body):
 	if body.has_method("player"):
 		player_in_chat_zone = true
-		
 
 func _on_chatdetection_area_body_exited(body):
 	if body.has_method("player"):
@@ -38,5 +37,3 @@ func _process(delta):
 func _on_Dialogo_dialogo_finish():
 	is_chatting = false
 	player_in_chat_zone = false
-
- 

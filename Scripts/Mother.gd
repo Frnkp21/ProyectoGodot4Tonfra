@@ -23,7 +23,6 @@ func _on_chat_detection_area_body_entered(body):
 	if body.has_method("player"):
 		player_in_chat_zone = true
 
-
 func _on_chat_detection_area_body_exited(body):
 	if body.has_method("player"):
 		player_in_chat_zone = false
@@ -38,5 +37,3 @@ func _process(delta):
 func _on_Dialogo_dialogo_finish():
 	is_chatting = false
 	player_in_chat_zone = false
-
-

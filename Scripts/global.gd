@@ -46,3 +46,7 @@ var lastPositon : Vector2
 var lastScene : String
 var lastZoom : Vector2
 
+var chatPortalAbierto : bool
+var chatMadreAbierto : bool
+var chatGuardaAbierto : bool
+

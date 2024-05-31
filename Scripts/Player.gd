@@ -112,32 +112,35 @@ func _physics_process(delta):
 func player_movement(delta):
 	if (!is_attacking and !puede_correr):
 		if (!global.inventarioAbiertoJugador):
-			if Input.is_action_pressed("move_right"):
-				current_dir = "right"
-				play_anim(1)
-				velocity.x = speed
-				velocity.y = 0
-			elif Input.is_action_pressed("move_left"):
-				current_dir = "left"
-				play_anim(1)
-				velocity.x = -speed
-				velocity.y = 0
-			elif Input.is_action_pressed("move_down"):
-				current_dir = "down"
-				play_anim(1)
-				velocity.y = speed
-				velocity.x = 0
-			elif Input.is_action_pressed("move_up"):
-				current_dir = "up"
-				play_anim(1)
-				velocity.y = -speed
-				velocity.x = 0
-			else:
-				play_anim(0)
-				velocity.x = 0
-				velocity.y = 0
-				
-			move_and_slide()
+			if (!global.chatPortalAbierto):
+				if (!global.chatMadreAbierto):
+					if (!global.chatGuardaAbierto):
+						if (Input.is_action_pressed("move_right")):
+							current_dir = "right"
+							play_anim(1)
+							velocity.x = speed
+							velocity.y = 0
+						elif (Input.is_action_pressed("move_left")):
+							current_dir = "left"
+							play_anim(1)
+							velocity.x = -speed
+							velocity.y = 0
+						elif (Input.is_action_pressed("move_down")):
+							current_dir = "down"
+							play_anim(1)
+							velocity.y = speed
+							velocity.x = 0
+						elif (Input.is_action_pressed("move_up")):
+							current_dir = "up"
+							play_anim(1)
+							velocity.y = -speed
+							velocity.x = 0
+						else:
+							play_anim(0)
+							velocity.x = 0
+							velocity.y = 0
+							
+						move_and_slide()
 
 
 func play_anim(movement):
@@ -410,41 +413,43 @@ func desactivar():
 	$healthbar.visible = false
 
 
-
+#!global.chatPortalAbierto
 func player_movement_runing(delta):
 	if (!global.inventarioAbiertoJugador):
-		if Input.is_action_just_pressed("run"):
-			puede_correr = true
-		elif Input.is_action_just_released("run"):
-			puede_correr = false
-		
-		if !is_attacking:
-			if Input.is_action_pressed("move_right") and puede_correr:
-				current_dir = "right"
-				play_anim_runing(2)
-				velocity.x = speedRuning
-				velocity.y = 0
-			elif Input.is_action_pressed("move_left") and puede_correr:
-				current_dir = "left"
-				play_anim_runing(2)
-				velocity.x = -speedRuning
-				velocity.y = 0
-			elif Input.is_action_pressed("move_down") and puede_correr:
-				current_dir = "down"
-				play_anim_runing(2)
-				velocity.y = speedRuning
-				velocity.x = 0
-			elif Input.is_action_pressed("move_up") and puede_correr:
-				current_dir = "up"
-				play_anim_runing(2)
-				velocity.y = -speedRuning
-				velocity.x = 0
-			else:
-				play_anim_runing(0) 
-				velocity.x = 0
-				velocity.y = 0
-			
-			move_and_slide()
+		if (!global.chatPortalAbierto):
+			if (!global.chatMadreAbierto):
+				if (!global.chatGuardaAbierto):
+					if (Input.is_action_just_pressed("run")):
+						puede_correr = true
+					elif (Input.is_action_just_released("run")):
+						puede_correr = false
+					if (!is_attacking):
+						if (Input.is_action_pressed("move_right") and puede_correr):
+							current_dir = "right"
+							play_anim_runing(2)
+							velocity.x = speedRuning
+							velocity.y = 0
+						elif (Input.is_action_pressed("move_left") and puede_correr):
+							current_dir = "left"
+							play_anim_runing(2)
+							velocity.x = -speedRuning
+							velocity.y = 0
+						elif (Input.is_action_pressed("move_down") and puede_correr):
+							current_dir = "down"
+							play_anim_runing(2)
+							velocity.y = speedRuning
+							velocity.x = 0
+						elif (Input.is_action_pressed("move_up") and puede_correr):
+							current_dir = "up"
+							play_anim_runing(2)
+							velocity.y = -speedRuning
+							velocity.x = 0
+						else:
+							play_anim_runing(0) 
+							velocity.x = 0
+							velocity.y = 0
+						
+						move_and_slide()
 
 
 func play_anim_runing(movement):

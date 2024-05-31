@@ -21,3 +21,12 @@ res://Scenes/checkpoint.tscn
 res://Scenes/checkpoint.gd
 res://Scripts/Dead.gd
 res://Scenes/guarda_bosques.tscn
+res://Scenes/mother.tscn
+res://Scripts/Player.gd
+res://Scripts/Mother.gd
+res://Scripts/Portal.gd
+res://Scenes/portal.tscn
+res://Scripts/Dialogos/DialogoPortal.gd
+res://Scenes/Dialogos/DialogoPortal.tscn
+res://Scripts/Dialogos/DialogoMadre.gd
+res://Scripts/Dialogos/DialogoGuardaBosques.gd
