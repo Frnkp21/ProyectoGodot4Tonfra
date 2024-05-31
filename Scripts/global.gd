@@ -52,3 +52,5 @@ var chatGuardaAbierto : bool
 
 var questIniciada : bool
 
+var nextZoneCuevaUnlocked : bool
+

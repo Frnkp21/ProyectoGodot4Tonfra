@@ -6,6 +6,8 @@ var quest1_active = false
 var quest1_completed = false
 var huevodebabosa = 0
 
+var cambioatrue = true
+
 
 func _process(delta):
 	if quest1_active:
@@ -31,7 +33,7 @@ func _on_yes_button_1_pressed():
 	$quest1_ui.visible = false
 	quest1_active = true
 	huevodebabosa = 0
-	global.questIniciada = true
+	global.questIniciada = cambioatrue
 	emit_signal("quest_menu_closed")
 
 
@@ -47,5 +49,6 @@ func huevodebabosa_collected():
 func play_finish_quest_anim():
 	$finished_quest.visible = true
 	$completed.play()
+	global.nextZoneCuevaUnlocked = true
 	await get_tree().create_timer(120).timeout
 	$finished_quest.visible = false

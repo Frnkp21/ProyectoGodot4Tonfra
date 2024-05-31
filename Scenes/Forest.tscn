@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmfdss347dvja"]
+[gd_scene load_steps=13 format=3 uid="uid://cmfdss347dvja"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
 [ext_resource type="Script" path="res://Scripts/Forest.gd" id="1_bmqeg"]
@@ -13,6 +13,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5std7"]
 size = Vector2(17.25, 105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3c18p"]
+size = Vector2(26, 143)
 
 [node name="Forest" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_bmqeg")
@@ -54,11 +57,11 @@ shape = SubResource("RectangleShape2D_5std7")
 position = Vector2(-1140, 4)
 script = ExtResource("10_hgn4e")
 target_scene = "cueva"
-target_position = Vector2(670, 209)
+target_position = Vector2(666, 207)
 target_zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cave_enterpoint"]
-position = Vector2(482, 197)
+position = Vector2(478, 197)
 shape = SubResource("RectangleShape2D_5std7")
 
 [node name="GuardaBosques" parent="." instance=ExtResource("7_myib3")]
@@ -83,29 +86,31 @@ position = Vector2(-59, 214)
 position = Vector2(-451, 555)
 
 [node name="huevosdebabosa_collectable" parent="." instance=ExtResource("8_1shik")]
-visible = false
 position = Vector2(618, -192)
 
 [node name="huevosdebabosa_collectable2" parent="." instance=ExtResource("8_1shik")]
-visible = false
 position = Vector2(-488, -231)
 
 [node name="huevosdebabosa_collectable3" parent="." instance=ExtResource("8_1shik")]
-visible = false
 position = Vector2(-509, 614)
 
 [node name="huevosdebabosa_collectable4" parent="." instance=ExtResource("8_1shik")]
-visible = false
 position = Vector2(511, 639)
 
 [node name="huevosdebabosa_collectable5" parent="." instance=ExtResource("8_1shik")]
-visible = false
 position = Vector2(-194, 259)
 
 [node name="player" parent="." instance=ExtResource("5_kclhs")]
 position = Vector2(161, 200)
 
 [node name="Pause" parent="." instance=ExtResource("10_65boj")]
+visible = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-609, 196.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_3c18p")
 
 [connection signal="body_entered" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_entered"]
 [connection signal="body_exited" from="Forest_exitpoint" to="Forest_exitpoint" method="_on_body_exited"]

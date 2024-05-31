@@ -34,3 +34,7 @@ res://Scripts/guardabosques_quest.gd
 res://tilemaps/bedroomtile.tres
 res://Scenes/BedRoom.tscn
 res://Scenes/MoveScene.tscn
+res://Scripts/MoveScene_smooth.gd
+res://Scenes/movescenesmothcueva.gd
+res://Scenes/Street.tscn
+res://Scenes/guardabosques_quest.tscn
