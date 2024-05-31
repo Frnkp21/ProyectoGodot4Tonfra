@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmfdss347dvja"]
+[gd_scene load_steps=12 format=3 uid="uid://cmfdss347dvja"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_ara27"]
 [ext_resource type="Script" path="res://Scripts/Forest.gd" id="1_bmqeg"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="5_kclhs"]
 [ext_resource type="PackedScene" uid="uid://dpavm202gipoo" path="res://Scenes/guarda_bosques.tscn" id="7_myib3"]
+[ext_resource type="PackedScene" uid="uid://cmoalbm6bg0el" path="res://Scenes/checkpoint.tscn" id="7_sla2v"]
 [ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="7_tn5fg"]
 [ext_resource type="PackedScene" uid="uid://b7jd4mbmvpu0v" path="res://Scenes/huevosdebabosa_collectable.tscn" id="8_1shik"]
 [ext_resource type="PackedScene" uid="uid://dppkaro83hemm" path="res://Scenes/enemy.tscn" id="8_6cabg"]
@@ -69,6 +70,9 @@ position = Vector2(531, -187)
 [node name="Enemy2" parent="." instance=ExtResource("8_6cabg")]
 position = Vector2(-425, -213)
 
+[node name="Checkpoint" parent="." instance=ExtResource("7_sla2v")]
+position = Vector2(129, 112)
+
 [node name="Enemy3" parent="." instance=ExtResource("8_6cabg")]
 position = Vector2(562, 564)
 
@@ -94,7 +98,7 @@ position = Vector2(511, 639)
 position = Vector2(-194, 259)
 
 [node name="player" parent="." instance=ExtResource("5_kclhs")]
-position = Vector2(459, 203)
+position = Vector2(161, 200)
 
 [node name="Pause" parent="." instance=ExtResource("10_65boj")]
 

@@ -13,9 +13,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_cjoj6")
-target_position = Vector2(-77, -1)
-target_scene = "BedRoom"
-target_zoom = Vector2(4.5, 4.5)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,7 +26,7 @@ offset_bottom = -1.0
 texture = ExtResource("2_qce8a")
 expand_mode = 1
 
-[node name="Respawn" type="Button" parent="."]
+[node name="RespawnLastPos" type="Button" parent="."]
 texture_filter = 2
 layout_mode = 1
 anchors_preset = -1
@@ -46,13 +43,21 @@ grow_vertical = 0
 focus_mode = 0
 theme_override_fonts/font = ExtResource("3_haq7r")
 theme_override_font_sizes/font_size = 24
-text = "Play again
-"
+text = "Last Respawn"
 flat = true
+
+[node name="RespawnHome" type="Button" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 222.0
+offset_right = 182.0
+offset_bottom = 324.0
+text = "Respawn Home"
 
 [node name="DeadSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_k0nnl")
 volume_db = -17.465
 autoplay = true
 
-[connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]
+[connection signal="pressed" from="RespawnLastPos" to="." method="_on_respawn_pressed"]
+[connection signal="pressed" from="RespawnHome" to="." method="_on_respawn_home_pressed"]

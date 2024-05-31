@@ -17,3 +17,7 @@ res://Scenes/cueva.gd
 res://Scripts/Forest.gd
 res://Inventory/Inv_UI.gd
 res://Scripts/global.gd
+res://Scenes/checkpoint.tscn
+res://Scenes/checkpoint.gd
+res://Scripts/Dead.gd
+res://Scenes/guarda_bosques.tscn

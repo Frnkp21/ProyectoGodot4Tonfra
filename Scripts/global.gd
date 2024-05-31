@@ -28,7 +28,7 @@ var botonesActivados = false
 var hpProtagonista = 100
 var maxvida = 100
 var defensa = 10
-var dañoEnemigo = 5
+var dañoEnemigo = 25
 var ataqueProtagonista = 25
 var evasionProtagonista = 0
 var suerteProtagonista = 0
@@ -36,8 +36,13 @@ var aprendeizajePersonaje = 0
 var criticoPersonaje = 0
 var regeneracionPersonaje = 0
 
-
 var dañoBoss = 10
 
 var dañoSuperAttackEnemigo = 30
 var inventarioAbiertoJugador : bool
+
+var checkpoint : bool
+var lastPositon : Vector2
+var lastScene : String
+var lastZoom : Vector2
+
