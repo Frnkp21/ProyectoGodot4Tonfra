@@ -36,5 +36,8 @@ var aprendeizajePersonaje = 1
 var criticoPersonaje = 1
 var regeneracionPersonaje = 1
 
+
+var dañoBoss = 10
+
 var dañoSuperAttackEnemigo = 30
 var inventarioAbiertoJugador : bool

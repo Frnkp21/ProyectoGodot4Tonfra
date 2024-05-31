@@ -19,12 +19,16 @@ var niño1_in_range = false
 var niño2_in_range = false
 var vieja_in_range = false
 var madregitana_in_range = false
-#enemigo1 y boss
+#enemigos simples
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
 #boss ataque final
 var bossfinalattack_inattack_range = false
 var bossfinalattack_cooldown = true
+
+#ataque boss
+var boss_inattack_range = false
+var boss_attack_cooldown = true
 
 var player_alive = true
 
@@ -53,10 +57,12 @@ func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
 	enemy_superattack()
+	boss_attack()
 	attack()
 	update_health()
 	update_experience_bar()
 	player_movement_runing(delta)
+	
 	
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
@@ -171,15 +177,24 @@ func player():
 	pass
 
 func _on_player_hitbox_body_entered(body):
-	if body.has_method("enemy") or body.has_method("boss") or body.has_method("snake"):
+	if body.has_method("enemy") or body.has_method("snake"):
 		enemy_inattack_range = true
 		
 
-
 func _on_player_hitbox_body_exited(body):
-	if body.has_method("enemy") or body.has_method("boss") or body.has_method("snake"):
+	if body.has_method("enemy") or body.has_method("snake"):
 		enemy_inattack_range = false
 		
+
+func _on_playerhitbox_boss_body_entered(body):
+	if body.has_method("boss"):
+		boss_inattack_range = true
+
+
+func _on_playerhitbox_boss_body_exited(body):
+	if body.has_method("boss"):
+		boss_inattack_range = false
+
 
 
 func _on_player_hitbox_attack_super_body_entered(body):
@@ -204,12 +219,30 @@ func enemy_attack():
 					print(global.hpProtagonista)
 					print(global.dañoEnemigo)
 					colorDiferente = true
-					print("cambia a true")
+					print("dano de enemigo simple")
 					if colorDiferente == true:
 						$AnimatedSprite.modulate = Color(1,0,0,1)
 						time_out()
 					enemy_attack_cooldown = false
 					$attack_cooldown.start()
+
+func boss_attack():
+		var random_number = randi() % 100
+		if (random_number != null):
+			if boss_inattack_range and boss_attack_cooldown == true:
+				print("Random Number:", random_number)
+				print("Evasion Chance:", global.evasionProtagonista)
+				if (random_number >= global.evasionProtagonista):
+					global.hpProtagonista = global.hpProtagonista - global.dañoBoss
+					print(global.hpProtagonista)
+					print(global.dañoBoss)
+					colorDiferente = true
+					print("dano de boss")
+					if colorDiferente == true:
+						$AnimatedSprite.modulate = Color(1,0,0,1)
+						time_out()
+					boss_attack_cooldown = false
+					$bossattack_cooldown.start()
 				
 func enemy_superattack():
 	var random_number = randi() % 100
@@ -222,12 +255,12 @@ func enemy_superattack():
 				print(global.hpProtagonista)
 				print(global.dañoSuperAttackEnemigo)
 				colorDiferente = true
-				print("cambia a true")
 				if colorDiferente == true:
 					$AnimatedSprite.modulate = Color(1,0,0,1)
 					time_out()
 				bossfinalattack_cooldown = false
 				$superattack_cooldown.start()
+				print("comenzo el cooldown de superataque")
 
 		
 func time_out():
@@ -243,6 +276,9 @@ func _on_attack_cooldown_timeout():
 func _on_superattack_cooldown_timeout():
 	bossfinalattack_cooldown = true
 
+
+func _on_bossattack_cooldown_timeout():
+	boss_attack_cooldown = true
 	
 func attack():
 	var dir = current_dir
@@ -462,3 +498,6 @@ func _on_sound_slime_area_body_entered(body):
 	if body.has_method("enemy"):
 		$slimedamage.play()
 		
+
+
+

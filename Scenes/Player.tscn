@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://deqiv7y1s5d6y"]
+[gd_scene load_steps=91 format=3 uid="uid://deqiv7y1s5d6y"]
 
 [ext_resource type="Texture2D" uid="uid://bo2smhy3rtw0r" path="res://Assets/Player/player.png" id="1"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2"]
@@ -532,6 +532,8 @@ radius = 16.1245
 [sub_resource type="CircleShape2D" id="CircleShape2D_bgwt4"]
 radius = 72.0278
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_adrat"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ftfeh"]
 radius = 16.0
 
@@ -585,6 +587,11 @@ shape = SubResource("CircleShape2D_cp0a5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitboxAttackSuper"]
 shape = SubResource("CircleShape2D_bgwt4")
 
+[node name="playerhitbox_boss" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerhitbox_boss"]
+shape = SubResource("CircleShape2D_adrat")
+
 [node name="attack_cooldown" type="Timer" parent="."]
 
 [node name="deal_attack_timer" type="Timer" parent="."]
@@ -637,7 +644,7 @@ offset_right = -11.0
 offset_bottom = 24.0
 
 [node name="superattack_cooldown" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 15.0
 
 [node name="hitsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_v14gp")
@@ -665,10 +672,14 @@ shape = SubResource("CircleShape2D_nie3k")
 stream = ExtResource("21_aim8l")
 volume_db = -7.08
 
+[node name="bossattack_cooldown" type="Timer" parent="."]
+
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="body_entered" from="player_hitboxAttackSuper" to="." method="_on_player_hitbox_attack_super_body_entered"]
 [connection signal="body_exited" from="player_hitboxAttackSuper" to="." method="_on_player_hitbox_attack_super_body_exited"]
+[connection signal="body_entered" from="playerhitbox_boss" to="." method="_on_playerhitbox_boss_body_entered"]
+[connection signal="body_exited" from="playerhitbox_boss" to="." method="_on_playerhitbox_boss_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
 [connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]
@@ -679,3 +690,4 @@ volume_db = -7.08
 [connection signal="timeout" from="superattack_cooldown" to="." method="_on_superattack_cooldown_timeout"]
 [connection signal="body_entered" from="soundSnakeArea" to="." method="_on_sound_snake_area_body_entered"]
 [connection signal="body_entered" from="soundSlimeArea" to="." method="_on_sound_slime_area_body_entered"]
+[connection signal="timeout" from="bossattack_cooldown" to="." method="_on_bossattack_cooldown_timeout"]

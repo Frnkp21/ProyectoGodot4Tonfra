@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Boss
+class_name BossSuperAttack
 
 var speed = 70
 var player_chase = false
@@ -26,32 +26,27 @@ var tiempo_espera = 5.0
 var cronometro = false
 
 var can_play_superattack = true  # Variable para controlar el super ataque
+var animation_duration = 3.0  # Duración de la animación de superataque
 
 func _ready():
 	$Cooldown_Timer.connect("timeout", Callable(self, "_on_cooldown_timer_timeout"))
+	$AnimatedSprite2D.connect("animation_finished", Callable(self, "_on_animation_finished"))
+	self.visible = false  # Hacer invisible toda la escena por defecto
 
 func _physics_process(delta):
 	tiempo_transcurrido += delta
-	if (tiempo_transcurrido >= tiempo_espera):
+	if tiempo_transcurrido >= tiempo_espera:
 		cronometro = true
 	else:
 		cronometro = false
 	deal_with_damage()
 	update_health()
-	if (!pararIdle):
+	if !pararIdle:
 		if player_chase:
 			var direction = (player.position - position).normalized()
 			position += direction * speed * delta
-			if direction.x > 0:
-				$AnimatedSprite2D.play("WalkRight")
-				last_direction = direction  # Actualiza la última dirección
-			elif direction.x < 0:
-				$AnimatedSprite2D.play("WalkLeft")
-				last_direction = direction  # Actualiza la última dirección
-		else:
-			$AnimatedSprite2D.play("Idle")
-
-		move_and_collide(Vector2(0, 0))
+			last_direction = direction  # Actualiza la última dirección
+		move_and_collide(Vector2.ZERO)
 
 func _on_detecting_area_body_entered(body):
 	player = body
@@ -74,18 +69,18 @@ func _on_enemy_hitbox_body_exited(body):
 
 func deal_with_damage():
 	var random_number = randi() % 100
-	if (random_number != null):
-		if player_inattack_zone and global.player_current_attack == true:
-			if can_take_damage == true:
-				if (random_number >= global.criticoPersonaje):
-					health = health - global.ataqueProtagonista
+	if random_number != null:
+		if player_inattack_zone and global.player_current_attack:
+			if can_take_damage:
+				if random_number >= global.criticoPersonaje:
+					health -= global.ataqueProtagonista
 					colorDiferente = true
 					$take_damage_cooldown.start()
 				else:
-					health = health - global.ataqueProtagonista * 2
+					health -= global.ataqueProtagonista * 2
 					colorDiferente = true
 					$take_damage_cooldown.start()
-				if colorDiferente == true:
+				if colorDiferente:
 					$AnimatedSprite2D.modulate = Color(1, 0, 0, 1)
 					time_out()
 					var direction = (position - player.position).normalized()
@@ -94,7 +89,7 @@ func deal_with_damage():
 				can_take_damage = false
 				print("boss health ", health)
 				if health <= 0:
-					self.queue_free()
+					queue_free()
 					give_experience(player)
 
 func time_out():
@@ -108,12 +103,8 @@ func _on_take_damage_cooldown_timeout():
 
 func update_health():
 	var healthbar = $healthbar
-
 	healthbar.value = health
-	if health >= 100:
-		healthbar.visible = false
-	else:
-		healthbar.visible = true
+	healthbar.visible = health < 100
 
 func give_experience(player):
 	var exp = global.aprendeizajePersonaje + drop_exp
@@ -133,10 +124,24 @@ func _on_attack_area_body_exited(body):
 
 func _on_super_attack_area_body_entered(body):
 	if body.has_method("player") and can_play_superattack:
-		print("rocaaaaaaaaas")
-		$AnimatedSprite2D.play("rocks")
-		can_play_superattack = false
-		$Cooldown_Timer.start(5)
+		activate_super_attack()
 
 func _on_cooldown_timer_timeout():
 	can_play_superattack = true
+	if player and player_inattack_zone:
+		activate_super_attack()
+
+func _on_animation_finished():
+	if $AnimatedSprite2D.animation == "rocks":
+		self.visible = false
+
+func activate_super_attack():
+	print("rocaaaaaaaaas")
+	self.visible = true
+	$AnimatedSprite2D.play("rocks")
+	can_play_superattack = false
+	$Cooldown_Timer.start(15)
+	get_tree().create_timer(animation_duration).connect("timeout", Callable(self, "_on_super_attack_animation_timeout"))
+
+func _on_super_attack_animation_timeout():
+	self.visible = false

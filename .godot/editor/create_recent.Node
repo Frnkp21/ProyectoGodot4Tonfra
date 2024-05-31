@@ -1,6 +1,7 @@
 Timer
 CollisionShape2D
 Area2D
+AnimationPlayer
 AnimatedSprite2D
 StaticBody2D
 AudioStreamPlayer
@@ -11,5 +12,3 @@ CollisionPolygon2D
 TextureRect
 VBoxContainer
 LightOccluder2D
-DirectionalLight2D
-PointLight2D
