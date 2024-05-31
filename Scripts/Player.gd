@@ -397,6 +397,7 @@ func gain_experience(amount):
 func level_up():
 	global.lvlProtagonista += 1
 	$LevelUp.play()
+	$AnimatedSprite.play("LevelUp")
 	print("Jugador ha subido de nivel al nivel: ", global.lvlProtagonista)
 	global.expProtagonista -= global.experience_threshold
 	global.experience_threshold *= 1.3 # Ejemplo de valor; ajusta según tus necesidades en el juego.

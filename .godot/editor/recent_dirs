@@ -1,3 +1,4 @@
+res://Assets/Player
 res://Scripts
 res://Assets/Enemies
 res://Sound
@@ -6,7 +7,6 @@ res://
 res://Scenes
 res://Inventory/items
 res://Assets/items
-res://Assets/Player
 res://Inventory
 res://Scripts/Dialogos
 res://tilemaps
