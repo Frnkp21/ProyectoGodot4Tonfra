@@ -110,7 +110,7 @@ layout_mode = 2
 
 [node name="Button3" type="Button" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "Options"
+text = "Controles"
 
 [node name="Separetor3" type="Control" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
 process_mode = 3

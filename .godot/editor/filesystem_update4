@@ -1,4 +1,3 @@
-res://Scripts/Boss.gd
 res://tilemaps/default_env.tres
 res://Scenes/Player.tscn
 res://Inventory/inventory_item.gd
@@ -12,6 +11,7 @@ res://Scenes/enemy.tscn
 res://Scenes/snake.tscn
 res://Scenes/Boss.tscn
 res://Scenes/BossSuperattack.tscn
-res://Scripts/BossSuperattack.gd
-res://Scripts/Player.gd
-res://Scripts/global.gd
+res://Inventory/items/huevodebabosa.tres
+res://Scenes/Forest.tscn
+res://Scenes/cueva.gd
+res://Scripts/Forest.gd

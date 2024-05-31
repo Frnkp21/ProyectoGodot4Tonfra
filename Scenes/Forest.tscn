@@ -57,7 +57,7 @@ target_position = Vector2(670, 209)
 target_zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cave_enterpoint"]
-position = Vector2(499, 200)
+position = Vector2(482, 197)
 shape = SubResource("RectangleShape2D_5std7")
 
 [node name="GuardaBosques" parent="." instance=ExtResource("7_myib3")]

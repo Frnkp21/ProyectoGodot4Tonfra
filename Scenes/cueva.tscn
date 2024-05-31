@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://bvbw81rupfuu0"]
+[gd_scene load_steps=29 format=3 uid="uid://bvbw81rupfuu0"]
 
+[ext_resource type="Script" path="res://Scenes/cueva.gd" id="1_08ibk"]
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1_hfv25"]
 [ext_resource type="TileSet" uid="uid://bj0sju3foal3c" path="res://tilemaps/1.tres" id="2_7mipu"]
 [ext_resource type="PackedScene" uid="uid://8gtm3igcn7ic" path="res://Scenes/Boss.tscn" id="3_e8bs8"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://doidyrg0q8vqc" path="res://Assets/Additional/sombra.png" id="6_tbuwj"]
 [ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="7_e2pc5"]
 [ext_resource type="AudioStream" uid="uid://b0sucxc4eilop" path="res://Sound/paralacueva.mp3" id="8_l1si0"]
+[ext_resource type="Script" path="res://Scripts/MoveScene_smooth.gd" id="10_mt83y"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eklmt"]
 a = Vector2(168.428, 118.311)
@@ -74,7 +76,12 @@ b = Vector2(435, 170)
 a = Vector2(704, 170)
 b = Vector2(704, 244)
 
-[node name="Cueva" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fss7h"]
+size = Vector2(6.625, 36.5)
+
+[node name="Cueva" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_08ibk")
+player = NodePath("player")
 
 [node name="colisiones" type="Node2D" parent="."]
 
@@ -168,6 +175,18 @@ shape = SubResource("SegmentShape2D_2swss")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisiones/StaticBody2D16"]
 shape = SubResource("SegmentShape2D_ut2je")
 
+[node name="cave_exitpoint" type="Area2D" parent="."]
+position = Vector2(-2500, 225)
+scale = Vector2(2, 2)
+script = ExtResource("10_mt83y")
+target_scene = "Forest"
+target_position = Vector2(-620, 204)
+target_zoom = Vector2(3, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cave_exitpoint"]
+position = Vector2(1598.31, -8.25)
+shape = SubResource("RectangleShape2D_fss7h")
+
 [node name="Black" type="Sprite2D" parent="."]
 position = Vector2(357, 207)
 scale = Vector2(3, 3)
@@ -201,6 +220,7 @@ position = Vector2(298, 259)
 position = Vector2(670, 209)
 
 [node name="Transparencia" type="Sprite2D" parent="."]
+visible = false
 self_modulate = Color(1, 1, 1, 0.490196)
 scale = Vector2(-3.93976, -1.63934)
 texture = ExtResource("6_tbuwj")
@@ -210,3 +230,6 @@ stream = ExtResource("8_l1si0")
 volume_db = -31.756
 
 [node name="Pause" parent="." instance=ExtResource("7_e2pc5")]
+
+[connection signal="body_entered" from="cave_exitpoint" to="cave_exitpoint" method="_on_body_entered"]
+[connection signal="body_exited" from="cave_exitpoint" to="cave_exitpoint" method="_on_body_exited"]
