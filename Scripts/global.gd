@@ -30,11 +30,11 @@ var maxvida = 100
 var defensa = 10
 var dañoEnemigo = 5
 var ataqueProtagonista = 25
-var evasionProtagonista = 1
-var suerteProtagonista = 1
-var aprendeizajePersonaje = 1
-var criticoPersonaje = 1
-var regeneracionPersonaje = 1
+var evasionProtagonista = 0
+var suerteProtagonista = 0
+var aprendeizajePersonaje = 0
+var criticoPersonaje = 0
+var regeneracionPersonaje = 0
 
 
 var dañoBoss = 10

@@ -20,6 +20,14 @@ func update_slots():
 		slots[i].update(inv.slots[i])
 
 func _process(delta):
+	$NinePatchRect2/Corazon3/AtaqueStat.text = str(global.ataqueProtagonista)
+	$NinePatchRect2/Corazon/VidaStat.text = str(global.maxvida)
+	$NinePatchRect2/Corazon2/DefensaStat.text = str(global.defensa)
+	$NinePatchRect2/Corazon4/EvasionStat.text = str(global.evasionProtagonista)
+	$NinePatchRect2/Corazon5/SuerteStat.text = str(global.suerteProtagonista)
+	$NinePatchRect2/Corazon6/AprendizajeStat.text = str(global.aprendeizajePersonaje)
+	$NinePatchRect2/Corazon7/CriticoStat.text = str(global.criticoPersonaje)
+	$NinePatchRect2/Corazon8/RegenStat.text = str(global.regeneracionPersonaje)
 	if global.botonesActivados:
 		$NinePatchRect2/Corazon/VidaStat/VidaButton.visible = true
 		$NinePatchRect2/Corazon2/DefensaStat/DefensaButton.visible = true
@@ -146,7 +154,6 @@ func mostrar_botones(btnTrue):
 func _on_vida_button_pressed():
 	var vida = global.maxvida
 	vida  += 30
-	$NinePatchRect2/Corazon/VidaStat.text = str(vida)
 	global.maxvida = vida
 	hideButtons = true
 	
@@ -155,42 +162,36 @@ func _on_defensa_button_pressed():
 	var defensa = global.defensa
 	defensa += 2
 	global.dañoEnemigo = - 2
-	$NinePatchRect2/Corazon2/DefensaStat.text = str(defensa)
 	global.defensa = defensa
 	hideButtons = true
 
 func _on_ataque_button_pressed():
 	var ataque = global.ataqueProtagonista
 	ataque += 10
-	$NinePatchRect2/Corazon3/AtaqueStat.text = str(ataque)
 	global.ataqueProtagonista = ataque
 	hideButtons = true
 
 func _on_evasion_button_pressed():
 	var evasion = global.evasionProtagonista
 	evasion += 5
-	$NinePatchRect2/Corazon4/EvasionStat.text = str(evasion)
 	global.evasionProtagonista = evasion
 	hideButtons = true
 
 func _on_suerte_button_pressed():
 	var suerte = global.suerteProtagonista
 	suerte += 2.5
-	$NinePatchRect2/Corazon5/SuerteStat.text = str(suerte)
 	global.suerteProtagonista = suerte
 	hideButtons = true
 
 func _on_aprendizaje_button_pressed():
 	var aprendizaje = global.aprendeizajePersonaje
 	aprendizaje += 5
-	$NinePatchRect2/Corazon6/AprendizajeStat.text = str(aprendizaje)
 	global.aprendeizajePersonaje = aprendizaje
 	hideButtons = true
 
 func _on_critico_button_pressed():
 	var critico = global.criticoPersonaje
 	critico += 5
-	$NinePatchRect2/Corazon7/CriticoStat.text = str(critico)
 	global.criticoPersonaje = critico
 	hideButtons = true
 
@@ -198,6 +199,5 @@ func _on_critico_button_pressed():
 func _on_regen_button_pressed():
 	var regen = global.regeneracionPersonaje
 	regen += 15
-	$NinePatchRect2/Corazon8/RegenStat.text = str(regen)
 	global.regeneracionPersonaje = regen
 	hideButtons = true

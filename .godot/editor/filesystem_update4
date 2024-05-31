@@ -15,3 +15,5 @@ res://Inventory/items/huevodebabosa.tres
 res://Scenes/Forest.tscn
 res://Scenes/cueva.gd
 res://Scripts/Forest.gd
+res://Inventory/Inv_UI.gd
+res://Scripts/global.gd
