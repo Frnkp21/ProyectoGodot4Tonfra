@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cq8rnooqvps1d"]
+[gd_scene load_steps=47 format=3 uid="uid://cq8rnooqvps1d"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Bathroom.gd" id="1_rrdkc"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://0tjfrxqtunut" path="res://Assets/Map/casa/decoracioncasa/espejo.png" id="13"]
 [ext_resource type="Texture2D" uid="uid://o2iiu25s4d8y" path="res://Assets/Map/casa/pared-baño2.png" id="14"]
 [ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="16_o70a3"]
+[ext_resource type="AudioStream" uid="uid://b5bt2tft15drq" path="res://Sound/gamesound.mp3" id="17_i2njb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgkvc"]
 texture = ExtResource("8")
@@ -849,10 +850,10 @@ sources/11 = SubResource("TileSetAtlasSource_xpjo4")
 sources/12 = SubResource("TileSetAtlasSource_vfslw")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m3vg7"]
-radius = 14.1421
+radius = 12.2953
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_keakh"]
-size = Vector2(16, 13)
+size = Vector2(16, 27)
 
 [node name="Bathroom" type="Node2D" node_paths=PackedStringArray("player")]
 script = ExtResource("1_rrdkc")
@@ -892,10 +893,15 @@ target_zoom = Vector2(4.5, 4.5)
 position = Vector2(336, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3, -5)
+position = Vector2(3, -4)
 scale = Vector2(1, 1.12)
 shape = SubResource("CircleShape2D_m3vg7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1, 30.5)
+position = Vector2(-1, 23.5)
 shape = SubResource("RectangleShape2D_keakh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_i2njb")
+volume_db = -26.0
+autoplay = true

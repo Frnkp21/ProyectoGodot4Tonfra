@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dw2ij6sg40md1"]
+[gd_scene load_steps=16 format=3 uid="uid://dw2ij6sg40md1"]
 
 [ext_resource type="Script" path="res://Scripts/Options.gd" id="1_ope6j"]
 [ext_resource type="Texture2D" uid="uid://34q7hvjbf5kw" path="res://Assets/Additional/teclaW.png" id="2_b1r5x"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cwruitau5xder" path="res://Assets/Additional/teclaT.png" id="11_cg837"]
 [ext_resource type="Texture2D" uid="uid://dmykeyuavfsew" path="res://Assets/Additional/TeclaP.png" id="12_j8l30"]
 [ext_resource type="Texture2D" uid="uid://c6h44or1cyu5x" path="res://Assets/Additional/TeclaQ.png" id="13_nhs8p"]
+[ext_resource type="AudioStream" uid="uid://cryatr05buu5l" path="res://Sound/menusound.mp3" id="15_ap5mg"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -294,5 +295,10 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_ap5mg")
+volume_db = -26.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/volver" to="." method="_on_volver_pressed"]

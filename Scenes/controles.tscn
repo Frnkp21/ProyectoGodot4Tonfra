@@ -1,0 +1,298 @@
+[gd_scene load_steps=15 format=3 uid="uid://dsgd13ls8jlv3"]
+
+[ext_resource type="Script" path="res://Scripts/controles.gd" id="1_qlv86"]
+[ext_resource type="Texture2D" uid="uid://c02ps1rkwh4jv" path="res://Assets/Additional/blackbackground.png" id="2_umrf6"]
+[ext_resource type="Texture2D" uid="uid://6p2t1bqrawib" path="res://Assets/Additional/inventario.png" id="3_k0fuh"]
+[ext_resource type="Texture2D" uid="uid://34q7hvjbf5kw" path="res://Assets/Additional/teclaW.png" id="4_055q5"]
+[ext_resource type="Texture2D" uid="uid://dp8twdg72tpny" path="res://Assets/Additional/teclaD.png" id="5_1lspn"]
+[ext_resource type="Texture2D" uid="uid://ctnhnykh1st8o" path="res://Assets/Additional/teclaS.png" id="6_r7yxk"]
+[ext_resource type="Texture2D" uid="uid://56a71frplsnd" path="res://Assets/Additional/teclaA.png" id="7_q61ww"]
+[ext_resource type="Texture2D" uid="uid://kibcnfaat6u6" path="res://Assets/Additional/teclaJ.png" id="8_314uq"]
+[ext_resource type="Texture2D" uid="uid://568g7qi5pqqn" path="res://Assets/Additional/teclaE.png" id="9_m03ak"]
+[ext_resource type="Texture2D" uid="uid://53ojmp56wvno" path="res://Assets/Additional/tecladoEspacio.png" id="10_033vc"]
+[ext_resource type="Texture2D" uid="uid://bvfnmltyfo5c1" path="res://Assets/Additional/TeclaB.png" id="11_xmadp"]
+[ext_resource type="Texture2D" uid="uid://cwruitau5xder" path="res://Assets/Additional/teclaT.png" id="12_35dwv"]
+[ext_resource type="Texture2D" uid="uid://dmykeyuavfsew" path="res://Assets/Additional/TeclaP.png" id="13_ruyb6"]
+[ext_resource type="Texture2D" uid="uid://c6h44or1cyu5x" path="res://Assets/Additional/TeclaQ.png" id="14_jdcfi"]
+
+[node name="Controles" type="Control"]
+layout_mode = 3
+anchor_right = 1.562
+anchor_bottom = 1.456
+offset_right = 0.319946
+offset_bottom = -0.160095
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qlv86")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(606.938, 315.938)
+scale = Vector2(62.1914, 104.612)
+texture = ExtResource("2_umrf6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.643
+anchor_bottom = 0.683
+offset_bottom = 0.108032
+texture = ExtResource("3_k0fuh")
+
+[node name="W" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_left = 0.089
+anchor_top = 0.092
+anchor_right = 0.124
+anchor_bottom = 0.156
+offset_left = 3.0
+offset_top = -0.208
+offset_bottom = -1.744
+texture = ExtResource("4_055q5")
+
+[node name="D" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.126
+anchor_top = 0.158
+anchor_right = 0.158
+anchor_bottom = 0.218
+offset_top = -0.791992
+offset_bottom = -0.231995
+texture = ExtResource("5_1lspn")
+
+[node name="S" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.093
+anchor_top = 0.158
+anchor_right = 0.125
+anchor_bottom = 0.219
+offset_top = 0.208008
+offset_bottom = 0.244011
+texture = ExtResource("6_r7yxk")
+
+[node name="A" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059
+anchor_top = 0.156
+anchor_right = 0.091
+anchor_bottom = 0.219
+offset_top = 0.256004
+offset_bottom = 0.244011
+texture = ExtResource("7_q61ww")
+
+[node name="J" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.233
+anchor_right = 0.122
+anchor_bottom = 0.294
+offset_top = -0.0919876
+offset_bottom = -0.0559845
+texture = ExtResource("8_314uq")
+
+[node name="E" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.309
+anchor_right = 0.122
+anchor_bottom = 0.37
+offset_top = 0.0840149
+offset_bottom = 0.120026
+texture = ExtResource("9_m03ak")
+
+[node name="Espacio" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.073
+anchor_top = 0.384
+anchor_right = 0.137
+anchor_bottom = 0.445
+offset_top = -0.215973
+offset_right = -1.52588e-05
+offset_bottom = -0.179977
+texture = ExtResource("10_033vc")
+
+[node name="B" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.087
+anchor_top = 0.464
+anchor_right = 0.118
+anchor_bottom = 0.525
+offset_left = -1.00001
+offset_top = -0.135986
+offset_bottom = -0.0999756
+texture = ExtResource("11_xmadp")
+
+[node name="I" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.132
+anchor_right = 0.371
+anchor_bottom = 0.193
+offset_left = -3.05176e-05
+offset_top = -0.167992
+offset_right = -3.05176e-05
+offset_bottom = -0.131989
+texture = ExtResource("12_35dwv")
+
+[node name="P" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.339
+anchor_top = 0.223
+anchor_right = 0.371
+anchor_bottom = 0.284
+offset_left = -3.05176e-05
+offset_top = 0.14801
+offset_right = -3.05176e-05
+offset_bottom = 0.184006
+texture = ExtResource("13_ruyb6")
+
+[node name="Q" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.338
+anchor_top = 0.315
+anchor_right = 0.37
+anchor_bottom = 0.376
+offset_left = -3.05176e-05
+offset_top = -0.0599976
+offset_bottom = -0.0239868
+texture = ExtResource("14_jdcfi")
+
+[node name="Basic Movement" type="Label" parent="."]
+layout_mode = 2
+anchor_left = 0.153
+anchor_top = 0.135
+anchor_right = 0.3
+anchor_bottom = 0.179
+offset_left = 7.99998
+offset_top = 1.26
+offset_right = 8.0
+offset_bottom = 1.20401
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "Movimiento Basico"
+
+[node name="Interact" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.132
+anchor_top = 0.319
+anchor_right = 0.22
+anchor_bottom = 0.361
+offset_top = -0.155991
+offset_right = -1.52588e-05
+offset_bottom = 0.835999
+theme_override_font_sizes/font_size = 20
+text = "Interactuar"
+
+[node name="Attack" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.134
+anchor_top = 0.242
+anchor_right = 0.185
+anchor_bottom = 0.284
+offset_top = 0.192009
+offset_bottom = 1.18401
+theme_override_font_sizes/font_size = 20
+text = "Atacar"
+
+[node name="Saltar dialogo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.143
+anchor_top = 0.389
+anchor_right = 0.249
+anchor_bottom = 0.433
+offset_top = 0.164001
+offset_right = -1.52588e-05
+offset_bottom = 0.108017
+theme_override_font_sizes/font_size = 20
+text = "Saltar dialogo
+"
+
+[node name="Esprintar" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.129
+anchor_top = 0.471
+anchor_right = 0.199
+anchor_bottom = 0.515
+offset_left = -1.00002
+offset_top = 0.196014
+offset_right = -1.52588e-05
+offset_bottom = 0.140015
+theme_override_font_sizes/font_size = 20
+text = "Esprintar"
+
+[node name="Inventario" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.385
+anchor_top = 0.143
+anchor_right = 0.465
+anchor_bottom = 0.187
+offset_left = -3.05176e-05
+offset_top = 0.0680084
+offset_right = -3.05176e-05
+offset_bottom = 0.0120087
+theme_override_font_sizes/font_size = 20
+text = "Inventario"
+
+[node name="Pausa" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.381
+anchor_top = 0.229
+anchor_right = 0.428
+anchor_bottom = 0.273
+offset_top = 0.00400543
+offset_right = -3.05176e-05
+offset_bottom = -0.0519867
+theme_override_font_sizes/font_size = 20
+text = "Pausa
+"
+
+[node name="Interactuar mision" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.378
+anchor_top = 0.323
+anchor_right = 0.572
+anchor_bottom = 0.366
+offset_left = -3.05176e-05
+offset_top = -0.251984
+offset_bottom = 0.216003
+theme_override_font_sizes/font_size = 20
+text = "Interactuar con la mision"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.541
+anchor_top = 0.53
+anchor_right = 0.541
+anchor_bottom = 0.53
+offset_left = -28.0
+offset_top = -15.72
+offset_right = 29.0
+offset_bottom = 15.28
+grow_horizontal = 0
+grow_vertical = 2
+alignment = 1
+
+[node name="volver" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Volver"
+
+[connection signal="pressed" from="VBoxContainer/volver" to="." method="_on_volver_pressed"]

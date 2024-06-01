@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dske5xin7ukac"]
+[gd_scene load_steps=15 format=3 uid="uid://dske5xin7ukac"]
 
 [ext_resource type="Script" path="res://Scripts/BossSuperattack.gd" id="1_k5crx"]
+[ext_resource type="AudioStream" uid="uid://cbfc1jqp1jjgv" path="res://Sound/terremoot.mp3" id="3_ctxh2"]
 [ext_resource type="Texture2D" uid="uid://pre43qc6fck" path="res://Assets/Enemies/Colision.png" id="6_7ovjy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wkoag"]
@@ -109,6 +110,10 @@ shape = SubResource("CircleShape2D_nqdtt")
 shape = SubResource("CircleShape2D_oh6yf")
 
 [node name="Cooldown_Timer" type="Timer" parent="."]
+
+[node name="terremotodmg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ctxh2")
+volume_db = -17.883
 
 [connection signal="sprite_frames_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_sprite_frames_changed"]
 [connection signal="body_entered" from="detecting_area" to="." method="_on_detecting_area_body_entered"]

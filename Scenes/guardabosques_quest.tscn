@@ -17,10 +17,10 @@ script = ExtResource("1_en56f")
 [node name="quest1_ui" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = -66.0
-offset_top = -58.0
-offset_right = 66.0
-offset_bottom = -18.0
+offset_left = -86.0
+offset_top = -82.0
+offset_right = 86.0
+offset_bottom = -14.0
 texture = ExtResource("1_vo6u3")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -32,52 +32,53 @@ texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
 offset_top = 5.0
-offset_right = 219.0
+offset_right = 310.0
 offset_bottom = 42.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/normal_font_size = 24
 text = "Guarda bosques quest:"
+scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="quest1_ui"]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 17.0
-offset_right = 283.0
-offset_bottom = 65.0
+offset_left = 13.0
+offset_top = 28.0
+offset_right = 313.0
+offset_bottom = 76.0
 scale = Vector2(0.4, 0.4)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/normal_font_size = 16
 text = "Roba todos los huevos de babosa
 "
 
 [node name="yesButton1" type="Button" parent="quest1_ui"]
 layout_mode = 0
-offset_left = 73.0
-offset_top = 23.0
-offset_right = 107.0
-offset_bottom = 54.0
+offset_left = 101.0
+offset_top = 42.0
+offset_right = 158.0
+offset_bottom = 84.0
 scale = Vector2(0.4, 0.4)
 text = "yes"
 
 [node name="noButtton1" type="Button" parent="quest1_ui"]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 23.0
-offset_right = 122.0
-offset_bottom = 54.0
+offset_left = 127.0
+offset_top = 42.0
+offset_right = 184.0
+offset_bottom = 84.0
 scale = Vector2(0.4, 0.4)
 text = "no"
 
 [node name="no_quest" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = -66.0
-offset_top = -58.0
-offset_right = 66.0
-offset_bottom = -18.0
+offset_left = -82.0
+offset_top = -69.0
+offset_right = 82.0
+offset_bottom = -10.0
 texture = ExtResource("1_vo6u3")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -87,36 +88,37 @@ patch_margin_bottom = 3
 [node name="name" type="RichTextLabel" parent="no_quest"]
 texture_filter = 1
 layout_mode = 0
-offset_left = 12.0
+offset_left = 10.0
 offset_top = 5.0
-offset_right = 219.0
+offset_right = 304.0
 offset_bottom = 42.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/normal_font_size = 24
 text = "Guarda bosques quest:"
+scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="no_quest"]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 16.75
-offset_right = 283.0
-offset_bottom = 56.75
+offset_left = 12.0
+offset_top = 25.0
+offset_right = 269.0
+offset_bottom = 61.0
 scale = Vector2(0.4, 0.4)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/normal_font_size = 16
 text = "no hay ninguna quest
 "
 
 [node name="finished_quest" type="NinePatchRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = -66.0
-offset_top = -58.0
-offset_right = 66.0
-offset_bottom = -18.0
+offset_left = -83.0
+offset_top = -73.0
+offset_right = 83.0
+offset_bottom = -10.0
 texture = ExtResource("1_vo6u3")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -128,27 +130,27 @@ texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
 offset_top = 5.0
-offset_right = 219.0
+offset_right = 308.0
 offset_bottom = 42.0
 scale = Vector2(0.5, 0.5)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/normal_font_size = 24
 text = "Guarda bosques quest:"
+scroll_active = false
 
 [node name="text" type="RichTextLabel" parent="finished_quest"]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 17.0
-offset_right = 309.0
-offset_bottom = 69.0
+offset_left = 12.0
+offset_top = 24.0
+offset_right = 369.0
+offset_bottom = 99.0
 scale = Vector2(0.4, 0.4)
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_8e50n")
-theme_override_font_sizes/normal_font_size = 13
-text = "Bien hecho gracias por la ayuda
-
-"
+theme_override_font_sizes/normal_font_size = 16
+text = "¡Bien hecho! Gracias por la ayuda. Ahora dirígete a la cueva. Por cierto, puedes quedarte con los huevos."
+scroll_active = false
 
 [node name="completed" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_81p76")

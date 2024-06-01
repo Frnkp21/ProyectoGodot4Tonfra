@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://gehfmyirjliq"]
+[gd_scene load_steps=5 format=3 uid="uid://gehfmyirjliq"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_gkscv"]
 [ext_resource type="Texture2D" uid="uid://0h4k0qql1ywd" path="res://Assets/Additional/inicio_portada.png" id="2_keu6k"]
 [ext_resource type="FontFile" uid="uid://d24t80y0wut4e" path="res://pixelart.ttf" id="3_76jn5"]
+[ext_resource type="AudioStream" uid="uid://cryatr05buu5l" path="res://Sound/menusound.mp3" id="4_7paku"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -86,6 +87,11 @@ theme_override_fonts/font = ExtResource("3_76jn5")
 theme_override_font_sizes/font_size = 24
 text = "Exit"
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7paku")
+volume_db = -23.524
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Options" to="." method="_on_options_pressed"]

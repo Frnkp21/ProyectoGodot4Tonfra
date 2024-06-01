@@ -54,3 +54,10 @@ var questIniciada : bool
 
 var nextZoneCuevaUnlocked : bool
 
+var pausaopen : bool
+
+var pathPause : String
+var playerPosition : Vector2
+
+var escenaFinal : bool
+

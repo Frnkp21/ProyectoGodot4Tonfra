@@ -5,7 +5,7 @@ var speed = 70
 var player_chase = false
 var player = null
 
-var health = 400
+var health = 500
 var player_inattack_zone = false
 
 var can_take_damage = true
@@ -139,6 +139,7 @@ func activate_super_attack():
 	print("rocaaaaaaaaas")
 	self.visible = true
 	$AnimatedSprite2D.play("rocks")
+	$terremotodmg.play()
 	can_play_superattack = false
 	$Cooldown_Timer.start(15)
 	get_tree().create_timer(animation_duration).connect("timeout", Callable(self, "_on_super_attack_animation_timeout"))

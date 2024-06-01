@@ -5,7 +5,7 @@ var speed = 70
 var player_chase = false
 var player = null
 
-var health = 400
+var health = 500
 var player_inattack_zone = false
 
 var can_take_damage = true
@@ -26,6 +26,8 @@ var tiempo_espera = 5.0
 var cronometro = false
 
 var can_play_superattack = true  # Variable para controlar el super ataque
+
+signal boss_defeated  # Señal para cuando el jefe sea derrotado
 
 func _ready():
 	$Cooldown_Timer.connect("timeout", Callable(self, "_on_cooldown_timer_timeout"))
@@ -51,7 +53,7 @@ func _physics_process(delta):
 		else:
 			$AnimatedSprite2D.play("Idle")
 
-		move_and_collide(Vector2(0, 0))
+	move_and_collide(Vector2(0, 0))
 
 func _on_detecting_area_body_entered(body):
 	player = body
@@ -95,6 +97,10 @@ func deal_with_damage():
 				print("boss health ", health)
 				if health <= 0:
 					self.queue_free()
+					var portal = get_parent().get_node("Portal")  # Obtener el nodo del portal
+					emit_signal("boss_defeated")
+					portal.visible = true
+					portal.process_mode = Node.PROCESS_MODE_INHERIT
 					give_experience(player)
 
 func time_out():

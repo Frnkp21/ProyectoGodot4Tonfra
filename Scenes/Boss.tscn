@@ -139,8 +139,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cf6b"]
-size = Vector2(31.5, 19)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xt1f"]
+radius = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jeall"]
 radius = 60.0083
@@ -149,7 +149,7 @@ radius = 60.0083
 radius = 25.02
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nqdtt"]
-radius = 16.5
+radius = 19.5059
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oh6yf"]
 radius = 53.5374
@@ -163,8 +163,8 @@ sprite_frames = SubResource("SpriteFrames_hbxmn")
 animation = &"AttackLeft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.25, -0.5)
-shape = SubResource("RectangleShape2D_8cf6b")
+scale = Vector2(1, 1.1)
+shape = SubResource("CircleShape2D_0xt1f")
 
 [node name="detecting_area" type="Area2D" parent="."]
 collision_layer = 2
@@ -193,6 +193,7 @@ show_percentage = false
 [node name="attackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attackArea"]
+scale = Vector2(1, 1.04)
 shape = SubResource("CircleShape2D_nqdtt")
 
 [node name="SuperAttackArea" type="Area2D" parent="."]

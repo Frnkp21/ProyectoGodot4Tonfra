@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://deqmiiupipoiw"]
+[gd_scene load_steps=15 format=3 uid="uid://deqmiiupipoiw"]
 
 [ext_resource type="Texture2D" uid="uid://366erd477kcq" path="res://blackBack.jpg" id="1"]
 [ext_resource type="Script" path="res://Scripts/Street.gd" id="1_a2iqd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c0c6347sf36nx" path="res://Scenes/niño2.tscn" id="10_2oggg"]
 [ext_resource type="Script" path="res://Scripts/MoveScene_smooth.gd" id="10_hhvf7"]
 [ext_resource type="PackedScene" uid="uid://cdhjc7c0r1vjx" path="res://Scenes/PauseMenu.tscn" id="13_41f6x"]
+[ext_resource type="AudioStream" uid="uid://b5bt2tft15drq" path="res://Sound/gamesound.mp3" id="13_ucr6w"]
 [ext_resource type="PackedScene" uid="uid://deqiv7y1s5d6y" path="res://Scenes/Player.tscn" id="15"]
 [ext_resource type="PackedScene" uid="uid://4spxvr3fh1xr" path="res://Scenes/MoveScene.tscn" id="29_3lqnr"]
 [ext_resource type="PackedScene" uid="uid://djtkdpdniw3cv" path="res://Scenes/cartel_to_bosque.tscn" id="32_euup7"]
@@ -103,6 +104,11 @@ shape = SubResource("RectangleShape2D_jyjb7")
 position = Vector2(294, 557)
 
 [node name="Pause" parent="." instance=ExtResource("13_41f6x")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ucr6w")
+volume_db = -26.0
+autoplay = true
 
 [connection signal="body_entered" from="Forest_transition_point" to="Forest_transition_point" method="_on_body_entered"]
 [connection signal="body_exited" from="Forest_transition_point" to="Forest_transition_point" method="_on_body_exited"]

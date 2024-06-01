@@ -20,6 +20,7 @@ func update_slots():
 		slots[i].update(inv.slots[i])
 
 func _process(delta):
+	$NinePatchRect2/lvl.text = str(global.lvlProtagonista)
 	$NinePatchRect2/Corazon3/AtaqueStat.text = str(global.ataqueProtagonista)
 	$NinePatchRect2/Corazon/VidaStat.text = str(global.maxvida)
 	$NinePatchRect2/Corazon2/DefensaStat.text = str(global.defensa)
@@ -153,27 +154,27 @@ func mostrar_botones(btnTrue):
 
 func _on_vida_button_pressed():
 	var vida = global.maxvida
-	vida  += 30
+	vida  += 50
 	global.maxvida = vida
 	hideButtons = true
 	
 
 func _on_defensa_button_pressed():
 	var defensa = global.defensa
-	defensa += 2
+	defensa += 3
 	global.dañoEnemigo = - 2
 	global.defensa = defensa
 	hideButtons = true
 
 func _on_ataque_button_pressed():
 	var ataque = global.ataqueProtagonista
-	ataque += 10
+	ataque += 15
 	global.ataqueProtagonista = ataque
 	hideButtons = true
 
 func _on_evasion_button_pressed():
 	var evasion = global.evasionProtagonista
-	evasion += 5
+	evasion += 10
 	global.evasionProtagonista = evasion
 	hideButtons = true
 
@@ -185,13 +186,13 @@ func _on_suerte_button_pressed():
 
 func _on_aprendizaje_button_pressed():
 	var aprendizaje = global.aprendeizajePersonaje
-	aprendizaje += 5
+	aprendizaje += 25
 	global.aprendeizajePersonaje = aprendizaje
 	hideButtons = true
 
 func _on_critico_button_pressed():
 	var critico = global.criticoPersonaje
-	critico += 5
+	critico += 25
 	global.criticoPersonaje = critico
 	hideButtons = true
 

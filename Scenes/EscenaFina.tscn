@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://4di27yitml7v"]
+
+[ext_resource type="Texture2D" uid="uid://dtcfth8mdqha8" path="res://Assets/Additional/Aprender1.png" id="1_dy704"]
+
+[node name="EscenaFina" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(322, 180)
+scale = Vector2(7.6875, 5.25)
+texture = ExtResource("1_dy704")

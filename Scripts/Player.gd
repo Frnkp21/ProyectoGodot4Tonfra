@@ -42,7 +42,7 @@ var puede_correr = false
 var colorDiferente = false
 var originalModulateColor = Color(1, 1, 1, 1)
 
-
+var playerPosition : Vector2
 
 func _ready():
 	$AnimatedSprite.play("Idle")
@@ -63,6 +63,15 @@ func _physics_process(delta):
 	update_experience_bar()
 	player_movement_runing(delta)
 	
+	if (global.escenaFinal):
+		global.posicion = self.position
+		Trans.aparecer()
+		get_tree().change_scene_to_file("res://Scenes/EscenaFinal.tscn")
+		Trans.desaparecer()
+		
+	
+	playerPosition = self.position
+	global.playerPosition = playerPosition 
 	
 	if mother_in_range == true:
 		if Input.is_action_just_pressed("Interact"):
@@ -245,6 +254,8 @@ func boss_attack():
 						$AnimatedSprite.modulate = Color(1,0,0,1)
 						time_out()
 					boss_attack_cooldown = false
+					$snakedamage.play()
+					$herido.play
 					$bossattack_cooldown.start()
 				
 func enemy_superattack():
@@ -498,12 +509,16 @@ func collect(item):
 func _on_sound_snake_area_body_entered(body):
 	if body.has_method("snake"):
 		$snakedamage.play()
+		$herido.play
 
 
 func _on_sound_slime_area_body_entered(body):
 	if body.has_method("enemy"):
 		$slimedamage.play()
+		$herido.play
 		
+
+
 
 
 

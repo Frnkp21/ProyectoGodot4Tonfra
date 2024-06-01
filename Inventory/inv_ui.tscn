@@ -488,6 +488,24 @@ theme_override_fonts/font = ExtResource("7_e2qr3")
 theme_override_font_sizes/font_size = 8
 text = "Vida"
 
+[node name="Label" type="Label" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("7_0yg6s")
+text = "LVL."
+
+[node name="lvl" type="Label" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 8.0
+offset_right = 101.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("7_0yg6s")
+text = "1"
+
 [node name="invsound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_m7irv")
 volume_db = -18.337
